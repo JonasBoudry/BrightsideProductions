@@ -1,0 +1,15 @@
+{
+	"media": {
+        "src": "/assets/media/images/productions/eat-more-trees.avif",
+        "srcDesktop": "/assets/media/images/productions/eat-more-trees.avif",
+		"alt": "Foto Eat more trees production image",
+		"width": "1280",
+		"height": "720",
+		"loading": "eager"
+	},
+	"title": "Eat more trees",
+	"anchor": {
+		"link": "https://www.eatmoretrees.org/",
+		"label": "More info about this production"
+	}
+}
