@@ -1,24 +1,5 @@
 {
     "logo": {
         "link": "/"
-    },
-    "navigation": {
-        "items": [
-            {
-                "islink": true,
-                "link": "#about-us",
-                "label": "About us"
-            },
-            {
-                "islink": true,
-                "link": "#services",
-                "label": "Services"
-            },
-            {
-                "islink": true,
-                "link": "#contact",
-                "label": "Contact"
-            }
-        ]
     }
 }
