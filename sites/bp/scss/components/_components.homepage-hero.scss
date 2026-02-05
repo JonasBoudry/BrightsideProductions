@@ -47,6 +47,13 @@
 	}
 }
 
+.subtitle {
+	font-weight: 300;
+	font-size: 30px;
+	line-height: 1.2;
+	color: rgb(var(--brand__color--white));
+}
+
 .hero-banner__cta {
 	margin-block-start: var(--brand__spacing);
 	--brand__btn-primary--background-color: rgb(var(--brand__color--white));
