@@ -6,7 +6,7 @@
     border-radius: var(--brand__border-radius);
     padding: var(--contact-cta__body--padding, var(--brand__spacing));
 
-        @include mq($from: desktop){
+    @include mq($from: desktop) {
         --contact-cta__body--padding: var(--brand__spacing--large);
     }
 }
@@ -18,6 +18,10 @@
 .c-contact-cta__description {
     text-align: center;
     margin-block-end: var(--brand__spacing--large);
+
+    @include mq($from: large) {
+        max-width: 800px;
+    }
 }
 
 .c-contact-cta__cta {

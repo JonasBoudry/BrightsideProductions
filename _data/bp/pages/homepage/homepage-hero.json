@@ -1,7 +1,7 @@
 {
 	"media": {
-        "src": "/assets/media/images/hero-banner.png",
-        "srcDesktop": "/assets/media/images/hero-banner.png",
+        "src": "/assets/media/images/hero-banner.avif",
+        "srcDesktop": "/assets/media/images/hero-banner.avif",
 		"alt": "Foto dark clouds banner image",
 		"width": "1280",
 		"height": "720",
