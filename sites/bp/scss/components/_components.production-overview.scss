@@ -65,6 +65,8 @@
 }
 
 .a-production__body {
+    display: flex;
+    flex-direction: column-reverse;
     @include absolute(0, 0, 0, 0, 1);
     padding: var(--brand__spacing);
     background-color: var(--production__body--bc, rgba(var(--brand__color--black), 0.2));
@@ -106,6 +108,7 @@
 .a-production__genre {
     background-color: rgb(var(--brand__color--black));
     padding: var(--brand__spacing--tiny) var(--brand__spacing--small);
+    border-radius: var(--brand__border-radius);
 }
 
 .a-production__text {
