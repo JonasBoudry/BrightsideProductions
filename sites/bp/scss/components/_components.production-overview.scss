@@ -108,7 +108,7 @@
 
 .a-production__genre {
     background-color: rgb(var(--brand__color--black));
-    padding: var(--brand__spacing--tiny) var(--brand__spacing--small);
+    padding: calc(var(--brand__spacing--tiny)/2) var(--brand__spacing--tiny);
     border-radius: var(--brand__border-radius);
 }
 
