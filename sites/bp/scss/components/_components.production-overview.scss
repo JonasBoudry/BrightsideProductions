@@ -1,4 +1,4 @@
-.c-production-overview {
+.production-overview {
     ul {
         display: grid;
         grid-gap: var(--production-overview--grid-gap, var(--brand__spacing--large));
@@ -15,26 +15,9 @@
     li {
         border-radius: 5px;
 
-        &.pool-vos {
-            --production__info--jc: center;
-        }
-
         &:hover {
             --production-before--display: inline-block;
             --production__body--bc: rgba(var(--brand__color--black), 0.35);
-
-            &.zilver-vos {
-                --production-before--bc: rgb(var(--brand__color--zilver-vos));
-            }
-
-            &.rode-vos {
-                --production-before--bc: rgb(var(--brand__color--rode-vos));
-            }
-
-            &.pool-vos {
-                cursor: not-allowed;
-                --production-before--bc: rgb(var(--brand__color--pool-vos));
-            }
         }
     }
 }
