@@ -16,6 +16,7 @@ footer {
 
 	@include mq($from: wide) {
 		--footer__content--flex-direction: row;
+		--footer__content--justify-content: space-between;
 	}
 
 	ul {
