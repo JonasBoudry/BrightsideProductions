@@ -5,27 +5,25 @@
 			"media": {
                 "src": "/assets/media/images/hero-banner.avif",
                 "srcDesktop": "/assets/media/images/hero-banner.avif",
-				"alt": "Foto kamer Zilvervos"
+				"alt": "Foto Eat more trees production"
 			},
-			"title": "Zilver vos",
-			"link": "/zilver-vos"
+			"title": "Eat more trees"
 		},
 		{
 			"media": {
                 "src": "/assets/media/images/hero-banner.avif",
                 "srcDesktop": "/assets/media/images/hero-banner.avif",
-				"alt": "Foto kamer Rodevos"
+				"alt": "Foto The girlfriend experience production"
 			},
-			"title": "Rode vos",
-			"link": "/rode-vos"
+			"title": "The girlfriend experience"
 		},
 		{
 			"media": {
                 "src": "/assets/media/images/hero-banner.avif",
                 "srcDesktop": "/assets/media/images/hero-banner.avif",
-				"alt": "Foto kamer Poolvos"
+				"alt": "Foto Moedertje production"
 			},
-			"title": "Pool vos"
+			"title": "Moedertje"
 		}
 	]
 }
