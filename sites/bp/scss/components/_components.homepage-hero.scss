@@ -11,7 +11,7 @@
 	min-height: var(--set-hero-banner--min-height, var(--hero-banner--min-height, 300px));
 
 	@include mq($from: large) {
-		--hero-banner--min-height: var(--hero-banner-large--min-height, 700px);
+		--hero-banner--min-height: var(--hero-banner-large--min-height, 550px);
 		align-items: center;
 	}
 }
