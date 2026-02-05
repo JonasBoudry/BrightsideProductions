@@ -101,8 +101,11 @@
     font-size: 12px;
     letter-spacing: 1px;
     --brand__typography-p--color: rgb(var(--brand__color--white));
+}
+
+.a-production__genre {
     background-color: rgb(var(--brand__color--black));
-    padding: var(--brand__spacing--tiny);
+    padding: var(--brand__spacing--tiny) var(--brand__spacing--small);
 }
 
 .a-production__text {
