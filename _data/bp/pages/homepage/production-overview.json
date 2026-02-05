@@ -21,26 +21,17 @@
         },
         {
             "media": {
-                "src": "/assets/media/images/productions/the-girlfriend-experience.avif",
-                "srcDesktop": "/assets/media/images/productions/the-girlfriend-experience.avif",
-                "alt": "Foto The girlfriend experience production"
+                "src": "/assets/media/images/productions/between-us.avif",
+                "srcDesktop": "/assets/media/images/productions/between-us.avif",
+                "alt": "Foto Between us production"
             },
-            "title": "The girlfriend experience",
-            "genre": "Human Interest"
-        },
-        {
-            "media": {
-                "src": "/assets/media/images/productions/hero-banner.avif",
-                "srcDesktop": "/assets/media/images/productions/hero-banner.avif",
-                "alt": "Foto Moedertje production"
-            },
-            "title": "Moedertje",
+            "title": "Between us",
             "genre": "Kortfilm"
         },
         {
             "media": {
-                "src": "/assets/media/images/hero-banner.avif",
-                "srcDesktop": "/assets/media/images/hero-banner.avif",
+                "src": "/assets/media/images/productions/lander-severins.avif",
+                "srcDesktop": "/assets/media/images/productions/lander-severincs.avif",
                 "alt": "Foto Broer - Lander Severins production"
             },
             "title": "Broer - Lander Severins",
@@ -48,14 +39,14 @@
         },
         {
             "media": {
-                "src": "/assets/media/images/hero-banner.avif",
-                "srcDesktop": "/assets/media/images/hero-banner.avif",
+                "src": "/assets/media/images/productions/made-in-cite.avif",
+                "srcDesktop": "/assets/media/images/productions/made-in-cite.avif",
                 "alt": "Foto Made in Cité production"
             },
             "title": "Made in Cité",
             "genre": "Comedy"
         },
-                {
+        {
             "media": {
                 "src": "/assets/media/images/productions/helmut.avif",
                 "srcDesktop": "/assets/media/images/productions/helmut.avif",
@@ -63,6 +54,30 @@
             },
             "title": "Helmut",
             "genre": "Documentaire"
+        },
+                {
+            "media": {
+                "src": "/assets/media/images/productions/streamz.avif",
+                "srcDesktop": "/assets/media/images/productions/streamz.avif",
+                "alt": "Foto Streamz production"
+            },
+            "genre": "Documentaire"
+        },
+                {
+            "media": {
+                "src": "/assets/media/images/productions/dpg-media.avif",
+                "srcDesktop": "/assets/media/images/productions/dpg-media.avif",
+                "alt": "Foto DPG Media production"
+            },
+            "genre": "Documentaire"
+        },
+                {
+            "media": {
+                "src": "/assets/media/images/productions/vrt.avif",
+                "srcDesktop": "/assets/media/images/productions/vrt.avif",
+                "alt": "Foto VRT production"
+            },
+            "genre": "Human Interest"
         }
     ]
 }
