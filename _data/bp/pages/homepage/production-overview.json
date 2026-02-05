@@ -1,5 +1,5 @@
 {
-    "title": "Onze producties",
+    "title": "Our productions",
     "items": [
         {
             "media": {
@@ -17,7 +17,7 @@
                 "alt": "Foto Eat more trees production"
             },
             "title": "Eat more trees",
-            "genre": "Documentaire"
+            "genre": "Documentary"
         },
         {
             "media": {
@@ -26,7 +26,7 @@
                 "alt": "Foto Between us production"
             },
             "title": "Between us",
-            "genre": "Kortfilm"
+            "genre": "Short"
         },
         {
             "media": {
@@ -53,7 +53,7 @@
                 "alt": "Foto Helmut production"
             },
             "title": "Helmut",
-            "genre": "Documentaire"
+            "genre": "Documentary"
         },
                 {
             "media": {
@@ -61,7 +61,7 @@
                 "srcDesktop": "/assets/media/images/productions/streamz.avif",
                 "alt": "Foto Streamz production"
             },
-            "genre": "Documentaire"
+            "genre": "Documentary"
         },
                 {
             "media": {
@@ -69,7 +69,7 @@
                 "srcDesktop": "/assets/media/images/productions/dpg-media.avif",
                 "alt": "Foto DPG Media production"
             },
-            "genre": "Documentaire"
+            "genre": "Documentary"
         },
                 {
             "media": {
