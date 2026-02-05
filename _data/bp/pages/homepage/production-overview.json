@@ -3,8 +3,8 @@
 	"items": [
 		{
 			"media": {
-        "src": "/assets/media/images/hero-banner.avif",
-        "srcDesktop": "/assets/media/images/hero-banner.avif",
+                "src": "/assets/media/images/hero-banner.avif",
+                "srcDesktop": "/assets/media/images/hero-banner.avif",
 				"alt": "Foto kamer Zilvervos"
 			},
 			"title": "Zilver vos",
@@ -12,8 +12,8 @@
 		},
 		{
 			"media": {
-        "src": "/assets/media/images/hero-banner.avif",
-        "srcDesktop": "/assets/media/images/hero-banner.avif",
+                "src": "/assets/media/images/hero-banner.avif",
+                "srcDesktop": "/assets/media/images/hero-banner.avif",
 				"alt": "Foto kamer Rodevos"
 			},
 			"title": "Rode vos",
@@ -21,8 +21,8 @@
 		},
 		{
 			"media": {
-        "src": "/assets/media/images/hero-banner.avif",
-        "srcDesktop": "/assets/media/images/hero-banner.avif",
+                "src": "/assets/media/images/hero-banner.avif",
+                "srcDesktop": "/assets/media/images/hero-banner.avif",
 				"alt": "Foto kamer Poolvos"
 			},
 			"title": "Pool vos"
