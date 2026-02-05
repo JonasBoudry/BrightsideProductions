@@ -1,29 +1,68 @@
 {
-	"title": "Onze producties",
-	"items": [
-		{
-			"media": {
+    "title": "Onze producties",
+    "items": [
+        {
+            "media": {
+                "src": "/assets/media/images/over-geld-gesproken.avif",
+                "srcDesktop": "/assets/media/images/over-geld-gesproken.avif",
+                "alt": "Foto Over geld gesproken production"
+            },
+            "title": "Over geld gesproken",
+            "genre": "Human Interest"
+        },
+        {
+            "media": {
+                "src": "/assets/media/images/eat-more-trees.avif",
+                "srcDesktop": "/assets/media/images/eat-more-trees.avif",
+                "alt": "Foto Eat more trees production"
+            },
+            "title": "Eat more trees",
+            "genre": "Documentaire"
+        },
+        {
+            "media": {
                 "src": "/assets/media/images/hero-banner.avif",
                 "srcDesktop": "/assets/media/images/hero-banner.avif",
-				"alt": "Foto Eat more trees production"
-			},
-			"title": "Eat more trees"
-		},
-		{
-			"media": {
+                "alt": "Foto The girlfriend experience production"
+            },
+            "title": "The girlfriend experience",
+            "genre": "Human Interest"
+        },
+        {
+            "media": {
                 "src": "/assets/media/images/hero-banner.avif",
                 "srcDesktop": "/assets/media/images/hero-banner.avif",
-				"alt": "Foto The girlfriend experience production"
-			},
-			"title": "The girlfriend experience"
-		},
-		{
-			"media": {
+                "alt": "Foto Moedertje production"
+            },
+            "title": "Moedertje",
+            "genre": "Kortfilm"
+        },
+        {
+            "media": {
                 "src": "/assets/media/images/hero-banner.avif",
                 "srcDesktop": "/assets/media/images/hero-banner.avif",
-				"alt": "Foto Moedertje production"
-			},
-			"title": "Moedertje"
-		}
-	]
+                "alt": "Foto Broer - Lander Severins production"
+            },
+            "title": "Broer - Lander Severins",
+            "genre": "Comedy"
+        },
+        {
+            "media": {
+                "src": "/assets/media/images/hero-banner.avif",
+                "srcDesktop": "/assets/media/images/hero-banner.avif",
+                "alt": "Foto Made in Cité production"
+            },
+            "title": "Made in Cité",
+            "genre": "Comedy"
+        },
+                {
+            "media": {
+                "src": "/assets/media/images/helmut.avif",
+                "srcDesktop": "/assets/media/images/helmut.avif",
+                "alt": "Foto Helmut production"
+            },
+            "title": "Helmut",
+            "genre": "Documentaire"
+        }
+    ]
 }
