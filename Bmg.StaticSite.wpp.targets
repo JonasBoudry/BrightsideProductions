@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <!--Hook into the packaging/publishing pipeline.-->
+    <CopyAllFilesToSingleFolderForPackageDependsOn>
+      IncludeSiteFiles;
+      IncludeInfrastructureFiles;
+      IncludeGeneratedFiles;
+      $(CopyAllFilesToSingleFolderForPackageDependsOn);
+    </CopyAllFilesToSingleFolderForPackageDependsOn>
+
+    <CopyAllFilesToSingleFolderForMsdeployDependsOn>
+      IncludeSiteFiles;
+      IncludeInfrastructureFiles;
+      IncludeGeneratedFiles;
+      $(CopyAllFilesToSingleFolderForPackageDependsOn);
+    </CopyAllFilesToSingleFolderForMsdeployDependsOn>
+  </PropertyGroup>
+  <Target Name="IncludeSiteFiles">
+    <ItemGroup>
+      <_CustomFiles Include=".\sites\**\*" />
+      <FilesForPackagingFromProject Include="%(_CustomFiles.Identity)">
+        <DestinationRelativePath>sites\%(RecursiveDir)%(Filename)%(Extension)</DestinationRelativePath>
+      </FilesForPackagingFromProject>
+    </ItemGroup>
+  </Target>
+  <Target Name="IncludeInfrastructureFiles">
+    <ItemGroup>
+      <_CustomFilesInfra Include=".\infrastructure\**\*" />
+      <FilesForPackagingFromProject Include="%(_CustomFilesInfra.Identity)">
+        <DestinationRelativePath>infrastructure\%(RecursiveDir)%(Filename)%(Extension)</DestinationRelativePath>
+      </FilesForPackagingFromProject>
+    </ItemGroup>
+  </Target>
+  <Target Name="IncludeGeneratedFiles">
+    <ItemGroup>
+      <_CustomFilesGenerated Include=".\dist\**\*" />
+      <FilesForPackagingFromProject Include="%(_CustomFilesGenerated.Identity)">
+        <DestinationRelativePath>dist\%(RecursiveDir)%(Filename)%(Extension)</DestinationRelativePath>
+      </FilesForPackagingFromProject>
+    </ItemGroup>
+  </Target>
+
+</Project>

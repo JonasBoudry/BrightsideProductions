@@ -1,0 +1,18 @@
+{
+	"shape": {
+		"dimension": {
+			"maxWidth": 32,
+			"maxHeight": 32
+		}
+	},
+	"mode": {
+		"symbol": {
+			"dest": "sites/bmg/assets/svg",
+			"sprite": "svg-symbols.svg",
+			"example": {
+				"template": "_tmpl/bmg-svg-view.hbs",
+				"dest": "../../pages/styleguide/svg-view.hbs"
+			}
+		}
+	}
+}

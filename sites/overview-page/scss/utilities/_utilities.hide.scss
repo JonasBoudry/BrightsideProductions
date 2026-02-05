@@ -1,0 +1,17 @@
+.u-hide-until-desktop {
+	display: none;
+	@include mq($from: desktop) {
+		display: block;
+	}
+}
+
+.u-hide-desktop {
+	display: block;
+	@include mq($from: desktop) {
+		display: none;
+	}
+}
+
+.u-hidden {
+	display: none;
+}

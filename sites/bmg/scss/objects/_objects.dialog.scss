@@ -1,0 +1,232 @@
+$account-watermark-size: 482px !default;
+:root {
+	--dialog-border-spacing: var(--brand__spacing);
+}
+
+.o-dialog {
+	z-index: $brand__modal--z-index;
+	display: flex;
+	justify-content: center;
+
+	@include mq($until: larger) {
+		--dialog__close-btn-label--display: none;
+	}
+
+	@include mq($until: large) {
+		--brand__input--bg-color: rgb(var(--brand__color--white));
+	}
+
+	@include mq($from: large) {
+		--dialog__document--margin: auto;
+		--dialog__document--bg: rgb(var(--brand__color--white));
+		--dialog__document__border-radius: var(--brand__border-radius);
+		--dialog__document--max-width: 95%;
+		--dialog__document--max-height: 90%;
+		--dialog__inner--gtc: 1fr 2fr;
+		--dialog__inner--row-gap: 0;
+		--dialog__inner--padding: 0;
+		--dialog__aside--padding: var(--brand__spacing--huge) var(--brand__spacing--large);
+		--dialog__body--padding: var(--brand__spacing--huge) var(--brand__spacing--large);
+	}
+
+	@include mq($from: larger) {
+		--dialog__document--max-width: 85%;
+	}
+
+	&,
+	&__overlay {
+		@include fixed(0, 0, 0, 0);
+	}
+
+	&[aria-hidden="true"] {
+		display: none;
+	}
+
+	&__overlay {
+		background-color: rgba(var(--brand__color--gray-darker), 0.9);
+		animation: fade-in 200ms both;
+	}
+
+	&__close {
+		--btn__label--display: var(--dialog__close-btn-label--display);
+		margin-inline-start: auto;
+		@include fixed(
+			var(--dialog__close--top, var(--brand__spacing--small)),
+			var(--dialog__close--right, var(--brand__spacing--small)),
+			null,
+			null,
+			1
+		);
+
+		filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.1));
+
+		@include mq($from: large) {
+			--btn-close-icon-svg--fill: var(--dialog__close-icon-svg--fill);
+			--btn-close-icon--background-color: var(
+				--dialog__close-btn-icon--background-color,
+				rgb(var(--brand__color--primary-light))
+			);
+		}
+	}
+
+	&__document {
+		position: relative;
+		display: flex;
+		background-color: var(--dialog__document--bg, rgb(var(--brand__color--primary-lighter)));
+		border-radius: var(--dialog__document__border-radius);
+		max-height: var(--dialog__document--max-height, 100vh);
+		width: var(--dialog__document--width, 100%);
+		max-width: var(--dialog__document--max-width, 100vw);
+		animation: fade-in 400ms 200ms both, slide-up 400ms 200ms both;
+		margin: var(--dialog__document--margin, 0);
+		z-index: 2;
+		overflow: hidden;
+
+		@include after(var(--dialog__document--content, none)) {
+			display: block;
+			@include absolute(null, -5px, -5px, null, -1);
+			background-image: var(--set-brand__watermark, var(--brand__watermark));
+			background-size: cover;
+			background-repeat: no-repeat;
+			width: $account-watermark-size;
+			height: $account-watermark-size;
+		}
+	}
+
+	&__inner {
+		width: 100%;
+		display: grid;
+		grid-template-columns: var(--dialog__inner--gtc, 1fr);
+		grid-template-rows: auto 1fr;
+		grid-row-gap: var(--dialog__inner--row-gap, var(--brand__spacing));
+		grid-column-gap: var(--dialog__inner--column-gap, 0);
+		padding: var(--dialog__inner--padding, var(--brand__spacing));
+		max-height: 100%;
+		overflow: auto;
+		overflow-y: var(--dialog__body--overflow-y);
+		@include scrollbar(false);
+
+		@supports (-webkit-touch-callout: none) {
+			min-height: -webkit-fill-available;
+		}
+	}
+
+	&__aside {
+		background-color: var(--dialog__aside--background-color, rgb(var(--brand__color--primary-lighter)));
+		padding: var(--dialog__aside--padding, 0);
+		height: 100%;
+	}
+
+	&__body,
+	&__footer,
+	&__header {
+		padding-inline-start: var(--dialog--pis, 0);
+		padding-inline-end: var(--dialog--pie, 0);
+	}
+
+	&__body {
+		display: grid;
+		grid-template-columns: var(--dialog__body--gtc, 1fr);
+		grid-gap: var(--dialog__body--gap, var(--brand__spacing--large));
+		width: 100%;
+		max-width: 100%;
+		max-height: 100%;
+		padding: var(--dialog__body--padding, 0px);
+		padding-block-start: var(--dialog__body--pbs);
+
+		&.has-watermark {
+			overflow: hidden;
+
+			&::after {
+				display: var(--set-brand__dialog-watermark-after--display,
+				var(--brand__dialog-watermark-after--display, none));
+				content: "";
+				@include absolute(null, -80px, -40%, null);
+				background-image: var(--brand__dialog-watermark-after--background-image, var(--brand__watermark));
+				background-size: cover;
+				background-repeat: no-repeat;
+				width: var(--brand__dialog-watermark-after--width, 400px);
+				height: var(--brand__dialog-watermark-after--height, 400px);
+			}
+
+			@include mq($from: large) {
+				--brand__dialog-watermark-after--display: block;
+			}
+
+			@include mq($from: larger) {
+				--brand__dialog-watermark-after--width: 480px;
+				--brand__dialog-watermark-after--height: 480px;
+			}
+		}
+	}
+
+	&__header {
+		--set-brand__heading--margin-bottom: 0;
+		padding-block-start: var(--dialog__header--pbs, 0);
+	}
+
+	&__footer {
+		--brand__btn--color: rgb(var(--brand__color--primary));
+		--brand__btn-hover--color: rgb(var(--brand__color--primary));
+		--brand__btn--margin: var(--brand__spacing--tiny) var(--brand__spacing--small);
+		padding-block-end: var(--dialog__footer--pbe, 0);
+		padding-block-start: var(--dialog__footer--pbs, var(--dialog-border-spacing));
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		justify-content: var(--dialog__footer--justify-content, flex-end);
+		margin-inline-end: calc(var(--brand__spacing--small) * -1);
+		margin-inline-start: calc(var(--brand__spacing--small) * -1);
+	}
+}
+
+.o-dialog--tiny {
+	--dialog__document--max-width: 800px;
+	--dialog__close-btn-label--display: block;
+	--dialog__body--pbs: var(--brand__spacing);
+	--dialog__document--margin: auto var(--brand__spacing--small);
+	--dialog__document--bg: rgb(var(--brand__color--white));
+	--dialog__document__border-radius: var(--brand__border-radius);
+	--dialog__document--max-height: auto;
+	--dialog__body--gap: var(--brand__spacing);
+	--dialog__footer--pbs: 0;
+	--dialog__footer--pbe: var(--brand__spacing);
+	--btn-close-icon-svg--fill: var(--dialog__close-icon-svg--fill);
+	--btn-close-icon--background-color: var(
+		--dialog__close-btn-icon--background-color,
+		rgb(var(--brand__color--primary-light))
+	);
+	--box-desktop--pis: var(--brand__spacing);
+	--box-desktop--pie: var(--brand__spacing);
+	--box-desktop--pbs: var(--brand__spacing);
+	--box-desktop--pbe: var(--brand__spacing);
+
+	@include mq($from: large) {
+		--dialog__inner--gtc: 1fr;
+		--dialog--pis: var(--brand__spacing--large);
+		--dialog--pie: var(--brand__spacing--large);
+		--dialog__body--padding: var(--brand__spacing) var(--brand__spacing--large);
+		--dialog__body--pbs: var(--brand__spacing--large);
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.o-dialog__close {
+		transition: none;
+	}
+	.o-dialog__content {
+		animation: none;
+	}
+}
+
+@keyframes slide-up {
+	from {
+		transform: translateY(-5%);
+	}
+}
+
+@keyframes fade-in {
+	from {
+		opacity: 0;
+	}
+}

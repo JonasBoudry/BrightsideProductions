@@ -1,0 +1,34 @@
+{{!--
+	Flex Grid exist of:
+	# several columns: [
+		- o-grid--column-1
+		- o-grid--column-2
+		- o-grid--column-3
+		- o-grid--column-4
+		- o-grid--column-5
+	# several gaps:
+		- o-grid--tiny
+		- o-grid--small-
+		- o-grid--large
+		- o-grid--huge
+		- o-grid--flush
+--}}
+<div class="o-grid
+	{{#if 1-column}}o-grid--column-1{{/if}}
+	{{#if 2-column}}o-grid--column-2{{/if}}
+	{{#if 3-column}}o-grid--column-3{{/if}}
+	{{#if 4-column}}o-grid--column-4{{/if}}
+	{{#if 5-column}}o-grid--column-5{{/if}}
+	{{#if gapTiny}}o-grid--tiny{{/if}}
+	{{#if gapSmall}}o-grid--small{{/if}}
+	{{#if gapLarge}}o-grid--large{{/if}}
+	{{#if gapHuge}}o-grid--huge{{/if}}
+	">
+
+	{{#each items}}
+	<div class="o-grid__cell">
+		{{> @partial-block}}
+	</div>
+	{{/each}}
+
+</div>

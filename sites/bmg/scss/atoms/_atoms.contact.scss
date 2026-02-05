@@ -1,0 +1,7 @@
+.a-contact {
+	ul {
+		@include list-unstyle();
+		display: flex;
+		flex-direction: column;
+	}
+}

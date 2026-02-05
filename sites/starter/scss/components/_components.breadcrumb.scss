@@ -1,0 +1,85 @@
+.c-breadcrumb-list {
+	display: flex;
+	flex-wrap: var(--breadcrumb-list--flex-wrap, wrap);
+
+	&.has-ellipsis {
+		--breadcrumb-item-last-child--white-space: nowrap;
+		--breadcrumb-item-last-child--overflow: hidden;
+		--breadcrumb-item-last-child--text-overflow: ellipsis;
+
+		@include mq($from: desktop) {
+			--breadcrumb-list--flex-wrap: auto;
+		}
+	}
+
+	&:not(.has-ellipsis) {
+		@include mq($until: desktop) {
+			--breadcrumb-item--display: none;
+			--breadcrumb-item-nth-last-child-3-before--content: "...";
+		}
+	}
+}
+
+.c-breadcrumb-item {
+	display: var(--breadcrumb-item--display);
+	flex-shrink: var(--breadcrumb-item--flex-shrink, 0);
+	white-space: var(--breadcrumb-item--white-space);
+	overflow: var(--breadcrumb-item--overflow);
+	text-overflow: var(--breadcrumb-item--text-overflow);
+
+	@include mq($until: desktop) {
+		&:first-child, &:nth-last-child(2), &:nth-last-child(3) {
+			--breadcrumb-item--display: block;
+		}
+
+		&:nth-last-child(2) {
+			--breadcrumb-item__icon--display: none;
+		}
+
+		&:nth-last-child(3) {
+			--breadcrumb-item-before--content: var(--breadcrumb-item-nth-last-child-3-before--content);
+		}
+	}
+
+	&:last-child {
+		--breadcrumb-item__icon--display: none;
+		--breadcrumb-item--flex-shrink: 1;
+		--breadcrumb-item--white-space: var(--breadcrumb-item-last-child--white-space);
+		--breadcrumb-item--overflow: var(--breadcrumb-item-last-child--overflow);
+		--breadcrumb-item--text-overflow: var(--breadcrumb-item-last-child--text-overflow);
+
+		@include mq($until: desktop) {
+			--breadcrumb-item--display: none;
+		}
+	}
+
+	@include before {
+		content: var(--breadcrumb-item-before--content);
+		color: rgb(var(--brand__color--primary));
+	}
+}
+
+.c-breadcrumb-item__link {
+	font-size: var(--brand__font-size--small);
+	font-weight: $brand__font-weight--light;
+	color: var(--breadcrumb-item__link, rgb(var(--brand__color--primary)));
+	text-transform: uppercase;
+	text-decoration: underline;
+	text-underline-offset: 3px;
+	text-decoration-thickness: 2px;
+
+	@include hover {
+		--breadcrumb-item__link: rgb(var(--brand__color--secondary));
+	}
+}
+
+.c-breadcrumb-item__text {
+	font-size: var(--brand__font-size--small);
+	font-weight: $brand__font-weight--light;
+	text-transform: uppercase;
+}
+
+.c-breadcrumb-item__icon {
+	display: var(--breadcrumb-item__icon--display);
+	margin: 0 var(--brand__spacing--small);
+}

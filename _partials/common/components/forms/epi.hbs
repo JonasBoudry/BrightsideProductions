@@ -1,0 +1,244 @@
+<link rel="stylesheet" href="../../../../../infrastructure/epi/forms/4.18.0/ClientResources/ViewMode/EPiServerForms.css" />
+
+<form method="post" novalidate="novalidate" data-f-metadata="" enctype="multipart/form-data" class="o-wrapper EPiServerForms ValidationSuccess"
+    data-f-type="form" id="a581c21c-717c-48c9-ab58-a32c6a1b4c63" data-component-class="Forms">
+    
+    <h2 class="Form__Title">Forms container block</h2>
+    <aside class="Form__Description">A form containing two columns</aside>
+
+
+    <div class="Form__Status">
+        <div class="Form__Status__Message Form__Warning__Message" data-f-form-statusmessage="">You must be logged in to
+            submit this form. If you are logged in and still cannot post, make sure "Do not track" in your browser
+            settings is disabled.</div>
+    </div>
+
+    <div data-f-mainbody="" class="Form__MainBody">
+
+        <section id="__field_" data-f-type="step" data-f-element-name="__field_" class="Form__Element FormStep Form__Element--NonData "
+            data-f-stepindex="0" data-f-element-nondata="">
+
+
+            <!-- Each FormStep groups the elements below it til the next FormStep -->
+            <div class="Form__Element FormCaptcha" data-f-element-name="__field_1361" data-f-type="captcha">
+                <label class="Form__Element__Caption" for="8bb7355f-6673-4d0c-9895-94f295a32ce0">
+                    Word verification
+                    <button name="submit" type="submit" data-f-captcha-image-handler="8bb7355f-6673-4d0c-9895-94f295a32ce0"
+                        value="RefreshCaptcha" class="FormExcludeDataRebind FormCaptcha__Refresh"
+                        data-f-captcha-refresh="">
+                        Refresh captcha
+                    </button>
+                </label>
+                <img src="../../../../../infrastructure/epi/forms/GetCaptchaImage.jpg"
+                    alt="An error has occurred while getting captcha image" class="FormCaptcha__Image"
+                    data-f-captcha-image="">
+                <input id="8bb7355f-6673-4d0c-9895-94f295a32ce0" name="__field_1361" type="text" class="FormTextbox__Input FormCaptcha__Input FormHideInSummarized"
+                    data-f-datainput="">
+
+                <span class="Form__Element__ValidationError" data-f-linked-name="__field_1361" data-f-validationerror=""
+                    style="display:none"></span>
+            </div>
+            <div class="Form__Element FormChoice" data-f-element-name="__field_1362" data-f-type="choice" id="8983aa59-56f5-4efd-9b15-b859f4d13820">
+                <span class="Form__Element__Caption">Multiple or single choice</span>
+                <span class="Form__Element__ValidationError" data-f-linked-name="__field_1362" data-f-validationerror=""
+                    style="display:none"></span>
+            </div>
+            <div class="Form__Element FormFileUpload" data-f-element-name="__field_1363" data-f-type="fileupload">
+                <label for="99b4ccb9-9adb-4482-965b-952a6b0c7192" class="Form__Element__Caption">File upload</label>
+                <input name="__field_1363" id="99b4ccb9-9adb-4482-965b-952a6b0c7192" type="file" class="FormFileUpload__Input"
+                    data-f-datainput="">
+                <div class="FormFileUpload__PostedFile" data-f-postedfile=""></div>
+                <span class="Form__Element__ValidationError" data-f-linked-name="__field_1363" data-f-validationerror=""
+                    style="display:none"></span>
+            </div>
+            <div class="Form__Element FormChoice FormChoice--Image" data-f-element-name="__field_1364" data-f-type="choice"
+                id="46270404-1a66-4830-b928-47ddc79211d6">
+                <div class="Form__Element__Caption">Image choice</div>
+                <span class="Form__Element__ValidationError" data-f-linked-name="__field_1364" data-f-validationerror=""
+                    style="display:none"></span>
+            </div>
+            <div class="Form__Element FormTextbox FormTextbox--Number" data-f-element-name="__field_1365"
+                data-f-modifier="number" data-f-type="textbox">
+                <label for="769ab1f4-5742-4d28-ae74-e62f3172c71e" class="Form__Element__Caption">Number</label>
+                <input name="__field_1365" id="769ab1f4-5742-4d28-ae74-e62f3172c71e" type="number" placeholder="" class="FormTextbox__Input"
+                    data-f-datainput="" value="">
+                <span class="Form__Element__ValidationError" data-f-linked-name="__field_1365" data-f-validationerror=""
+                    style="display:none"></span>
+
+            </div>
+            <div class="Form__Element FormParagraphText Form__Element--NonData" data-f-element-name="__field_1366"
+                data-f-element-nondata="">
+                <div name="__field_1366" id="e826ecf4-d96a-4035-9d4c-cb25c6ff7dbf"></div>
+                <script type="text/javascript">
+                    if (typeof $$epiforms !== 'undefined') {
+                        $$epiforms(document).ready(function () {
+                            $$epiforms('.EPiServerForms, [data-f-type="form"]').on("formsNavigationNextStep formsSetupCompleted", function (event) {
+                                (function ($) {
+                                    var text = "",
+                                        workingFormInfo = event.workingFormInfo,
+                                        searchPattern = null,
+                                        $workingForm = workingFormInfo.$workingForm,
+                                        $currentElement = $("#e826ecf4-d96a-4035-9d4c-cb25c6ff7dbf", $workingForm);
+
+                                    // if cannot find the element in form, do nothing
+                                    if (!$currentElement || $currentElement.length == 0) {
+                                        return;
+                                    }
+
+                                    var data = epi.EPiServer.Forms.Data.loadFormDataFromStorage(workingFormInfo.Id);
+
+                                    // replace placeholder with real field value
+                                    for (var fieldName in workingFormInfo.ElementsInfo) {
+                                        if (workingFormInfo.FieldsExcludedInSubmissionSummary.indexOf(fieldName) != -1) {
+                                            continue;
+                                        }
+                                        var elementInfo = workingFormInfo.ElementsInfo[fieldName],
+                                            friendlyName = elementInfo.friendlyName;
+                                        if (!friendlyName) {
+                                            continue;
+                                        }
+                                        var value = elementInfo && elementInfo.customBinding == true ?
+                                            epi.EPiServer.Forms.CustomBindingElements[elementInfo.type](elementInfo, data[fieldName])
+                                            : data[fieldName];
+                                        if (value == null || value === undefined) {
+                                            value = "";
+                                        }
+
+                                        // If the element is inactive (hidden due to dependency rules), set its value to empty
+                                        if (workingFormInfo.DependencyInactiveElements && workingFormInfo.DependencyInactiveElements.indexOf(fieldName) !== -1) {
+                                            value = "";
+                                        }
+
+                                        //We have to encode the friendlyName before replacing it with placeholders in the paragraph text because the paragraph text is already encoded.
+                                        var encodedFriendlyName = $('<div></div>').text(friendlyName).html();
+
+                                        //https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String/replace
+                                        //https://msdn.microsoft.com/en-us/library/ewy2t5e0.aspx
+                                        var escapeSpecialCharacterFromEncodedFriendlyName = encodedFriendlyName.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
+                                        searchPattern = new RegExp("#" + escapeSpecialCharacterFromEncodedFriendlyName + "#", 'g');
+                                        text = text.replace(searchPattern, $('<div></div>').text(value).html());
+                                    }
+
+                                    $currentElement.html(text);
+
+                                })($$epiforms);
+                            });
+                        });
+                    }
+                </script>
+            </div>
+
+            <input name="__field_1367" id="a7cbf85c-d73c-428c-96f7-cde5c536347e" type="hidden" value="" class="Form__Element FormHidden FormHideInSummarized"
+                data-f-type="hidden">
+            <div class="Form__Element FormRange" data-f-element-name="__field_1368" data-f-type="range">
+                <label for="ee0d6a32-5ac4-40a6-82f9-fe2ee15a5b80" class="Form__Element__Caption">Range</label>
+                <span>
+                    <span class="FormRange__Min">0</span>
+                    <input name="__field_1368" id="ee0d6a32-5ac4-40a6-82f9-fe2ee15a5b80" type="range" class="FormRange__Input"
+                        value="0" data-f-datainput="" min="0" max="10" step="1">
+                    <span class="FormRange__Max">10</span>
+                </span>
+                <span data-f-linked-name="__field_1368" data-f-validationerror="" class="Form__Element__ValidationError">Error</span>
+            </div>
+
+            <input type="reset" form="a581c21c-717c-48c9-ab58-a32c6a1b4c63" class="Form__Element FormResetButton Form__Element--NonData"
+                data-f-element-nondata="" value="Reset form" data-f-type="resetbutton">
+            <div class="Form__Element FormSelection" data-f-element-name="__field_1370" data-f-type="selection">
+                <label for="8a04a767-18c7-4d57-b83e-b3de1937e8b1" class="Form__Element__Caption">Selection</label>
+                <select name="__field_1370" id="8a04a767-18c7-4d57-b83e-b3de1937e8b1" data-f-datainput="">
+                    <option disabled="disabled" selected="selected" value="">Select an option</option>
+                    <option value="">Item 1</option>
+                    <option value="">Item 2</option>
+                    <option value="">Item 3</option>
+                </select>
+                <span class="Form__Element__ValidationError" data-f-linked-name="__field_1370" data-f-validationerror=""
+                    style="display:none"></span>
+            </div>
+
+            <button id="d6d336f7-90f0-4d67-8b96-5037d96813e5" name="submit" type="submit" value="d6d336f7-90f0-4d67-8b96-5037d96813e5"
+                data-f-is-finalized="false" data-f-is-progressive-submit="true" data-f-type="submitbutton" disabled=""
+                class="Form__Element FormExcludeDataRebind FormSubmitButton">
+                Submit
+
+            </button>
+            
+            <div class="Form__Element FormTextbox FormTextbox--Textarea" data-f-element-name="__field_1372"
+                data-f-modifier="textarea" data-f-type="textbox">
+                <label for="065a4706-d556-44bc-b4f0-70a4b9a7d5cd" class="Form__Element__Caption">Text area</label>
+                <textarea name="__field_1372" id="065a4706-d556-44bc-b4f0-70a4b9a7d5cd" class="FormTextbox__Input"
+                    placeholder="" data-f-label="Text area" data-f-datainput=""></textarea>
+                <span class="Form__Element__ValidationError" data-f-linked-name="__field_1372" data-f-validationerror=""
+                    style="display:none"></span>
+            </div>
+            <div class="Form__Element FormTextbox" data-f-element-name="__field_1373" data-f-type="textbox">
+                <label for="5c4134fc-8ea1-4422-9ccb-7684467ea2a0d" class="Form__Element__Caption">Normal text</label>
+                <input name="__field_1373" id="5c4134fc-8ea1-4422-9ccb-7684467ea2a0d" type="text" class="FormTextbox__Input"
+                    placeholder="" data-f-datainput="" value="" />
+
+
+            </div>
+            <div class="Form__Element FormTextbox" data-f-element-name="__field_1373" data-f-type="textbox">
+                <label for="5c4134fc-8ea1-4422-9ccb-7684467ea2a0c" class="Form__Element__Caption">Text with placeholder</label>
+                <input name="__field_1373" id="5c4134fc-8ea1-4422-9ccb-7684467ea2a0c" type="text" class="FormTextbox__Input"
+                    placeholder="Here's already a placeholder" data-f-datainput="" value="" />
+
+
+            </div>
+            <div class="Form__Element FormTextbox" data-f-element-name="__field_1373" data-f-type="textbox">
+                <label for="5c4134fc-8ea1-4422-9ccb-7684467ea2a0b" class="Form__Element__Caption">Text with value</label>
+                <input name="__field_1373" id="5c4134fc-8ea1-4422-9ccb-7684467ea2a0b" type="text" class="FormTextbox__Input"
+                    placeholder="" data-f-datainput="" value="Here's already content" />
+
+                <span class="Form__Element__ValidationError" data-f-linked-name="__field_1373" data-f-validationerror=""
+                   >Invalid content</span>
+
+            </div>
+            <div class="Form__Element FormTextbox" data-f-element-name="__field_1373" data-f-type="textbox">
+                <label for="5c4134fc-8ea1-4422-9ccb-7684467ea2a0b" class="Form__Element__Caption">Text with value and placeholder</label>
+                <input name="__field_1373" id="5c4134fc-8ea1-4422-9ccb-7684467ea2a0b" type="text" class="FormTextbox__Input"
+                    placeholder="Here's a placeholder" data-f-datainput="" value="Here's already content" />
+
+                <span class="Form__Element__ValidationError" data-f-linked-name="__field_1373" data-f-validationerror=""
+                   >Invalid content</span>
+
+            </div>
+            <div class="Form__Element FormTextbox" data-f-element-name="__field_137" data-f-type="textbox">
+                <label for="5c4134fc-8ea1-4422-9ccb-7684467ea2a0a" class="Form__Element__Caption">Text required</label>
+                <input name="__field_1373" id="5c4134fc-8ea1-4422-9ccb-7684467ea2a0a" type="text" class="FormTextbox__Input"
+                    placeholder="" data-f-datainput="" required value="" />
+
+                <span class="Form__Element__ValidationError" data-f-linked-name="__field_1373" data-f-validationerror=""
+                   >Invalid content</span>
+
+            </div>
+            
+            <div class="Form__Element FormTextbox" data-f-element-name="__field_137" data-f-type="textbox">
+                <label for="5c4134fc-8ea1-4422-9ccb-7684467ea2a0a" class="Form__Element__Caption">Text required with placeholder</label>
+                <input name="__field_1373" id="5c4134fc-8ea1-4422-9ccb-7684467ea2a0a" type="text" class="FormTextbox__Input"
+                    placeholder="required" data-f-datainput="" required value="" />
+
+                <span class="Form__Element__ValidationError" data-f-linked-name="__field_1373" data-f-validationerror=""
+                   >Invalid content</span>
+
+            </div>
+            <div class="Form__Element FormTextbox FormTextbox--Url" data-f-element-name="__field_1374" data-f-modifier="url"
+                data-f-type="textbox">
+                <label for="ccda3c44-4dc9-453d-9a22-4dae8969b79f" class="Form__Element__Caption">Url</label>
+                <input name="__field_1374" id="ccda3c44-4dc9-453d-9a22-4dae8969b79f" type="url" class="FormTextbox__Input FormUrl__Input"
+                    placeholder="" value="" data-f-datainput="">
+
+                <span class="Form__Element__ValidationError" data-f-linked-name="__field_1374" data-f-validationerror=""
+                    style="display:none"></span>
+            </div>
+
+            <input name="__field_1375" id="b22d5717-be51-4e48-9ae6-59f6a8eeb379" type="hidden" class="Form__Element FormHidden FormHideInSummarized"
+                data-f-type="hidden">
+
+        </section>
+
+
+    </div>
+
+
+
+</form>

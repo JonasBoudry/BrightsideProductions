@@ -1,0 +1,30 @@
+{
+    "bgColor": "u-bg-color-black",
+    "items": [
+        {
+            "plus": true,
+            "number": "10",
+            "steps": "1",
+            "text": "Years experience"
+        },
+        {
+            "plus": true,
+            "number": "150",
+            "steps": "100",
+            "text": "Production partners"
+        },
+        {
+            "plus": true,
+            "number": "1100",
+            "steps": "1",
+            "text": "Productions"
+        },
+        {
+            "plus": true,
+            "number": "165",
+            "accent": "Million",
+            "steps": "10",
+            "text": "mln. Capital raised"
+        }
+    ]
+}

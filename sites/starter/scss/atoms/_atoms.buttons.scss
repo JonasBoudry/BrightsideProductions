@@ -1,0 +1,74 @@
+.c-btn {
+	@include button-unstyle();
+	display: var(--brand__btn--display, inline-flex);
+	align-items: var(--brand__btn--align-items, center);
+	flex-direction: var(--brand__btn--flex-direction);
+	justify-content: var(--brand__btn--justify-content);
+	position: var(--set-brand__btn--position, var(--brand__btn--position, relative));
+	font-size: var(--brand__btn--font-size, var(--brand__font-size--large));
+	font-weight: var(--brand__btn--font-weight, #{$brand__font-weight--bold});
+	text-transform: var(--brand__btn--text-transform, uppercase);
+	color: var(--set-brand__btn--color, var(--brand__btn--color, rgb(var(--brand__color--secondary))));
+	background-color: var(--set-brand__btn--background-color, var(--brand__btn--background-color));
+	border-bottom: var(--set-brand__btn--border-bottom, var(--brand__btn--border-bottom));
+	text-decoration: var(--brand__btn--text-decoration, none);
+	padding: var(--set-brand__btn--padding, var(--brand__btn--padding));
+	cursor: var(--brand__btn--cursor, pointer);
+	opacity: var(--brand__btn--opacity);
+	z-index: var(--set-brand__btn--z-index, var(--brand__btn--z-index));
+	transition: var(--brand__btn--transition, all .3s ease-in);
+
+	&::after {
+		content: "";
+		display: var(--set-brand__btn-after--display, var(--brand__btn-after--display, none));
+		background-image: var(--brand__btn-after--background-image, url("data:image/svg+xml,%3Csvg width='20' height='13' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M14.125 11.9375C13.875 11.6875 13.875 11.4375 14.125 11.1875L18.3125 6.5625H0.5C0.166665 6.5625 0 6.39584 0 6.0625C0 5.72917 0.166665 5.5625 0.5 5.5625H18.3125L14.125 0.937501C13.875 0.6875 13.875 0.437502 14.125 0.187501C14.375 -0.0625003 14.625 -0.0625003 14.875 0.187501C18.1667 3.81252 19.8333 5.64583 19.875 5.6875C19.9583 5.77083 20 5.89583 20 6.0625C20 6.22917 19.9583 6.35417 19.875 6.4375L14.875 11.9375C14.7917 12.0208 14.6667 12.0625 14.5 12.0625C14.3333 12.0625 14.2083 12.0208 14.125 11.9375Z' fill='%23007AFF'/%3E%3C/svg%3E%0A"));
+		background-size: cover;
+		background-repeat: no-repeat;
+		width: 20px;
+		height: 13px;
+		margin-inline-start: var(--brand__spacing--small);
+		transform: var(--brand__btn-after--transform);
+		transition: var(--brand__btn-after--transition, transform .3s);
+	}
+
+	&.disabled, &:disabled {
+		--brand__btn--opacity: .4;
+		--brand__btn--cursor: default;
+	}
+
+	@include hover {
+		--brand__btn--color: rgb(var(--brand__color--secondary-darker));
+		--brand__btn-after--transform: translateX(var(--brand__spacing--small));
+	}
+}
+
+.c-btn--primary {
+	--brand__btn--border-bottom: 4px solid rgb(var(--brand__color--secondary-darker));
+	--brand__btn--padding: var(--brand__spacing);
+	--brand__btn--color: rgb(var(--brand__color--white));
+	--brand__btn--background-color: rgb(var(--brand__color--primary));
+	--brand__btn-after--background-image: url("data:image/svg+xml,%3Csvg width='20' height='13' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M14.125 11.9375C13.875 11.6875 13.875 11.4375 14.125 11.1875L18.3125 6.5625H0.5C0.166665 6.5625 0 6.39584 0 6.0625C0 5.72917 0.166665 5.5625 0.5 5.5625H18.3125L14.125 0.937501C13.875 0.6875 13.875 0.437502 14.125 0.187501C14.375 -0.0625003 14.625 -0.0625003 14.875 0.187501C18.1667 3.81252 19.8333 5.64583 19.875 5.6875C19.9583 5.77083 20 5.89583 20 6.0625C20 6.22917 19.9583 6.35417 19.875 6.4375L14.875 11.9375C14.7917 12.0208 14.6667 12.0625 14.5 12.0625C14.3333 12.0625 14.2083 12.0208 14.125 11.9375Z' fill='%23FFFFFF'/%3E%3C/svg%3E%0A");
+	--brand__btn-after--display: block;
+
+	@include hover {
+		--brand__btn--color: rgb(var(--brand__color--white));
+		--brand__btn--background-color: rgb(var(--brand__color--secondary));
+		--brand__btn-after--transform: translateX(var(--brand__spacing--small));
+	}
+}
+
+.c-btn--secondary {
+	--brand__btn--border-bottom: 2px solid rgb(var(--brand__color--primary));
+	--brand__btn--padding: 0 0 var(--brand__spacing--tiny);
+	--brand__btn-after--display: block;
+}
+
+.c-btn--icon {
+	--brand__btn-after--display: none;
+	--brand__btn__icon--margin-inline-end: 0;
+}
+
+.c-btn__icon {
+	margin-inline-end: var(--brand__btn__icon--margin-inline-end, var(--brand__spacing--small));
+	height: auto;
+}

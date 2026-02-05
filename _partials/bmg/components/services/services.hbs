@@ -1,0 +1,27 @@
+{{#> component renderAsComponent=true bgColor=bgColor}}
+<div class="services" id="{{id}}">
+    <img class="services__img o-fit u-hide-until-desktop" src="{{banner.src}}" srcset="{{banner.srcset}}" alt="{{banner.alt}}"
+        sizes="{{banner.sizes}}" loading="lazy" aria-hidden="true" />
+    <div class="services__content">
+        <div class="o-wrapper o-wrapper--small">
+            <div class="services__body">
+                <h2>{{title}}</h2>
+                <ul class="services__blocks">
+                    {{#each blocks}}
+                    <li class="services__items">
+                        <h3 class="h4">{{title}}</h3>
+                        <ul>
+                            {{#each items}}
+                            <li>
+                                {{label}}
+                            </li>
+                            {{/each}}
+                        </ul>
+                    </li>
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+{{/component}}

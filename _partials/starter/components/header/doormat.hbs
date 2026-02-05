@@ -1,0 +1,40 @@
+<div class="c-doormat {{#if doormat.highlighted-block}} c-doormat--highlighted{{/if}}">
+	<div class="c-nav-primary-item">
+		<a class="c-nav-primary-item__link {{#if doormat}}js-nav-primary-item-link{{/if}} u-hide-large" href="{{link}}">
+			<span class="c-nav-primary-item__text">
+				{{link-text}}
+			</span>
+
+			{{#if doormat}}
+			<span class="c-nav-primary-item__icon u-hide-until-large">
+				{{> common/atoms/svg-icon
+					iconId="chevron"
+					iconHeight=8
+					iconWidth=8
+				}}
+			</span>
+
+			<span class="c-nav-primary-item__icon u-hide-large">
+				{{> common/atoms/svg-icon
+					iconId="arrow-right"
+					iconHeight=11
+					iconWidth=10
+				}}
+			</span>
+			{{/if}}
+		</a>
+	</div>
+
+	<div class="c-doormat__body">
+		{{#if doormat.link-block}}
+		<div class="c-doormat__start u-bg-color-white">
+			{{> starter/components/header/link-block}}
+		</div>
+		{{/if}}
+		{{#if doormat.highlighted-block}}
+		<div class="c-doormat__end {{doormat.highlighted-block.backgroundClass}}">
+			{{> starter/components/header/highlighted-block}}
+		</div>
+		{{/if}}
+	</div>
+</div>

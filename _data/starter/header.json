@@ -1,0 +1,185 @@
+{
+	"primary-navigation": {
+		"items": [
+			{
+				"link-text": "Company",
+				"link": "#",
+				"isDoormat": true,
+				"doormat": {
+					"link-block": {
+						"items": [
+							{
+								"link": "#",
+								"label": "Label One"
+							},
+							{
+								"link": "#",
+								"label": "Label Two"
+							},
+							{
+								"link": "#",
+								"label": "Another label"
+							},
+							{
+								"link": "#",
+								"label": "Label"
+							},
+							{
+								"link": "#",
+								"label": "Longer label"
+							},
+							{
+								"link": "#",
+								"label": "Longwordlabelleditem"
+							},
+							{
+								"link": "#",
+								"label": "Last item"
+							}
+						],
+						"button": {
+							"text": "Example",
+							"src": "#"
+						}
+					}
+				}
+			},
+			{
+				"link-text": "Projects",
+				"link": "#"
+			},
+			{
+				"link-text": "#peopleofdelaware",
+				"link": "#",
+				"isDoormat": true,
+				"doormat": {
+					"link-block": {
+						"items": [
+							{
+								"link": "#",
+								"label": "Label One"
+							},
+							{
+								"link": "#",
+								"label": "Label Two"
+							},
+							{
+								"link": "#",
+								"label": "Another label"
+							},
+							{
+								"link": "#",
+								"label": "Label"
+							},
+							{
+								"link": "#",
+								"label": "Longer label"
+							},
+							{
+								"link": "#",
+								"label": "Longwordlabel"
+							},
+							{
+								"link": "#",
+								"label": "Last label"
+							}
+						],
+						"button": {
+							"text": "Short",
+							"src": "#"
+						}
+					},
+					"highlighted-block": {
+						"image": {
+							"src": "/sites/starter/media/placeholders/placeholder-21-9--white.png"
+						},
+						"rich-text": "<p><strong>Lorem ipsum. </strong>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>",
+						"button": {
+							"isSecondary": true,
+							"text": "Find out how",
+							"src": "#"
+						},
+						"backgroundClass": "u-bg-color-background-accent1"
+					}
+				}
+			},
+			{
+				"link-text": "News & Stories",
+				"link": "#"
+			},
+			{
+				"link-text": "About us",
+				"link": "#",
+				"isDoormat": true,
+				"doormat": {
+					"link-block": {
+						"items": [
+							{
+								"link": "#",
+								"label": "Values"
+							},
+							{
+								"link": "#",
+								"label": "Contact"
+							},
+							{
+								"link": "#",
+								"label": "History"
+							},
+							{
+								"link": "#",
+								"label": "Our people"
+							},
+							{
+								"link": "#",
+								"label": "Facts & Figures"
+							},
+							{
+								"link": "#",
+								"label": "FAQ"
+							},
+							{
+								"link": "#",
+								"label": "Legal info"
+							}
+						],
+						"button": {
+							"text": "About us overview",
+							"src": "#"
+						}
+					}
+				}
+			}
+		]
+	},
+	"secondary-navigation": {
+		"items": [
+			{
+				"link-text": "Contact",
+				"link": "#"
+			},
+			{
+				"link-text": "FAQ",
+				"link": "#"
+			},
+			{
+				"link-text": "Careers",
+				"link": "#"
+			},
+			{
+				"isLanguage": true,
+				"link-text": "Global website - EN",
+				"link": "#"
+			}
+		]
+	},
+	"search": {
+		"title": "How can we help?",
+		"placeholder": "e.g. delaware",
+		"button": {
+			"src": "#",
+			"text": "Search",
+			"title": "Search"
+		}
+	}
+}

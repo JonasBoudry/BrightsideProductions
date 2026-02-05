@@ -1,0 +1,211 @@
+$input-check-size: 20px !default;
+
+.a-field {
+	--label--margin-block-start: 0;
+	--label--line-height: 1;
+	--brand__input--padding: var(--brand__spacing--small) 20px;
+	--select--padding: var(--brand__spacing--small) 140px var(--brand__spacing--small) 20px;
+
+	position: relative;
+	display: flex;
+	flex-direction: column;
+
+	&:focus-within,
+	&.has-value {
+		--field__label--top: var(--field-label-focus--top, 4px);
+		--label--font-size: var(--field-label-focus--font-size, 65%);
+	}
+
+	&.has-error {
+		--brand__input--bg-color: rgba(var(--brand__color--alert), 0.1);
+		--field-input--oc: rgba(var(--brand__color--alert), 0.3);
+		color: rgb(var(--brand__color--alert));
+	}
+
+	&[area-disabled="true"] {
+		opacity: var(--field-disabled--opacity, 0.5);
+	}
+
+	&--grow {
+		flex-grow: 1;
+		textarea {
+			flex-grow: inherit;
+		}
+	}
+
+	&--select {
+		@include after(attr(data-selected)) {
+			display: block;
+			font-size: 15px;
+			@include absolute(calc(var(--brand__spacing--small) + 2px), 60px, null, null, 1);
+		}
+
+		&.has-error {
+			--select--background-color: rgba(var(--brand__color--alert), 0.1)
+		}
+	}
+
+	&--top-label {
+		--set-label--font-weight: #{$brand__font-weight--medium};
+		--label--color: rgb(var(--brand__color--gray-darker));
+		--field-label-focus--font-size: 100%;
+		--field-label-focus--top: auto;
+		--field__label--position: relative;
+		--field__label--top: auto;
+		--field__label--left: auto;
+		--field__label--right: auto;
+		--field__label--pbs: 4px;
+		--field__label--color: rgb(var(--brand__color--gray-darker));
+		--field-gap--mie: 5px;
+		--field-gap--mbe: 5px;
+		--select--background-color: rgb(var(--brand__color--white));
+		--brand__input--bg-color: rgb(var(--brand__color--white));
+		--brand__input--border: var(--field__top-label-input--border-width, 1px) solid
+			rgb(var(--brand__color--gray-dark));
+
+		.a-field__label {
+			margin-block-end: 3px;
+		}
+	}
+
+	&--checkbox {
+		--field-label-focus--font-size: 100%;
+		--field-label-focus--top: auto;
+		--field__label--position: relative;
+		--field__label--top: auto;
+		--field__label--left: auto;
+		--field__label--right: auto;
+		cursor: pointer;
+		position: relative;
+		display: flex;
+
+		&[area-disabled="true"] {
+			cursor: inherit;
+		}
+
+		input {
+			@include absolute(0, 0, 0, 0, -1);
+			display: var(--field-checkbox__input--display, block);
+			visibility: hidden;
+		}
+
+		input:checked ~ .a-field__label {
+			--field__label-after--content: "";
+			--field__label-before--bgc: var(
+				--field-checkbox-checked__label-before--bgc,
+				rgb(var(--brand__color--primary))
+			);
+			--field__label-before--border-color: rgb(var(--brand__color--primary));
+			--field__label-before--bgi: var(--field-checkbox-checked__label--bgi);
+			background-color: var(--set-field-checkbox-checked__label--bgc, var(--field-checkbox-checked__label--bgc, transparent));
+		}
+
+		&.has-error {
+			--field__label-before--border-color: rgba(var(--brand__color--alert), 0.3);
+
+			.a-field__label {
+				color: rgba(var(--brand__color--alert, 0.3));
+			}
+		}
+
+		.a-field__label {
+			margin-inline-end: var(--set-field-checkbox__label--mie, var(--field-checkbox__label--mie, 0));
+			padding-inline-start: var(
+				--field-checkbox__label--mis,
+				calc(#{$input-check-size} + var(--brand__spacing--tiny))
+			);
+			padding-inline-end: var(--field-checkbox__label--pie, 0);
+			padding-block-start: var(--field-checkbox__label--pbs, 0);
+			padding-block-end: var(--field-checkbox__label--pbs, 0);
+			border-radius: var(--brand__border-radius--small);
+
+			@include before(var(--field__label-before__content, "")) {
+				@include absolute(var(--field-checkbox__label-before--top, -4px), null, null, 0);
+				display: inline-block;
+				line-height: 1;
+				border: var(
+					--field__label-before--border,
+					2px solid var(--field__label-before--border-color, rgb(var(--brand__color--border-dark)))
+				);
+				border-radius: var(--brand__border-radius--small);
+				width: $input-check-size;
+				height: $input-check-size;
+				margin: var(--field__label-before--margin, 0);
+				background-image: var(--field__label-before--bgi);
+				background-repeat: no-repeat;
+				background-size: contain;
+				background-color: var(--field__label-before--bgc, rgb(var(--brand__color--white)));
+			}
+
+			@include after(var(--set-field__label-after--content, var(--field__label-after--content, none))) {
+				display: inline-block;
+				@include absolute(var(--field-checkbox__label-after--top, 2px), null, null, 5px);
+				width: 10px;
+				height: 10px;
+				background-image: var(--field__label-after--background-image, var(--brand__input-check));
+				background-size: cover;
+				background-position: center;
+			}
+		}
+
+		&.is-ro {
+			--set-field__label-after--content: none;
+			--field__label-before--border: none;
+			--field-checkbox__label-before--top: 8px;
+			--field__label-before--margin: 0 0 0 var(--brand__spacing--tiny);
+			--field__label-before--bgc: transparent;
+			--field-checkbox-checked__label--bgi: var(--brand__input-check-ro);
+			--field-checkbox-checked__label-before--bgc: transparent;
+			--field-checkbox-checked__label--bgc: var(
+				--field-checkbox-ro__label--bgc,
+				rgb(var(--brand__color--primary-lighter))
+			);
+			--field-disabled--opacity: 0.8;
+			--set-field-checkbox__label--mie: 0;
+			--field-checkbox__input--display: none;
+			--field-checkbox__label--pbs: var(--brand__spacing--tiny);
+			--field-checkbox__label--pbe: var(--brand__spacing--tiny);
+			--field-checkbox__label--mis: calc(#{$input-check-size} + var(--brand__spacing--small));
+			--field-checkbox__label--pie: var(--brand__spacing--tiny);
+
+			input:not(:checked) ~ .a-field__label {
+				--field-checkbox__label--mis: var(--brand__spacing--small);
+			}
+		}
+	}
+
+	input {
+		&:focus-visible {
+			outline-color: var(--field-input--oc, rgb(var(--brand__color--border)));
+		}
+	}
+
+	.is-required {
+		@include after("*") {
+			display: inline-block;
+			vertical-align: super;
+			transform: translateY(4px);
+			line-height: 0;
+			margin-inline-start: 4px;
+		}
+	}
+
+	&__label {
+		display: inline-flex;
+		pointer-events: none;
+		position: var(--field__label--position, absolute);
+		top: var(--field__label--top, calc(var(--brand__input--height) / 2.7));
+		right: var(--field__label--right, var(--brand__spacing--small));
+		left: var(--field__label--left, var(--brand__spacing--small));
+		z-index: 1;
+		font-size: var(--field__label--font-size, inherit);
+		transition: top 0.3s ease;
+		color: var(--field__label--color, currentColor);
+	}
+
+	&__info {
+		font-size: var(--brand__font-size--small);
+		color: currentColor;
+		@include absolute(calc(100% + 4px), null, null, 0, 1);
+	}
+}

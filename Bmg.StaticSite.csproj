@@ -1,0 +1,287 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <ProjectGuid>{CBA77485-7BD2-4C55-9F8D-3E15F145BCC5}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <OutputPath>bin</OutputPath>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+    <TypeScriptToolsVersion>3.0</TypeScriptToolsVersion>
+    <TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+    <Use64BitIISExpress />
+  </PropertyGroup>
+  <PropertyGroup>
+    <IncludeScss>bundles\**\*.scss</IncludeScss>
+    <IncludeHtml>bundles\**\*.html</IncludeHtml>
+    <IncludeJs>bundles\*\js\**\*.js</IncludeJs>
+    <IncludeTs>bundles\**\*.ts</IncludeTs>
+    <IncludeDts>typings\**\*.d.ts</IncludeDts>
+    <IncludeCommon>common\**\*.js;common\**\*.css;common\**\*.scss;common\**\*.html</IncludeCommon>
+    <IncludeCommonTs>common\**\*.ts</IncludeCommonTs>
+    <IncludeContent>bundles\*\content\**\*;bundles\*\css\**\*;bundles\*\fonts\**\*</IncludeContent>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include=".gitignore" />
+    <Content Include="assets\Svg\horsepower.svg" />
+    <Content Include="assets\Svg\loading.svg" />
+    <Content Include="assets\Svg\motor.svg" />
+    <Content Include="assets\Svg\next.svg" />
+    <Content Include="assets\Svg\previous.svg" />
+    <Content Include="assets\Svg\search.svg" />
+    <Content Include="assets\Svg\settings.svg" />
+    <Content Include="assets\Svg\speed.svg" />
+    <Content Include="infrastructure\lib\precompile-handlebars-custom.js" />
+    <Content Include="infrastructure\loader.js" />
+    <Content Include="parameters.xml" />
+    <Content Include="sites\demo\clickmodel\components\CarsSpotlight\CarSpotlight.html" />
+    <Content Include="sites\demo\clickmodel\components\CarsSpotlight\_CarCarousel.html" />
+    <Content Include="sites\demo\clickmodel\components\CarsSpotlight\_CarHighlight.html" />
+    <Content Include="sites\demo\clickmodel\components\CarsSpotlight\_CarParallax.html" />
+    <Content Include="sites\demo\clickmodel\components\CarsSpotlight\_CarSpecification.html" />
+    <Content Include="sites\demo\clickmodel\components\CarsSpotlight\_CarTrial.html" />
+    <Content Include="sites\demo\clickmodel\components\Footer\Footer.html" />
+    <Content Include="sites\demo\clickmodel\components\Header\Header.html" />
+    <Content Include="sites\demo\clickmodel\components\Header\_HeaderNav.html" />
+    <Content Include="sites\demo\clickmodel\components\Header\_HeaderZero.html" />
+    <Content Include="sites\demo\clickmodel\components\Mailtemplate\Template3column.html" />
+    <Content Include="sites\demo\clickmodel\components\Pagination\Pagination.html" />
+    <Content Include="sites\demo\clickmodel\components\ProductFacet\ProductFacet.html" />
+    <Content Include="sites\demo\clickmodel\components\ProductThumbs\ProductThumbs.html" />
+    <Content Include="sites\demo\clickmodel\components\RelatedProducts\RelatedProducts.html" />
+    <Content Include="sites\demo\clickmodel\components\richText\richText.html" />
+    <Content Include="sites\demo\clickmodel\components\SearchResults\SearchResults.html" />
+    <Content Include="sites\demo\clickmodel\index.html" />
+    <Content Include="sites\demo\clickmodel\pages\Forms.html" />
+    <Content Include="sites\demo\clickmodel\pages\General.html" />
+    <Content Include="sites\demo\clickmodel\pages\Mail_Template3column.html" />
+    <Content Include="sites\demo\clickmodel\pages\ProductDetail.html" />
+    <Content Include="sites\demo\clickmodel\pages\ProductFacets.html" />
+    <Content Include="sites\demo\clickmodel\pages\ProductSearch.html" />
+    <Content Include="sites\demo\clickmodel\pages\Richtext.html" />
+    <Content Include="sites\demo\clickmodel\pages\Webforms.html" />
+    <Content Include="sites\demo\content\img\2012_bmw_z4_convertible_sdrive35i_fq_oem_10_1600_main.jpg" />
+    <Content Include="sites\demo\content\img\2013_audi_allroad_wagon_premium_quattro_fq_oem_12_1600_main.jpg" />
+    <Content Include="sites\demo\content\img\2013_audi_tt_coupe_20t_premium_plus_quattro_fq_oem_2_1600_main.jpg" />
+    <Content Include="sites\demo\content\img\2013_bmw_1_series_coupe_135is_fq_oem_4_1600_main.jpg" />
+    <Content Include="sites\demo\content\img\audi_logo.gif" />
+    <Content Include="sites\demo\content\img\banner.jpg" />
+    <Content Include="sites\demo\content\img\BMW_logo.png" />
+    <Content Include="sites\demo\content\img\brand-audi.svg" />
+    <Content Include="sites\demo\content\img\brand-bmw.png" />
+    <Content Include="sites\demo\content\img\brand-mercedes.svg" />
+    <Content Include="sites\demo\content\img\brand-vw.png" />
+    <Content Include="sites\demo\content\img\favicon.png" />
+    <Content Include="sites\demo\content\img\logo.png" />
+    <Content Include="sites\demo\content\img\logo_be_mini.png" />
+    <Content Include="sites\demo\content\img\Mailing_Audi.png" />
+    <Content Include="sites\demo\content\img\Mailing_BMW.png" />
+    <Content Include="sites\demo\content\img\Mailing_Mini.png" />
+    <Content Include="sites\demo\content\img\Mini.jpeg" />
+    <Content Include="sites\demo\content\img\MiniBack.png" />
+    <Content Include="sites\demo\content\img\MiniBackBg.jpeg" />
+    <Content Include="sites\demo\content\img\MiniBackLeft.png" />
+    <Content Include="sites\demo\content\img\MiniBackLeftBg.jpeg" />
+    <Content Include="sites\demo\content\img\MiniBrown.gif" />
+    <Content Include="sites\demo\content\img\MiniFront.png" />
+    <Content Include="sites\demo\content\img\MiniFrontBg.jpeg" />
+    <Content Include="sites\demo\content\img\MiniFrontInside.jpeg" />
+    <Content Include="sites\demo\content\img\MiniFrontRight.png" />
+    <Content Include="sites\demo\content\img\MiniFrontRightBg.jpeg" />
+    <Content Include="sites\demo\content\img\MiniGray.gif" />
+    <Content Include="sites\demo\content\img\MiniLeftInside.jpeg" />
+    <Content Include="sites\demo\content\img\MiniOpenBg.jpeg" />
+    <Content Include="sites\demo\content\img\MiniRed.gif" />
+    <Content Include="sites\demo\content\img\MiniWhite.gif" />
+    <Content Include="sites\demo\content\img\MiniYellow.gif" />
+    <Content Include="sites\demo\fonts\IcoFont\ico.svg" />
+    <Content Include="assets\icomoon\DemoFont\demo-files\demo.css" />
+    <Content Include="assets\icomoon\DemoFont\demo-files\demo.js" />
+    <Content Include="assets\icomoon\DemoFont\demo.html" />
+    <Content Include="assets\icomoon\DemoFont\fonts\ico.svg" />
+    <Content Include="assets\icomoon\DemoFont\Read Me.txt" />
+    <Content Include="assets\icomoon\DemoFont\style.css" />
+    <Content Include="infrastructure\lib\handlebars.js" />
+    <Content Include="sites\demo\js\lib\parallax\parallax.js" />
+    <Content Include="sites\demo\js\lib\readme.txt" />
+    <Content Include="webpack.config.js" />
+    <TypeScriptCompile Include="sites\demo\clickmodel\components\CarsSpotlight\CarSpotLight.ts" />
+    <TypeScriptCompile Include="sites\demo\js\config\webpack-entry.ts" />
+    <TypeScriptCompile Include="sites\demo\js\index.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="infrastructure\auth\login.aspx" />
+    <Content Include="infrastructure\auth\login.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="gulpfile.js" />
+    <Content Include="index.html" />
+    <Content Include="robots.txt" />
+    <Content Include="web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="package.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="tsconfig.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\icomoon\DemoFont\fonts\ico.eot" />
+    <Content Include="assets\icomoon\DemoFont\fonts\ico.ttf" />
+    <Content Include="assets\icomoon\DemoFont\fonts\ico.woff" />
+    <Content Include="assets\icomoon\DemoFont\selection.json" />
+    <Content Include=".tfignore" />
+    <Content Include="Bmg.StaticSite.wpp.targets" />
+    <None Include="Properties\PublishProfiles\slnsupp-static.pubxml">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="sites\demo\scss\demo.scss" />
+    <Content Include="sites\demo\scss\vendors\icomoon\_vendors.icons.icomoon.scss" />
+    <Content Include="sites\demo\scss\utilities\_utilities.colors.scss" />
+    <Content Include="sites\demo\scss\utilities\_utilities.floats.scss" />
+    <Content Include="sites\demo\scss\utilities\_utilities.responsive.hide.scss" />
+    <Content Include="sites\demo\scss\utilities\_utilities.text.scss" />
+    <Content Include="sites\demo\scss\settings\_settings.config.scss" />
+    <Content Include="sites\demo\scss\settings\_settings.core.scss" />
+    <Content Include="sites\demo\scss\settings\_settings.global.scss" />
+    <Content Include="sites\demo\scss\settings\_settings.mq.scss" />
+    <Content Include="sites\demo\scss\elements\_elements.page.scss" />
+    <Content Include="sites\demo\scss\generic\_generic.normalize.fixes.scss" />
+    <Content Include="sites\demo\scss\objects\_objects.collapse.scss" />
+    <Content Include="sites\demo\scss\objects\_objects.dropdown.scss" />
+    <Content Include="sites\demo\scss\objects\_objects.grid.bootstrap.scss" />
+    <Content Include="sites\demo\scss\components\_components.badge.circle.scss" />
+    <Content Include="sites\demo\scss\components\_components.buttons.scss" />
+    <Content Include="sites\demo\scss\components\_components.buttons.toggle.scss" />
+    <Content Include="sites\demo\scss\components\_components.caret.scss" />
+    <Content Include="sites\demo\scss\components\_components.divider.scss" />
+    <Content Include="sites\demo\scss\components\_components.dropdown.scss" />
+    <Content Include="sites\demo\scss\components\_components.facet.scss" />
+    <Content Include="sites\demo\scss\components\_components.forms.input.scss" />
+    <Content Include="sites\demo\scss\components\_components.forms.inputgroup.scss" />
+    <Content Include="sites\demo\scss\components\_components.header.scss" />
+    <Content Include="sites\demo\scss\components\_components.links.scss" />
+    <Content Include="sites\demo\scss\components\_components.navbar.scss" />
+    <Content Include="sites\demo\scss\components\_components.pagination.scss" />
+    <Content Include="sites\demo\scss\components\_components.thumbnail.scss" />
+    <Content Include="readme.md" />
+    <Content Include="sites\demo\fonts\IcoFont\ico.eot" />
+    <Content Include="sites\demo\fonts\IcoFont\ico.ttf" />
+    <Content Include="sites\demo\fonts\IcoFont\ico.woff" />
+    <Content Include="sites\demo\scss\components\_components.footer.scss" />
+    <Content Include="sites\demo\scss\components\_components.forms.labels.scss" />
+    <Content Include="sites\demo\scss\components\_components.highlight.scss" />
+    <Content Include="sites\demo\scss\components\_components.page.title.scss" />
+    <Content Include="sites\demo\scss\components\_components.product.specification.scss" />
+    <Content Include="sites\demo\scss\elements\_elements.headings.scss" />
+    <Content Include="sites\demo\scss\elements\_elements.links.scss" />
+    <Content Include="sites\demo\scss\objects\_objects.descriptionlist.scss" />
+    <Content Include="sites\demo\scss\utilities\_utilities.row.flex.scss" />
+    <Content Include="sites\demo\scss\vendors\slick\slick-theme.custom.scss" />
+    <Content Include="sites\demo\scss\vendors\slick\slick-theme.scss" />
+    <Content Include="sites\demo\scss\vendors\slick\slick.scss" />
+    <Content Include="sites\demo\scss\utilities\_utilities.disabled.scss" />
+    <Content Include="sites\demo\scss\components\_components.quote.scss" />
+    <Content Include="sites\demo\scss\components\_components.mediaresult.scss" />
+    <Content Include="tslint.json" />
+    <Content Include="sites\demo\scss\components\_components.carousel.scss" />
+    <Content Include="sites\demo\scss\components\_components.parallax.scss" />
+    <Content Include="sites\demo\scss\components\_components.cards.scss" />
+    <None Include="Web.Release.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="dist\" />
+    <Folder Include="sites\demo\clickmodel\components\Card\" />
+    <Folder Include="sites\demo\clickmodel\components\Faq\" />
+    <Folder Include="sites\demo\content\svg\" />
+    <Folder Include="sites\demo\scss\tools\" />
+    <Folder Include="sites\demo\scss\trumps\" />
+    <Folder Include="sites\_shared\html\" />
+    <Folder Include="sites\_shared\js\lib\" />
+    <Folder Include="sites\_shared\scss\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">12.0</VisualStudioVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>Bmg.StaticSite</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\WebApplications\Microsoft.WebApplication.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\WebApplications\Microsoft.WebApplication.targets')" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>57985</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:57985/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>http://localhost:3002</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <TypeScriptRemoveComments>false</TypeScriptRemoveComments>
+    <TypeScriptSourceMap>true</TypeScriptSourceMap>
+    <TypeScriptTarget>Unknown</TypeScriptTarget>
+    <TypeScriptJSXEmit>-1</TypeScriptJSXEmit>
+    <TypeScriptCompileOnSaveEnabled>True</TypeScriptCompileOnSaveEnabled>
+    <TypeScriptNoImplicitAny>False</TypeScriptNoImplicitAny>
+    <TypeScriptModuleKind>CommonJS</TypeScriptModuleKind>
+    <TypeScriptOutFile />
+    <TypeScriptOutDir />
+    <TypeScriptGeneratesDeclarations>False</TypeScriptGeneratesDeclarations>
+    <TypeScriptNoEmitOnError>False</TypeScriptNoEmitOnError>
+    <TypeScriptMapRoot />
+    <TypeScriptSourceRoot />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <TypeScriptRemoveComments>true</TypeScriptRemoveComments>
+    <TypeScriptSourceMap>false</TypeScriptSourceMap>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+</Project>

@@ -1,0 +1,18 @@
+{{#> doormat type="thumbnails" }}
+
+	thumbnails
+
+	{{#each items}}
+		<div class="c-doormat-card c-doormat-card--thumbnail">
+			<figure class="c-doormat-card__image o-ratio o-ratio--1:1">
+				<img class="o-ratio__content" src="{{img.src}}" alt="{{img.alt}}">
+			</figure>
+			<div class="c-doormat-card__title-wrapper">
+				<a class="c-doormat-card__link" href="{{link}}">
+					<span class="c-doormat-card__title">{{label}}</span>
+				</a>
+			</div>
+		</div>
+	{{/each}}
+
+{{/doormat}}

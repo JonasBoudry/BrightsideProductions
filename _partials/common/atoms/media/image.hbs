@@ -1,0 +1,7 @@
+{{#with image}}
+<picture class="a-image {{extraClass}} {{../extraClass}}">
+	{{#if srcDesktop}}<source media="(min-width:480px)" srcset="{{srcDesktop}}">{{/if}}
+	<img class="{{#if objectFit}}o-fit{{/if}}" src="{{src}}" alt="{{alt}}" width="{{width}}" height="{{height}}" loading="lazy">
+</picture>
+{{/with}}
+

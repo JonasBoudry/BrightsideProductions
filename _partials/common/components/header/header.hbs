@@ -1,0 +1,30 @@
+<header class="c-header {{#unless isGlobal}}is-non-global{{/unless}} js-header" data-action="header">
+	<div class="c-header-wrapper">
+		<figure class="c-header__logo">
+			<a class="c-header__logo-link" href="{{buildUrl}}" aria-labelledby="{{@root.siteName}}">
+				<img src="{{buildUrl @root.paths.logo}}" alt="Logo of {{@root.siteName}}">
+				{{#if country}}
+					<span class="c-header__country-label">{{country}}</span>
+				{{/if}}
+			</a>
+		</figure>
+
+		<div class="c-header__button-wrapper">
+			{{#if currentCategory}}<div class="c-header__category-label">{{currentCategory}}</div>{{/if}}
+			<button class="c-header-search__button js-toggle-search">
+				<span></span>
+			</button>
+			<button class="c-header__nav-button js-toggle-nav">
+				<span></span>
+			</button>
+		</div>
+	</div>
+
+	<div class="c-nav-wrapper js-nav-wrapper">
+		{{#unless isGlobal}}<div class="c-nav-wrapper__divider"></div>{{/unless}}
+		{{> common/components/header/search}}
+		{{> common/components/header/nav type="primary" items=primary-navigation.items }}
+		{{> common/components/header/nav type="secondary" items=secondary-navigation.items}}
+		{{> common/components/header/nav type="social" items=social-navigation.items }}
+	</div>
+</header>

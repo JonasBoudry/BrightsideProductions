@@ -1,0 +1,528 @@
+$tab-icon-size: 35px;
+
+.c-doormat {
+    display: var(--brand__doormat--display, none);
+    position: var(--brand__doormat--position, absolute);
+    top: var(--brand__doormat--top);
+    bottom: var(--brand__doormat--bottom);
+    left: var(--brand__doormat--left, 0);
+    right: var(--brand__doormat--right, auto);
+    margin: var(--brand__doormat--margin);
+    padding: var(--brand__doormat--padding);
+    z-index:  var(--brand__doormat--z-index);
+    transition: var(--brand__doormat--transition);
+    background-color: var(--brand__doormat--background-color);
+
+    @include mq($until: large) {
+        overflow-y: scroll;
+        --brand__doormat--transition: all .3s ease-in-out;
+        --brand__doormat--display: block;
+        --brand__doormat--position: fixed;
+        --brand__doormat--top: #{$header__height--mobile};
+        --brand__doormat--right: 0;
+        --brand__doormat--bottom: 0;
+        --brand__doormat--left: 100vw;
+        --brand__doormat--z-index: 2;
+        --brand__doormat--background-color: rgba(var(--brand__color--white));
+
+        [dir="rtl"] & {
+            --brand__doormat--right: 100vw;
+            --brand__doormat--left: 0;
+        }
+    }
+
+    @include mq($from: large) {
+        &.align-center {
+            --brand__doormat--left: auto;
+        }
+
+        &.align-right {
+            --brand__doormat--left: auto;
+            --brand__doormat--right: 0;
+        }
+    }
+}
+
+.c-doormat-wrapper {
+    background-color: var(--brand__doormat-wrapper--background-color, rgba(var(--brand__color--white)));
+    padding: var(--brand__doormat-wrapper--padding);
+    height: 100%;
+
+    @include mq($until: large) {
+        --brand__doormat-wrapper--padding: #{$header__spacing};
+    }
+
+    @include mq($from: large) {
+        --brand__doormat-wrapper--padding: calc(#{$header__spacing} * 4) calc(#{$header__spacing} * 4) calc(#{$header__spacing} * 3);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, .25);
+    }
+}
+
+.c-doormat__header {
+    display: var(--brand__doormat-header--display, none);
+    --brand__nav-overview-link--padding: #{$header__spacing};
+
+    @include mq($until: large) {
+        --brand__doormat-header--display: block;
+    }
+
+    .c-list__item{
+        &:nth-child(2), &:nth-child(3) {
+            margin: 0 #{$header__spacing};
+        }
+    }
+
+    .c-list__item--doormat-grandparent {
+        padding: $header__spacing;
+        background-color: rgba(var(--brand__color--primary));
+        color: rgba(var(--brand__color--white));
+        font-weight: 600;
+    }
+}
+
+.c-doormat--image-columns {
+    @include mq($from: large) {
+        --brand__doormat-wrapper--grid-template-columns: repeat(4, auto);
+        --brand__doormat-wrapper--grid-gap: #{$header__spacing};
+        --brand__doormat-card--width: 200px;
+        --brand__doormat-card-title--display: inline-flex;
+        --brand__doormat-card-title--padding: 7px;
+        --brand__doormat-card-title-wrapper--margin: 0;
+        --brand__doormat-card-title--background-color: rgba(rgba(var(--brand__color--white)), .6);
+        --brand__doormat-card-title--line-height: 18px;
+        --brand__doormat-card-image-wrapper--grid-row: auto;
+        --brand__doormat-card-image-wrapper--align-self: start;
+        --brand__doormat-card-title-after--display: none;
+    }
+}
+
+.c-doormat--thumbnails {
+    --brand__doormat-wrapper--grid-gap: #{$header__spacing};
+    --brand__doormat-card--width: 160px;
+    --brand__doormat-card-title-wrapper--align-self: center;
+    --brand__doormat-card-title--display: block;
+    --brand__doormat-card-title--line-height: 14px;
+
+    @include mq($until: large) {
+        --brand__doormat-wrapper--grid-template-columns: repeat(2, auto);
+    }
+
+    @include mq($from: large) {
+        --brand__doormat-wrapper--grid-template-columns: repeat(4, auto);
+    }
+}
+
+.c-doormat--mixed-content {
+    @include mq($from: large) {
+        --brand__doormat-wrapper--grid-template-columns: max-content max-content max-content;
+        --brand__doormat-wrapper--grid-gap: 40px;
+        --brand__doormat-column--width: auto;
+        --brand__doormat-card--width: 220px;
+        --brand__doormat-card--margin-bottom: #{$header__spacing};
+        --brand__doormat-card-title--display: inline-flex;
+        --brand__doormat-card-title--padding: 5px 7px;
+        --brand__doormat-card-title-wrapper--margin: #{$header__spacing};
+        --brand__doormat-card-title--background-color: rgba(rgba(var(--brand__color--white)), .6);
+        --brand__doormat-card-title--line-height: 20px;
+        --brand__doormat-card-image-wrapper--grid-row: 1 / -1;
+    }
+}
+
+.c-doormat--products {
+    @include mq($from: large) {
+        --brand__doormat-wrapper--grid-template-columns: 240px 655px;
+        --brand__doormat-card--width: 150px;
+    }
+
+    @include mq($from: large, $until: large) {
+        --brand__doormat-wrapper--grid-template-columns: 240px 495px;
+    }
+}
+
+.c-doormat--search {
+    --brand__doormat-wrapper--background-color: rgba(var(--brand__color--gray-lighter));
+    --brand__doormat--z-index: 2;
+
+    @include mq($until: large) {
+        --brand__doormat--left: 0;
+        --brand__doormat--display: none;
+        --brand__doormat--bottom: auto;
+        --brand__doormat-wrapper--padding: calc(#{$header__spacing} * 2);
+
+        [dir="rtl"] & {
+            --brand__doormat--right: 0;
+        }
+    }
+
+    @include mq($from: large) {
+        --brand__doormat--right: 0;
+        --brand__doormat--left: auto;
+        --brand__doormat--margin: calc(#{$header__spacing} * 2) 0 0;
+    }
+}
+
+.c-doormat__link-wrapper {
+    text-align: center;
+    margin-top: $header__spacing;
+    display: var(--brand__doormat-link-wrapper--display, none);
+
+    @include mq($from: large) {
+        --brand__doormat-link-wrapper--display: block;
+    }
+}
+
+.c-doormat__link {
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: rgb(var(--brand__color--gray));
+    padding-right: var(--brand__doormat-link--padding-right, 30px);
+    padding-left: var(--brand__doormat-link--padding-left);
+
+    &::after {
+        color: rgba(var(--brand__color--primary));
+        transform: var(--brand__doormat-link-after--transform);
+        left: var(--brand__doormat-link-after--left);
+        right: var(--brand__doormat-link-after--right, 0);
+    }
+
+    @include mq($from: large) {
+        --brand__doormat-link-wrapper--display: block;
+    }
+}
+
+.c-doormat__body {
+    display: grid;
+    grid-template-columns: var(--brand__doormat-wrapper--grid-template-columns);
+    grid-template-rows: auto;
+    gap: var(--brand__doormat-wrapper--grid-gap);
+
+    @include mq($until: large) {
+        padding: 0 calc(#{$header__spacing} * 2) calc(#{$header__spacing} * 2);
+    }
+}
+
+// doormat cards
+.c-doormat-card {
+    position: relative;
+
+    &:not(:last-child) {
+        margin-bottom: var(--brand__doormat-card--margin-bottom);
+    }
+
+    @include mq($from: large) {
+        position: relative;
+        width: var(--brand__doormat-card--width);
+    }
+}
+
+.c-doormat-card__link {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.c-doormat-card__title-wrapper {
+    grid-area: title;
+    margin: var(--brand__doormat-card-title-wrapper--margin);
+    padding: var(--brand__doormat-card-title-wrapper--padding);
+    align-self: var(--brand__doormat-card-title-wrapper--align-self);
+    background-color: var(--brand__doormat-card-title-wrapper--background-color);
+    z-index: 2;
+    position: var(--brand__doormat-card-title-wrapper--position, relative);
+    transition: var(--brand__doormat-card-title-wrapper--transition);
+}
+
+.c-doormat-card__title {
+    @include mq($until: large) {
+        padding: $header__spacing 0;
+        border-bottom: var(--brand__header--card-title--border-bottom, 1px solid rgba(var(--brand__color--border)));
+    }
+
+    @include mq($from: large) {
+        display: var(--brand__doormat-card-title--display);
+        flex-direction: var(--brand__doormat-card-title--flex-direction);
+        height: var(--brand__doormat-card-title--height);
+        align-items: var(--brand__doormat-card-title--align-items, center);
+        line-height: var(--brand__doormat-card-title--line-height);
+        padding: var(--brand__doormat-card-title--padding);
+        color: var(--brand__doormat-card-title--color, rgb(var(--brand__color--gray)));
+        background-color: var(--brand__doormat-card-title--background-color);
+        font-weight: var(--brand__doormat-card-title--font-weight, 600);
+        font-size:  var(--brand__doormat-card-title--font-size, 16px);
+        margin: 0;
+
+        &::after {
+            content: var(--brand__doormat-card-title-after--content);
+            font-family: 'dlw-font';
+            padding-left: $header__spacing;
+            display: var(--brand__doormat-card-title-after--display, block);
+            text-align: var(--brand__doormat-card-title-after--text-align);
+            margin-top: var(--brand__doormat-card-title-after--margin-top);
+            width: var(--brand__doormat-card-title-after--width);
+            transform: var(--brand__doormat-card-title-after--transform);
+        }
+    }
+}
+
+.c-doormat-card__image-wrapper {
+    display: var(--brand__doormat-card-image-wrapper--display);
+    grid-area: image;
+    margin: 0;
+    overflow: hidden;
+
+    @include mq($from: large) {
+        grid-row: var(--brand__doormat-card-image-wrapper--grid-row);
+        grid-column: var(--brand__doormat-card-image-wrapper--grid-column);
+    }
+}
+
+.c-doormat-card__image {
+    transition: all .3s ease;
+    transform: var(--brand__doormat-card-image-wrapper--transform);
+    margin: var(--brand__doormat-card-image--margin);
+}
+
+.c-doormat-card--image {
+    @include mq($until: large) {
+        --brand__doormat-card-image-wrapper--display: none;
+    }
+
+    @include mq($from: large) {
+        display: grid;
+        grid-template-areas: "image"
+                            "title";
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr;
+        align-self: var(--brand__doormat-card-image-wrapper--align-self, end);
+        overflow: hidden;
+        --brand__doormat-card-image-wrapper--grid-column: 1 / -1;
+        --brand__doormat-card-title-after--content: "\e903";
+    }
+
+    &:hover {
+        --brand__doormat-card-image-wrapper--transform: scale(1.1);
+    }
+}
+
+.c-doormat-card--thumbnail {
+    display: grid;
+    grid-template-areas: "image title";
+    grid-template-columns: 35px auto;
+    column-gap: 7px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgb(var(--brand__color--border));
+    transition: all .3s ease;
+    --brand__header--card-title--border-bottom: 0;
+    --brand__doormat-card-title--font-weight: 400;
+    --brand__doormat-card-title--font-size: 16px;
+    --brand__doormat-card-image--margin: 0;
+
+    &:hover {
+        background-color: rgb(var(--brand__color--gray-lighter));
+    }
+}
+
+.c-doormat-card--product {
+    @include mq($until: large) {
+        margin: 0 $header__spacing;
+    }
+
+    @include mq($from: large) {
+        display: grid;
+        grid-template-areas: "image"
+                            "title";
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr;
+        overflow: hidden;
+        --brand__doormat-card-title-wrapper--background-color: rgba(var(--brand__color--white));
+
+        &:hover {
+            --brand__doormat-card-image-wrapper--transform: scale(1.1);
+        }
+    }
+}
+
+.c-doormat-card--category-link {
+    @include mq($until: large) {
+        .o-ratio:before {
+            padding-bottom: 0;
+        }
+
+        margin: 0 $header__spacing;
+    }
+
+    @include mq($from: large) {
+        --brand__doormat-card-title-wrapper--background-color: rgba(var(--brand__color--primary));
+        --brand__doormat-card-title-wrapper--padding: #{$header__spacing};
+        --brand__doormat-card-title--color: rgba(var(--brand__color--white));
+        --brand__doormat-card-title-after--content: "\e903";
+        --brand__doormat-card-title-after--text-align: right;
+        --brand__doormat-card-title-after--margin-top: auto;
+        --brand__doormat-card-title-after--width: 100%;
+        --brand__doormat-card-title--line-height: 120%;
+        --brand__doormat-card-title--display: flex;
+        --brand__doormat-card-title--flex-direction: column;
+        --brand__doormat-card-title--height: 100%;
+        --brand__doormat-card-title--align-items: flex-start;
+        --brand__doormat-card-title-wrapper--position: absolute;
+        --brand__doormat-card-title-wrapper--transition: background-color .3s ease;
+        --brand__doormat-card-title--font-size: 16px;
+
+        &:hover {
+            --brand__doormat-card-title-wrapper--background-color: rgb(var(--brand__color--secondary));
+        }
+    }
+}
+
+// doormat columns
+.c-doormat-column {
+    @include mq($until: large) {
+        &:not(:first-child) {
+            margin-top: $header__spacing * 2;
+        }
+    }
+
+    @include mq($from: large) {
+        width: var(--brand__doormat-column--width, 220px);
+    }
+}
+
+.c-doormat-column__title {
+    margin: 0 0 calc(#{$header__spacing} / 2) 0;
+}
+
+.c-doormat-column__link {
+    color: var(--doormat-column__link, rgba(var(--brand__color--primary)));
+    &:hover {
+        --doormat-column__link: rgb(var(--brand__color--secondary));
+    }
+}
+
+// doormat lists
+.c-doormat__list {
+    &:not(:last-child) {
+        margin-bottom: calc(#{$header__spacing} * 2);
+    }
+}
+
+.c-doormat-list-item {
+    position: relative;
+    line-height: 20px;
+    &:not(:last-child) {
+        margin-bottom: calc(#{$header__spacing} / 2);
+    }
+
+    @include mq($until: large) {
+        border-bottom: 1px solid rgb(var(--brand__color--border));
+        padding: $header__spacing 0;
+    }
+}
+
+.c-doormat-list-item__link {
+    color: rgb(var(--brand__color--gray));
+    &:hover {
+        color: rgba(var(--brand__color--primary));
+    }
+}
+
+// doormat tabs
+.c-doormat-tab {
+    @include mq($until: large) {
+        margin-bottom: 1px;
+        --brand__doormat-card-image-wrapper--display: none;
+        &.is-active {
+            --brand__doormat-tab--content--display: block;
+            --brand__doormat-tab-title-after--transform: rotate(180deg);
+        }
+    }
+
+    @include mq($from: large) {
+        display: grid;
+        grid-template-columns: 240px auto;
+        background-color: rgba(var(--brand__color--white));
+        &.is-active {
+            --brand__doormat-tab--background-color: rgba(var(--brand__color--white));
+            --brand__doormat-tab-content-wrapper--display: block;
+            --brand__doormat-tab-content-wrapper--z-index: 2;
+        }
+        &:hover {
+            --brand__doormat-tab--background-color: rgba(var(--brand__color--white));
+        }
+    }
+}
+
+.c-doormat-tab__button {
+    background-color: var(--brand__doormat-tab--background-color, rgba(var(--brand__color--gray-lighter)));
+    margin-bottom: 2px;
+    padding: calc(#{$header__spacing} / 2) $header__spacing;
+    transition: all .3s ease;
+    cursor: pointer;
+    border: none;
+    text-align: inherit;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+}
+
+.c-doormat-tab__icon {
+    max-width: $tab-icon-size;
+    display: inline-block;
+    margin-inline-end: $header__spacing;
+}
+
+.c-doormat-tab__title {
+    align-self: center;
+    line-height: 20px;
+
+    @include mq($until: large) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+
+        &::after {
+            content: "\e901";
+            font-family: 'dlw-font';
+            font-size: 12px;
+            color: inherit;
+            display: block;
+            margin: 0 0 0 calc(#{$header__spacing} / 2);
+            transform: var(--brand__doormat-tab-title-after--transform);
+        }
+    }
+}
+
+.c-doormat-tab__content {
+    @include mq($until: large) {
+        display: var(--brand__doormat-tab--content--display, none);
+        margin-bottom: calc(#{$header__spacing} * 2);
+    }
+
+    @include mq($from: large) {
+        display: grid;
+        grid-template-columns: repeat(4, auto);
+        gap: $header__spacing;
+        grid-template-rows: auto;
+        align-self: self-start;
+    }
+
+    @include mq($from: large, $until: large) {
+        grid-template-columns: repeat(3, auto);
+    }
+}
+
+.c-doormat-tab__content-wrapper {
+    @include mq($from: large) {
+        background-color: rgb(var(--brand__color--white));
+        display: var(--brand__doormat-tab-content-wrapper--display, none);
+        position: absolute;
+        left: var(--brand__doormat-tab-content-wrapper--left, 305px);
+        right: var(--brand__doormat-tab-content-wrapper--right);
+        top: 40px;
+        z-index: var(--brand__doormat-tab-content-wrapper--z-index, 1);
+    }
+}

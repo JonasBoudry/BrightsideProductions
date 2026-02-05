@@ -1,0 +1,10 @@
+{
+	"size": "1200px",
+	"containerTypes": [
+		{
+			"label": "Small Container",
+			"class": "o-wrapper--small",
+			"size": "785px"
+		}
+	]
+}

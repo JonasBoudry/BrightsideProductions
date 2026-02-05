@@ -1,0 +1,24 @@
+:root {
+	--brand__svg--height: unset;
+	--brand__svg--width: auto;
+	--brand__svg--max-width: auto;
+	--brand__svg--transform: none;
+}
+
+svg {
+	fill: var(--set-brand__svg--fill, var(--brand__svg--fill, currentColor));
+	stroke: var(--brand__svg--stroke);
+	width: var(--brand__svg--width);
+	height: var(--brand__svg--height);
+	max-width: var(--brand__svg--max-width);
+	flex-shrink: 0;
+	transition: var(--brand__svg--transition, all 0.3);
+	transform: var(--set-brand__svg--transform, var(--brand__svg--transform));
+	margin-block-start: var(--brand__svg--margin-block-start, var(--brand__svg--margin-block-start));
+	margin-inline-start: var(--brand__svg--margin-inline-start, var(--brand__svg--margin-inline-start));
+	margin-inline-end: var(--brand__svg--mie, var(--brand__svg--mie));
+
+	&::selection {
+		background-color: rgb(var(--brand__color--primary-light));
+	}
+}

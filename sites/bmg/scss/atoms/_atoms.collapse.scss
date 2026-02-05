@@ -1,0 +1,19 @@
+.a-collapse {
+	--brand__img--border-radius: var(--brand__border-radius);
+
+	@include mq($from: tablet) {
+		--collapse__heading--padding: var(--brand__spacing--small) 0;
+		--collapse__heading--font-size: calc(var(--brand__typography-h4--font-size) + 4px);
+		--collapse__heading-after--size: 17px;
+	}
+}
+
+.a-collapse__heading {
+	--brand__btn--padding: var(--collapse__heading--padding, var(--brand__spacing--tiny) 0);
+	--brand__btn--color: currentColor;
+	--brand__btn-hover--color: currentColor;
+	--brand__btn-active--color: currentColor;
+	--brand__btn--font-size: var(--collapse__heading--font-size, calc(var(--brand__typography-p--font-size) - 1px));
+	--brand__btn-after--filter: none;
+	--brand__btn-after--size: var(--collapse__heading-after--size, 14px);
+}

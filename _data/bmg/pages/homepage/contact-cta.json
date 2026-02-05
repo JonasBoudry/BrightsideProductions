@@ -1,0 +1,11 @@
+{
+    "id": "contact",
+    "bgColor": "u-bg-color-black",
+    "bodyColor": "u-bg-color-white",
+    "title": "Want to know more?",
+    "description": "<p>Take the first step toward your new project — we guide you from concept to completion.</p>",
+    "button": {
+        "label": "Contact us",
+        "link": "mailto:info@brightsidemediagroup.be"
+    }
+}

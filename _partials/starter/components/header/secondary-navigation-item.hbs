@@ -1,0 +1,16 @@
+<li class="c-nav-secondary-item {{#if isLanguage}}c-nav-secondary-item--language{{/if}}">
+	<a class="c-nav-secondary-item__link" href="{{link}}">
+		{{#if isLanguage}}
+		<span class="c-nav-secondary-item__icon">
+			{{> common/atoms/svg-icon
+				iconId="globe"
+				iconHeight=12
+				iconWidth=13
+			}}
+		</span>
+		{{/if}}
+		<span class="c-nav-secondary-item__text">
+			{{link-text}}
+		</span>
+	</a>
+</li>

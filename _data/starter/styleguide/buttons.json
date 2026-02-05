@@ -1,0 +1,22 @@
+{
+	"bgColors": [
+		{},
+		{
+			"bgColor": "u-bg-color-primary",
+			"bgColorTitle": "- Background Primary"
+		},
+		{
+			"bgColor": "u-bg-color-background-accent1",
+			"bgColorTitle": "- Background accent 1"
+		},
+		{
+			"bgColor": "u-bg-color-background-accent2",
+			"bgColorTitle": "- Background accent 2"
+		}
+	],
+	"buttonTypes": [
+		{ "label": "Default" },
+		{ "label": "Primary", "isPrimary": true },
+		{ "label": "Secondary", "isSecondary": true }
+	]
+}

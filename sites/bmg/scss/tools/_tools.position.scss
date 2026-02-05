@@ -1,0 +1,73 @@
+@mixin position($position) {
+	position: map-get($position, p);
+	top: map-get($position, t);
+	right: map-get($position, r);
+	bottom: map-get($position, b);
+	left: map-get($position, l);
+	z-index: map-get($position, z);
+}
+
+@mixin absolute($top, $right, $bottom, $left, $zIndex: null) {
+	@include position(
+		(
+			p: absolute,
+			t: $top,
+			r: $right,
+			b: $bottom,
+			l: $left,
+			z: $zIndex,
+		)
+	);
+}
+
+@mixin fixed($top, $right, $bottom, $left, $zIndex: null) {
+	@include position(
+		(
+			p: fixed,
+			t: $top,
+			r: $right,
+			b: $bottom,
+			l: $left,
+			z: $zIndex,
+		)
+	);
+}
+
+@mixin sticky($top: 0) {
+	@include position(
+		(
+			p: sticky,
+			t: $top,
+		)
+	);
+}
+
+@mixin align-middle($top: 50%, $left: null, $right: null, $zIndex: null) {
+	@include position(
+		(
+			p: absolute,
+			t: $top,
+			l: $left,
+			r: $right,
+			$zIndex: null,
+		)
+	);
+	transform: translateY(-50%);
+}
+
+@mixin align-center() {
+	@include position(
+		(
+			p: absolute,
+			t: 50%,
+			l: 50%,
+		)
+	);
+	transform: translateY(-50%) translateX(-50%);
+}
+
+@mixin flex-align-center() {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}

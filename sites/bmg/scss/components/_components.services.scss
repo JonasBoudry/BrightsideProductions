@@ -1,0 +1,117 @@
+.services {
+    display: grid;
+    grid-template-areas:
+        "media"
+        "content";
+    min-height: var(--services--min-height);
+    max-height: var(--services--max-height);
+    --brand__typography-h4--color: rgb(var(--brand__color--accent));
+    --brand__typography-h4--text-transform: uppercase;
+    --brand__typography-p--color: rgb(var(--brand__color--white));
+    --brand__typography-h4--font-weight: 600;
+
+    @include mq($from: desktop) {
+        --brand__typography-h2--color: rgb(var(--brand__color--white));
+        --brand__typography-h4--margin-bottom: var(--brand__spacing);
+    }
+}
+
+.services__img {
+    grid-column: span 1/-1;
+    grid-row: span 1/-1;
+    min-height: var(--services__img--min-height, 400px);
+    max-height: var(--services__img--max-height, 100%);
+    overflow: hidden;
+
+    @include mq($until: desktop) {
+        object-position: center right;
+        font-family: "object-fit: cover;object-position: center right;";
+    }
+
+    @include mq($from: desktop) {
+        --services__img--max-height: 650px;
+    }
+}
+
+.services__content {
+    display: flex;
+    align-items: center;
+    grid-area: content;
+    padding: var(--services__content--padding, var(--brand__spacing) 0);
+    z-index: 999;
+
+    @include mq($from: desktop) {
+        --services__content--padding: 0;
+    }
+}
+
+.services__blocks {
+    display: grid;
+    grid-template-columns: var(--services__blocks--gtc);
+    grid-gap: var(--services__blocks--grid-gap, var(--brand__spacing--large));
+    @include list-unstyle();
+    padding: var(--services__blocks--padding, var(--brand__spacing--small));
+    border-radius: var(--brand__border-radius);
+    background-color: var(--services__blocks--background-color, rgb(var(--brand__color--black))); 
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+
+    @include mq($from: tablet) {
+        --services__blocks--padding: var(--brand__spacing);
+    }
+
+    @include mq($from: desktop) {
+        --services__blocks--gtc: 1fr 1fr 1fr;
+        --services__blocks--padding: var(--brand__spacing--large) var(--brand__spacing--large) var(--brand__spacing--large) 0;
+        --services__blocks--background-color: rgba(var(--brand__color--black), 0.5);
+    }
+
+    @include mq($from: large) {
+        --services__blocks--padding: var(--brand__spacing--medium) var(--brand__spacing--medium) var(--brand__spacing--medium) 0;
+    }
+}
+
+.services__items {
+    position: relative;
+
+    &::after {
+        display: var(--services__items-after--display, block);
+        @include absolute(var(--services__items-after--top), var(--services__items-after--right, 0), var(--services__items-after--bottom, calc(var(--brand__spacing)* -1)), var(--services__items-after--left, 0));
+        content: "";
+        width: var(--services__items-after--width, 100%);
+        height: var(--services__items-after--height, 1px);
+        background-color: rgba(var(--brand__color--white), 0.5);
+    }
+
+    &:last-child {
+        --services__items-after--display: none;
+    }
+
+    @include mq($from: desktop) {
+        --services__items-after--top: calc(var(--brand__spacing) * -1);
+        --services__items-after--right: 0;
+        --services__items-after--bottom: auto;
+        --services__items-after--left: auto;
+        --services__items-after--width: 1px;
+        --services__items-after--height: calc(100% + (2 * var(--brand__spacing)));
+    }
+
+    ul {
+        @include list-unstyle();
+        display: grid;
+        grid-gap: var(--brand__spacing--tiny);
+        margin-inline-start: var(--brand__spacing--tiny);
+    }
+
+    li {
+        position: relative;
+        padding: var(--brand__list-item--padding, 0 var(--brand__spacing--tiny) 0 var(--brand__spacing--tiny));
+        text-align: left;
+
+        &::before {
+            @include absolute(var(--rich-text-ul-li-before--top, 10), null, null, -10px);
+            content: "•";
+            font-size: 15px;
+        }
+    }
+}

@@ -1,0 +1,51 @@
+$brand__modal-dialog--position-map: (p:fixed, t:0, r:0, b:0, l:0, z:#{$brand__modal--z-index});
+
+.o-modal {
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: var(--brand__modal--opacity, 0);
+    visibility: var(--brand__modal--visibility, hidden);
+    transition: all 0.3s ease-in-out;
+    background-color: rgba(var(--brand__color--gray), 0.7);
+	@include position($brand__modal-dialog--position-map);
+	border: none;
+	width: 100vw;
+    height: 100vh;
+
+    @include mq($until: desktop) {
+        padding-top: var(--brand__spacing);
+        padding-bottom: var(--brand__spacing);
+    }
+
+    &[open], &.is-active {
+        --brand__modal--opacity: 1;
+        --brand__modal--visibility: visible;
+	}
+}
+
+.o-modal__wrapper {
+    background-color: rgb(var(--brand__color--white));
+    position: relative;
+	padding: var(--brand__spacing--large);
+
+
+    @include mq($until: tablet) {
+		padding: var(--brand__spacing);
+		max-height: calc(100% - (var(--brand__spacing) * 2));
+		overflow-y: scroll;
+    }
+}
+
+.o-modal__close-btn {
+	top: 0;
+	right: 0;
+	--set-brand__btn--position: absolute;
+	--set-brand__btn--padding: var(--brand__spacing);
+	--set-brand__btn--z-index: 3;
+    --set-brand__svg--fill: rgb(var(--brand__color--primary));
+
+    @include hover {
+        --set-brand__svg--fill: rgb(var(--brand__color--gray));
+    }
+}

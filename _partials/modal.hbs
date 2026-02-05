@@ -1,0 +1,22 @@
+<dialog class="o-modal js-modal {{#if isActive}}is-active{{/if}}" {{#if isActive}}open{{/if}} id="{{id}}" tabindex="-1"
+	role="dialog" aria-modal="true" aria-hidden="true">
+	<div class="o-modal__wrapper o-wrapper" role="document" tabindex="0">
+
+		{{#if hasCloseButton}}
+		{{> common/atoms/button
+		../this
+		isIcon=true
+		isButton=true
+		iconId="close"
+		ariaLabel="Close"
+		iconWidth="32"
+		iconHeight="32"
+		extraClasses="o-modal__close-btn js-toggle-modal"
+		}}
+		{{/if}}
+
+		<div class="o-modal__body">
+			{{> @partial-block}}
+		</div>
+	</div>
+</dialog>

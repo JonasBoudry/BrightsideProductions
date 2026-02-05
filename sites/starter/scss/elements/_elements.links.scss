@@ -1,0 +1,54 @@
+a {
+	display: inline;
+	text-decoration: var(--brand__link--text-decoration);
+	text-decoration-line: var(--brand__link--text-decoration);
+	text-decoration-style: solid;
+	text-underline-position: var(--brand__link--text-underline-position);
+	text-underline-offset: var(--brand__link--text-underline-offset);
+	text-decoration-thickness: var(--brand__link--text-decoration-thickness);
+	text-decoration-color: var(--brand__link--text-decoration-color);
+	color: var(--set-brand__link--color, var(--brand__link--color));
+	transition: var(--brand__link--transition);
+	margin-bottom: var(--brand__link--margin-bottom, 0);
+	padding: var(--set-brand__link--padding, var(--brand__link--padding, 0));
+	pointer-events: var(--set-brand__link--pointer-events, var(--brand__link--pointer-events, auto));
+
+	&:hover {
+		cursor: pointer;
+		--brand__link--color: var(--set-brand__link-hover--color, var(--brand__link-hover--color));
+		--brand__link--border-bottom-color: var(
+			--set-brand__link-hover--border-bottom-color,
+			var(--brand__link--border-bottom-color)
+		);
+		--brand__link-text-decoration-color: var(
+			--set-brand__link-hover--text-decoration-color,
+			var(--brand__link-hover--text-decoration-color)
+		);
+	}
+
+	&:active {
+		cursor: pointer;
+		--brand__link--color: var(--set-brand__link-active--color, var(--brand__link-active--color));
+		--brand__link--border-bottom-color: var(
+			--set-brand__link-active--border-bottom-color,
+			var(--brand__link-active--border-bottom-color)
+		);
+		--brand__link-text-decoration-color: var(
+			--set-brand__link-active--text-decoration-color,
+			var(--brand__link-active--text-decoration-color)
+		);
+	}
+
+	&:focus {
+		cursor: pointer;
+		--brand__link--color: var(--set-brand__link-focus--color, var(--brand__link-focus--color));
+		--brand__link--border-bottom-color: var(
+			--set-brand__link-focus--border-bottom-color,
+			var(--brand__link-focus--border-bottom-color)
+		);
+		--brand__link-text-decoration-color: var(
+			--set-brand__link-focus--text-decoration-color,
+			var(--brand__link-focus--text-decoration-color)
+		);
+	}
+}

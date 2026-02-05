@@ -1,0 +1,14 @@
+:root {
+	--brand__img--height: auto;
+	--brand__img--width: auto;
+	--brand__img--transform: none;
+	--brand__img--transition: none;
+}
+
+img {
+	height: var(--set-brand__img--height, var(--brand__img--height));
+	width: var(--set-brand__img--width, var(--brand__img--width));
+	zoom: var(--brand__img-hover--zoom);
+	transform: var(--set-brand__img--transform, var(--brand__img--transform));
+	transition: var(--set-brand__img--transition, var(--brand__img--transition));
+}

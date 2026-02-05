@@ -1,0 +1,40 @@
+{{!--
+	Grid exist of:
+	# several columns on default o-wrapper container (depends on the container width how many columns): [
+		- o-grid o-grid--2@tablet o-grid--4@desktop
+	# several gaps:
+		- no class is no gap
+		- o-gap = default
+		- o-gap--large
+--}}
+{{#if renderAsGrid}}
+<div class="o-grid o-grid--2@tablet o-grid--4@desktop
+
+	{{#unless gapNone}}
+		o-gap
+		{{#if gapLarge}}
+			o-gap--large
+		{{/if}}
+	{{/unless}}">
+	{{/if}}
+
+	{{!-- Used with the Paramter "items=[dataArray]" to give data by json array:  --}}
+	{{!-- e.g. 	{{#> grid renderAsGrid=true items=teaser.items }} --}}
+	{{!-- {{> starter/molecules/cards/card}} --}}
+	{{!-- {{/grid}} --}}
+	{{#each items}}
+	{{> @partial-block}}
+	{{/each}}
+
+	{{!-- Used for including several partial inside the block: --}}
+	{{!-- e.g. {{#> grid renderAsGrid=true gapLarge=true}} --}}
+	{{!-- {{> common/atoms/rich-text starter/rich-text/rich-text-block-2 }} --}}
+	{{!-- {{> common/atoms/rich-text starter/rich-text/rich-text-block-2 }} --}}
+	{{!-- {{/grid}} --}}
+	{{#unless items}}
+	{{> @partial-block}}
+	{{/unless}}
+
+	{{#if renderAsGrid}}
+</div>
+{{/if}}

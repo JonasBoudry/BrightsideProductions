@@ -1,0 +1,29 @@
+{{#> component renderAsComponent=renderAsComponent}}
+	<div class="o-wrapper">
+	{{#with banner}}
+		<section class="c-testimonial-banner">
+			<div class="c-testimonial-banner__media">
+				{{> common/atoms/media/media-item}}
+			</div>
+
+			<div class="c-testimonial-banner__content">
+				<div class="c-rich-text-wrapper">
+					<div class="c-rich-text">
+						{{{rich-text}}}
+					</div>
+
+					{{#if rich-text-additional-info}}
+						<div class="c-rich-text">
+							{{{rich-text-additional-info}}}
+						</div>
+					{{/if}}
+
+					<div class="c-testimonial-banner__button">
+						<a href="#" class="c-btn c-btn--secondary">Learn more</a>
+					</div>
+				</div>
+			</div>
+		</section>
+	{{/with}}
+	</div>
+{{/component}}

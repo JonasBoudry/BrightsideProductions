@@ -1,0 +1,22 @@
+<section class="c-cookie {{bgColor}}" data-component-class="Cookie">
+	<div class="o-wrapper c-cookie-wrapper">
+		<div class="c-cookie__body">
+			{{{text}}}
+		</div>
+		<div class="c-cookie__cta-wrapper">
+			<div class="c-cookie__cta">
+				<a class="c-btn c-btn--primary" href="/pages/components/C004-cookie-management">
+					Manage cookies
+				</a>
+			</div>
+			<div class="c-cookie__cta">
+				{{> common/atoms/button
+					text="I agree"
+					isButton=true
+					isPrimary=true
+					extraClasses="js-accept"
+				}}
+			</div>
+		</div>
+	</div>
+</section>

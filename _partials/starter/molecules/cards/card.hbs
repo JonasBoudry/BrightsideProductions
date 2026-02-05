@@ -1,0 +1,50 @@
+<div class="o-card c-card">
+	<div class="o-card__obj-wrapper">
+		{{#if image}}
+		<div class="o-ratio {{#if image.is16by9ratio}}o-ratio--16:9{{/if}}">
+			<div class="c-card__img o-ratio__content">
+				<img class="o-fit" src="{{image.src}}" alt="{{image.alt}}" />
+			</div>
+			{{#if date }}
+			<div class="c-card__date u-bg-color-primary">
+				{{date}}
+			</div>
+			{{/if}}
+		</div>
+		{{/if}}
+	</div>
+
+	<div class="o-card__body-wrapper {{bgColor}}">
+		<div class="c-rich-text">
+			{{#if title}}
+			<h3>{{title}}</h3>
+			{{/if}}
+			{{#if text}}
+			<p>{{text}}</p>
+			{{/if}}
+		</div>
+
+		<div class="o-card__footer">
+			{{#if button}}
+			{{#if button.isFullyClickable}}
+			{{> common/atoms/button
+                    extraClasses="c-btn--link"
+                    isSecondary=button.isSecondary
+                    text=button.label
+                    src=button.link
+					iconId="arrow-right-light"
+					isIconRight=true
+                }}
+			{{^}}
+			{{> common/atoms/button
+                    isPrimary=button.isPrimary
+                    text=button.label
+                    src=button.link
+                }}
+			{{/if}}
+			{{/if}}
+
+			{{{buttonsSection}}}
+		</div>
+	</div>
+</div>

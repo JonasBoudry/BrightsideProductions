@@ -1,0 +1,81 @@
+:root {
+	--card__body-wrapper--justify-content: flex-start;
+	--card__body-wrapper--align-items: normal;
+	--card__body-wrapper--padding: 0;
+	--card__footer--margin-block-start: var(--brand__spacing--small);
+}
+
+.o-card {
+	position: relative;
+	display: flex;
+	flex-direction: var(--card--flex-direction, column);
+	align-items: var(--card--align-items);
+	flex: 1 1 auto; // Fill height of container in case part of grid
+	height: var(--card--height);
+	background-color: var(--card--background-color, transparent);
+	box-shadow: var(--card--box-shadow);
+	--brand__typography-h4--letter-spacing: var(--card-typography-h4--letter-spacing);
+}
+
+.o-card__obj-wrapper {
+	grid-area: var(--card__obj-wrapper--grid-area);
+	position: relative;
+	flex-shrink: 0;
+	flex-grow: 0;
+	flex-basis: var(--card__obj-wrapper--flex-basis);
+	width: 100%;
+	min-width: var(--card__obj-wrapper--min-width, 100%);
+	max-width: var(--card__obj-wrapper--max-width, 100%);
+	min-height: var(--card__obj-wrapper--min-height, auto);
+	max-height: var(--card__obj-wrapper--max-height, 100%);
+	background-color: var(--card__obj-wrapper--background-color, transparent);
+	margin-block-end: var(--card__obj-wrapper--margin-block-end);
+	margin-inline-end: var(--card__obj-wrapper--margin-inline-end);
+	line-height: 1px; // prevent white space
+	border-radius: var(--card__obj-wrapper--border-radius);
+
+	@include mq($from: desktop){
+		overflow: hidden;
+	}
+}
+
+.o-card__body-wrapper {
+	grid-area: var(--card__body-wrapper--grid-area);
+	flex: 1 1 auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: var(--card__body-wrapper--justify-content);
+	align-items: var(--card__body-wrapper--align-items);
+	padding: var(--card__body-wrapper--padding);
+	background-color: var(--card__body-wrapper--background-color, transparent);
+	transition: var(--card__body-wrapper--transition);
+}
+
+.o-card__title {
+	font-weight: var(--card__title--font-weight);
+	color: var(--card__title--color);
+	padding: var(--card__title--padding);
+	background-color: var(--card__title--background-color, transparent);
+	transition: var(--card__title--transition);
+	z-index: var(--card__title--z-index);
+}
+
+.o-card__body {
+	color: var(--card__body--color);
+	padding: var(--card__body--padding);
+	background-color: var(--card__body--background-color, transparent);
+	transition: var(--card__body--transition);
+	opacity: var(--card__body--opacity);
+}
+
+.o-card__footer {
+	margin-block-start: var(--set-card__footer--margin-block-start, var(--card__footer--margin-block-start));
+	display: var(--set-card__footer--display, var(--card__footer--display, flex));
+}
+
+.o-card__overlay {
+	&::after {
+		content: "";
+		@include absolute(0, 0, 0, 0, 2);
+	}
+}

@@ -1,0 +1,80 @@
+---
+pageId: base
+---
+
+<!doctype html>
+<html lang="en">
+
+<head>
+	<title>{{> common/atoms/page-title }}</title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, maximum-scale=3.0">
+	<meta name="description" content="{{description}}">
+	<meta name="keywords" content="{{keywords}}">
+	<meta name="author" content="{{author}}">
+	<meta property="og:site_name" content="{{sitename}}" />
+	<meta property="og:title" content="{{title}}" />
+	{{#if noFollow}}
+	<meta name="robots" content="noindex,nofollow">
+	{{/if}}
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="stylesheet"
+		href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+		media="print" onload="this.media='all'">
+
+	<noscript>
+		<link rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap">
+	</noscript>
+
+	<link rel="preload" as="image" href="/assets/media/images/hero-banner.png"
+		imagesrcset="/assets/media/images/hero-banner.png 1280w, /assets/media/images/hero-banner.png 640w"
+		imagesizes="100vw">
+
+	<style>
+		/* Critical CSS only */
+		.hero-banner {
+			display: grid;
+			place-items: end stretch;
+			min-height: 400px;
+		}
+
+		.hero-banner__bg img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+
+		.hero-banner__content {
+			text-align: center;
+			z-index: 2;
+		}
+	</style>
+
+
+	{{#if hasOverviewPageStyling}}
+	<link rel="stylesheet" href="/sites/overview-page/assets/css/overview-page.css" type="text/css">
+	{{/if}}
+
+	{{#each cssFiles}}
+	<link rel="stylesheet" href="{{path}}" type="text/css" {{#if mediaQuery}}media="{{mediaQuery}}" {{/if}}>
+	{{/each}}
+
+	{{#each jsFiles}}
+	<script {{#if defer}}defer{{/if}} {{#if module}}type="module" {{/if}} src="{{path}}"></script>
+	{{/each}}
+
+	{{> common/favicons/fav-icons }}
+
+</head>
+
+<body class="{{ bodyClass }}">
+
+	{{{content}}}
+
+</body>
+
+</html>

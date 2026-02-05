@@ -1,0 +1,22 @@
+<div class="c-media
+	{{#if bodyFirst}}c-media--text-media{{/if}}
+	{{#if reverseOnMobile}}u-column-reverse-until-tablet{{/if}}
+	{{#if outline}}c-media--outline{{/if}}
+	{{#if outlinePrimary}}c-media--outline-primary{{/if}}
+	{{#if bgColor}}{{bgColor}}{{/if}}">
+	{{#if bodyFirst}}
+	<div class="c-media__section">
+		{{> starter/components/content/media/media-body-wrapper}}
+	</div>
+	<div class="c-media__section">
+		{{> starter/components/content/media/media-obj-wrapper}}
+	</div>
+	{{else}}
+	<div class="c-media__section">
+		{{> starter/components/content/media/media-obj-wrapper}}
+	</div>
+	<div class="c-media__section">
+		{{> starter/components/content/media/media-body-wrapper}}
+	</div>
+	{{/if}}
+</div>

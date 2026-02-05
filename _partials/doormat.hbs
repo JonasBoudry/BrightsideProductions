@@ -1,0 +1,28 @@
+<div class="c-doormat {{#if type}}c-doormat--{{type}}{{/if}} {{#if isCentered}}align-center{{else if isRightAligned}}align-right{{/if}}">
+
+	<div class="c-doormat-wrapper">
+		<div class="c-doormat__header c-nav">
+			<ul class="c-list">
+				{{#if parent}}
+					<li class="c-list__item c-list__item--doormat-grandparent">{{{parent}}}</li>
+				{{/if}}
+				<li class="c-list__item"><button class="c-nav-back-link js-toggle-doormat">{{{label}}}</button></li>
+				<li class="{{#if isNav}}c-nav__item{{else}}c-list__item{{/if}}">
+					<a class="{{#if isNav}}c-nav__link{{else}}c-list__link{{/if}} c-nav-overview-link" href="#">
+						<span>Overview page</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+
+		<div class="c-doormat__body">
+			{{> @partial-block}}
+		</div>
+
+		{{#if link}}
+			<div class="c-doormat__link-wrapper">
+				<a class="c-doormat__link general-btn" href="{{link}}">{{linkText}}</a>
+			</div>
+		{{/if}}
+	</div>
+</div>

@@ -1,0 +1,169 @@
+$form__spacing: 0 20px !default;
+$form__spacing--select: 0 20px !default;
+$form__input--font-size: var(--brand__typography-p--font-size) !default;
+$form__input--line-height: 1.2 !default;
+$form__input--font-weight: var(--brand__font-weight) !default;
+$form__input--border: 1px solid transparent !default;
+$form__select--padding: 0 24px !default;
+
+:root {
+	--brand__input--padding: #{$form__spacing};
+	--brand__input--height: 60px;
+	--brand__input--width: 100%;
+	--brand__input--bg-color: rgb(var(--brand__color--background));
+	--brand__input--border-radius: var(--brand__border-radius);
+	--brand__input--border: #{$form__input--border};
+}
+
+button {
+	font-family: $brand__font-family;
+	font-weight: var(--brand__font-weight);
+	cursor: pointer;
+}
+
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="range"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"],
+textarea {
+	font-size: $form__input--font-size;
+	line-height: $form__input--line-height;
+	color: currentColor;
+	font-family: $brand__font-family;
+	font-weight: $form__input--font-weight;
+	padding: var(--brand__input--padding);
+	border: var(--set-brand__input--border, var(--brand__input--border));
+	border-radius: var(--brand__input--border-radius);
+	width: var(--brand__input--width);
+	height: var(--set-brand__input--height, var(--brand__input--height));
+	background-color: var(--set-brand__input--bg-color, var(--brand__input--bg-color));
+
+	@include placeholder();
+
+	&[disabled], &[readonly] {
+		background-color: rgb(var(--brand__color--background));
+		cursor: not-allowed;
+	}
+}
+
+input[type="range"] {
+	--brand__input--border: none;
+	--brand__input--width: auto;
+}
+
+textarea {
+	--brand__input--height: auto;
+}
+
+option {
+	padding: 2px 0;
+	font-family: $brand__font-family;
+	font-size: $form__input--font-size;
+	line-height: $form__input--line-height;
+	background-color: var(--brand-option--bgc, rgb(var(--brand__color--white)));
+	color: var(--brand-option--color, rgb(var(--brand__color--text)));
+}
+
+select {
+	background-color: var(--set-select--background-color,
+	var(--select--background-color, var(--brand__input--bg-color)));
+	border: var(--select--border, var(--brand__input--border));
+	border-radius: var(--set-select--border-radius, var(--select--border-radius, var(--brand__input--border-radius)));
+	padding: var(
+		--set-select--padding,
+		var(--select--padding, 0 var(--brand__spacing--large) 0 var(--brand__spacing--small))
+	);
+	color: var(--select--color, currentColor);
+	font-weight: var(--set-select--font-weight, var(--select--font-weight, #{$form__input--font-weight}));
+	width: var(--set-select--width, var(--select--width, var(--brand__input--width)));
+	appearance: none;
+	background-image: var(--select--background-image, var(--brand__arrow-down));
+	background-repeat: no-repeat;
+	background-position: var(--select--background-pos, right 40px center);
+	background-size: var(--select--background-size, 11px 6px);
+	max-width: 100%;
+	outline: none; // There's a focus state
+
+	&:focus {
+		--select--background-image: var(--select-focus--background-image, var(--brand__arrow-up));
+		--select--background-size: 20px 10px;
+		--select--background-pos: right 35px center;
+	}
+
+	&:focus-visible {
+		box-shadow: 0 0 10px 0 rgba(var(--brand__color--gray-darker), 0.5);
+	}
+
+}
+
+select:not([multiple]) {
+	height: var(--brand__select--height, var(--brand__input--height));
+}
+
+label {
+	color: var(--label--color);
+	font-size: var(--label--font-size);
+	font-weight: var(--set-label--font-weight, var(--label--font-weight));
+	line-height: var(--label--line-height);
+	margin-block-start: var(--label--margin-block-start);
+}
+
+label:not(.u-screen-reader) + select,
+label:not(.u-screen-reader) + .a-select {
+	margin-inline-start: var(--select--margin-inline-start, var(--brand__spacing));
+}
+
+input[type="radio"] ~ label {
+	color: var(--input-radio-label--color);
+	font-weight: #{$brand__font-weight--semibold};
+	position: relative;
+	padding-inline-start: calc(var(--brand__spacing--small) + var(--brand__spacing--tiny));
+
+	&::before {
+		display: block;
+		content: "";
+		@include absolute(0, null, null, 0);
+		line-height: 1;
+		border: var(--input-radio-label-before--border, 2px solid rgb(var(--brand__color--gray-darker)));
+		border-radius: 50%;
+		width: 20px;
+		height: 20px;
+		margin: 2px 0 0 0;
+		background-color: var(--input-radio-label-before--background-color);
+	}
+
+	&::after {
+		display: var(--input-radio-label-after--display, block);
+		content: "";
+		@include absolute(8px, null, null, 6px);
+		border-radius: 50%;
+		width: 8px;
+		height: 8px;
+		background-color: rgb(var(--brand__color--white));
+	}
+
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+input[type="radio"]:checked ~ label {
+	--input-radio-label--color: rgb(var(--brand__color--primary));
+	--input-radio-label-before--border: 2px solid rgb(var(--brand__color--primary));
+	--input-radio-label-before--background-color: rgb(var(--brand__color--primary));
+	--input-radio-label-after--display: block;
+}
+
+input[type="search"] {
+	-webkit-appearance: none;
+}

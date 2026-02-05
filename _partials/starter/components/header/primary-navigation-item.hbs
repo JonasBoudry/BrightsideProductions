@@ -1,0 +1,33 @@
+<li class="c-nav-primary-item
+    {{#if doormat}}c-nav-primary-item--has-doormat js-nav-primary-item-has-doormat {{/if}}
+    {{#if isActive}}is-active{{/if}}
+    {{#eq @root.pageId pageId}}is-active{{/eq}}">
+
+	<a class="c-nav-primary-item__link {{#if doormat}}js-nav-primary-item-link{{/if}}" href="{{link}}">
+		<span class="c-nav-primary-item__text">
+			{{link-text}}
+		</span>
+
+		{{#if doormat}}
+		<span class="c-nav-primary-item__icon u-hide-until-large">
+			{{> common/atoms/svg-icon
+				iconId="chevron"
+				iconHeight=8
+				iconWidth=8
+			}}
+		</span>
+
+		<span class="c-nav-primary-item__icon u-hide-large">
+			{{> common/atoms/svg-icon
+				iconId="arrow-right"
+				iconHeight=11
+				iconWidth=10
+			}}
+		</span>
+		{{/if}}
+	</a>
+
+	{{#if doormat}}
+	{{> starter/components/header/doormat}}
+	{{/if}}
+</li>

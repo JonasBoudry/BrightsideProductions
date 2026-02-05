@@ -1,0 +1,26 @@
+{{#if rich-text}}
+<div class="rich-text">
+	{{{rich-text}}}
+
+	{{#if buttons}}
+	{{#or buttons links}}
+	<p{{#or buttons.isCentered links.isCentered}} style="text-align:center" {{/or}}>
+		{{#each buttons.items}}
+		{{> common/atoms/button
+		isPrimary=isPrimary
+		isSecondary=isSecondary
+		isSecondaryLight=isSecondaryLight
+		isGhost=isGhost
+		src='#'
+		text=text
+		}}
+		{{/each}}
+
+		{{#each links.items}}
+		{{> common/atoms/link src='#'}}
+		{{/each}}
+		</p>
+		{{/or}}
+		{{/if}}
+</div>
+{{/if}}

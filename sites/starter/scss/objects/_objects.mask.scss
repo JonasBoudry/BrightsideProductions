@@ -1,0 +1,9 @@
+.o-mask {
+	@include absolute(0, 0, 0, 0);
+	background: linear-gradient(
+		180deg,
+		rgba(var(--brand__color--gray), 0) 0%,
+		rgba(var(--brand__color--gray), 0.335417) 31.25%,
+		rgba(var(--brand__color--gray), 0.6) 100%
+	);
+}

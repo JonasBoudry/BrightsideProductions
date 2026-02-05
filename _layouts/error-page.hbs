@@ -1,0 +1,78 @@
+---
+pageId: error-page
+title: "404 - 500 error page"
+---
+
+<!doctype html>
+<html lang="en">
+
+<head>
+	<title>{{> common/atoms/page-title}}</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86">
+	<meta name="description" content="404 - 500 page">
+
+	<style>
+		body {
+			margin: 0;
+			font-family: Arial, sans-serif;
+			overflow: hidden;
+			color: rgb(50, 61, 62);
+			font-size: 20px;
+			line-height: 130%;
+			text-align: center;
+		}
+
+		h1 {
+			margin-top: 0;
+			margin-bottom: 10px;
+			font-size: 42px;
+			line-height: 120%;
+		}
+
+		.c-error-block {
+			background-color: rgb(245, 245, 245);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100vw;
+			height: 100vh;
+
+			@supports (height: -webkit-fill-available) {
+				height: -webkit-fill-available;
+			}
+		}
+
+		.c-error-block__body {
+			padding: 20px;
+			text-align: center;
+		}
+
+		@media (min-width: 740px) {
+			.c-error-block__body {
+				max-width: 700px;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<main>
+		<section class="c-error-block">
+			<div class="c-error-block__body">
+				<div class="c-rich-text">
+					<h1>This is the title of the error message</h1>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nulla augue, faucibus sed mauris
+						non, sollicitudin condimentum neque. Maecenas venenatis ultrices commodo. Proin quis felis
+						faucibus, iaculis diam vel, posuere ipsum. Vivamus vel consectetur massa. Vestibulum lobortis
+						nunc ac posuere aliquam. Aenean eu nulla eleifend, pellentesque sapien ac, ultricies magna.
+						Aliquam facilisis ornare sodales.
+					</p>
+				</div>
+			</div>
+		</section>
+	</main>
+</body>
+
+</html>

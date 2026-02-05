@@ -1,0 +1,12 @@
+{{#> component renderAsComponent=true bgColor=bgColor}}
+<div class="slider swiper js-swiper" data-component-class="SwiperComponent">
+    <ul class="slider__list swiper-wrapper">
+        {{#each items}}
+        <li class="slider__item swiper-slide">
+            <img class="o-fit" src="{{src}}" alt="{{alt}}" width="{{width}}" height="{{height}}"
+                loading="{{loading}}" />
+        </li>
+        {{/each}}
+    </ul>
+</div>
+{{/component}}

@@ -1,0 +1,20 @@
+<div class="c-video-wrapper js-video-wrapper" {{#if image.src}}data-component-class="Video"{{/if}}>
+    {{#if image.src}}
+		{{> common/atoms/button
+			../this
+			isIcon=true
+			isButton=true
+			iconId="play"
+			ariaLabel="Play"
+			extraClasses="c-btn--play js-btn-play"
+		}}
+	{{/if}}
+    <div class="c-video-main">
+        {{#if image.src}}
+            {{> common/atoms/media/image extraClass="js-poster"}}
+        {{/if}}
+        <video class="c-video js-video" controls playsinline {{#if video.autoplay}}autoplay{{/if}} muted>
+            <source src="{{video.src}}" type="video/mp4">
+        </video>
+    </div>
+</div>

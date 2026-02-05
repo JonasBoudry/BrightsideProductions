@@ -1,0 +1,33 @@
+:root {
+	--brand__img--height: auto;
+	--brand__img--width: 100%;
+	--brand__img--transform: none;
+	--brand__img--transition: transform 0.3s ease-in-out;
+}
+
+img,
+picture {
+	&::selection {
+		background-color: rgb(var(--brand__color--primary-light));
+	}
+}
+
+img {
+	display: inline-block;
+	min-height: var(--brand__img--min-height, 100%);
+	height: var(--set-brand__img--height, var(--brand__img--height));
+	width: var(--set-brand__img--width, var(--brand__img--width));
+	transform: var(--brand__img--transform);
+	transition: var(--brand__img--transition);
+	border-radius: var(--brand__img--border-radius);
+	overflow: hidden;
+	flex-shrink: 0;
+}
+
+picture {
+	min-height: var(--brand__picture--min-height, 100%);
+	height: var(--set-brand__picture--height, var(--brand__picture--height, 100%));
+	width: var(--set-brand__picture--width, var(--brand__picture--width));
+	border-radius: var(--brand__picture--border-radius);
+	overflow: hidden;
+}

@@ -1,0 +1,18 @@
+<div class="u-padding-top-large u-padding-bottom-large">
+	<div class="o-wrapper">
+		<h1>Containers</h1>
+	</div>
+	<section class="o-wrapper">
+		<div class="c-styleguide-button u-padding">
+			<h2>Base container ({{size}})</h2>
+		</div>
+	</section>
+
+	{{#each containerTypes}}
+		<section class="o-wrapper {{class}}">
+			<div class="c-styleguide-button u-padding">
+				<h2>{{label}} ({{size}})</h2>
+			</div>
+		</section>
+	{{/each}}
+</div>

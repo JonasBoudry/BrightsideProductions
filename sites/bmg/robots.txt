@@ -1,0 +1,59 @@
+# ------------------------------
+# Brightside Media Group Robots.txt
+# Optimized for SEO & Crawl Efficiency
+# ------------------------------
+
+# Apply to all bots
+User-agent: *
+
+# ------------------------------
+# Disallow private/admin/staging paths
+# ------------------------------
+Disallow: /admin/
+Disallow: /drafts/
+Disallow: /private/
+Disallow: /staging/
+Disallow: /tmp/
+Disallow: /old/
+Disallow: /test/
+
+# ------------------------------
+# Block duplicate content
+# ------------------------------
+Disallow: /*?utm_  # Prevent tracking parameters indexing
+Disallow: /*?sessionid=
+Disallow: /*?ref=
+
+# ------------------------------
+# Allow everything else
+# ------------------------------
+Allow: /
+
+# ------------------------------
+# Sitemap location
+# ------------------------------
+Sitemap: https://www.brightsidemediagroup.be/sitemap.xml
+
+# ------------------------------
+# Optional Bot-Specific Rules
+# ------------------------------
+
+# Googlebot
+User-agent: Googlebot
+Crawl-delay: 2
+
+# Bingbot
+User-agent: Bingbot
+Crawl-delay: 3
+
+# Yandexbot (optional if you care about Russia)
+User-agent: Yandex
+Disallow: /
+
+# ------------------------------
+# Notes:
+# 1. Keep robots.txt small & readable.
+# 2. Combine with meta robots tags for more granular control:
+#    <meta name="robots" content="noindex,nofollow">
+# 3. Always submit sitemap in Search Console for indexing efficiency.
+# ------------------------------

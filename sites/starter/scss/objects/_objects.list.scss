@@ -1,0 +1,32 @@
+.o-list {
+	@include list-unstyle();
+
+	&--inline {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	&--middle {
+		align-items: center;
+	}
+}
+
+.o-list-bare__item {
+	display: inherit; /*EPI Fix user agent stylesheet display: list-item causes bullets in edit mode;*/
+}
+
+.o-icon-list {
+	@include list-unstyle();
+}
+
+.o-icon-list__item {
+	display: flex;
+	line-height: 1.5;
+	margin: 0 0 var(--brand__spacing--tiny) 0;
+}
+
+.o-icon-list__icon {
+	width: 25px;
+	height: 25px;
+	margin: 0 var(--brand__spacing--small) 0 0;
+}

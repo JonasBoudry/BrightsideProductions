@@ -1,0 +1,30 @@
+.o-flip {
+	&:hover .o-flip__inner {
+		transform: rotateY(180deg);
+	}
+	&__inner {
+		display: inherit;
+		flex-grow: 1;
+		height: inherit;
+		padding: inherit;
+		margin: inherit;
+		position: relative;
+
+		transition: transform 0.6s;
+		transform-style: preserve-3d;
+	}
+
+	&__front,
+	&__back {
+		display: inherit;
+		flex-grow: 1;
+		height: inherit;
+		padding: inherit;
+		margin: inherit;
+		@include absolute(0, 0, 0, 0);
+		backface-visibility: hidden;
+	}
+	&__back {
+		transform: rotateY(180deg);
+	}
+}

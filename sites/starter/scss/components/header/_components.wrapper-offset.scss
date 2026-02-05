@@ -1,0 +1,7 @@
+.wrapper--offset {
+    padding-top: var(--brand__wrapper-offset--padding-top);
+
+    @include mq($until: large) {
+        --brand__wrapper-offset--padding-top: #{$header__height--mobile};
+    }
+}

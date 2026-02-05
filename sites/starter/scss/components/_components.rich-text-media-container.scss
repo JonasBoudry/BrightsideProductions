@@ -1,0 +1,8 @@
+.c-rich-text-media-container {
+	--rich-text-media--margin-bottom: var(--brand__spacing--large);
+	--rich-text-media--flex-direction: row;
+
+	@include mq($from: large) {
+		--rich-text-media--spacing: var(--brand__spacing--large);
+	}
+}

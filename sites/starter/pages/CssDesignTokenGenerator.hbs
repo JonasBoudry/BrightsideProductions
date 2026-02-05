@@ -1,0 +1,31 @@
+---
+permalink: "/sites{{@root.paths.root}}assets/css/design-tokens.css"
+---
+
+:root {
+{{#with starter.design-tokens}}
+	{{#each token.colors}}
+		--brand__{{type}}--{{name}}: {{rgb}};
+	{{/each}}
+
+	{{#each token.typography}}
+		--brand__{{type}}-{{name}}--font-family: {{fontFamily}};
+		--brand__{{type}}-{{name}}--font-family-extended: {{fontPostScriptName}};
+		--brand__{{type}}-{{name}}--font-size: {{fontSize}};
+		--brand__{{type}}-{{name}}--font-weight: {{fontWeight}};
+		--brand__{{type}}-{{name}}--line-height: {{lineHeightPercentFontSize}};
+		--brand__{{type}}-{{name}}--letter-spacing: {{letterSpacing}};
+		--brand__{{type}}-{{name}}--color: {{hex}};
+		--brand__{{type}}-{{name}}--margin-bottom: {{paragraphSpacing}};
+		--brand__{{type}}-{{name}}--text-decoration: {{textDecoration}};
+	{{/each}}
+
+	{{#each token.spacings}}
+		{{#if (eq name "default")}}
+			--brand__{{type}}: {{value}};
+		{{else}}
+			--brand__{{type}}--{{name}}: {{value}};
+		{{/if}}
+	{{/each}}
+{{/with}}
+}

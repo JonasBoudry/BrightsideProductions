@@ -1,0 +1,8 @@
+.azure/
+node_modules/
+dist/
+infrastructure/
+Properties/
+readme.md
+package.json
+.eleventy.js

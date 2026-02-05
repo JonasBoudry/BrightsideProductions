@@ -1,0 +1,12 @@
+{{#> component renderAsComponent=true isSmallWrapper=true bgColor=bgColor}}
+<div class="video">
+	<video class="u-hide-desktop" autoplay muted loop playsinline preload="auto" aria-hidden="true">
+		<!-- Mobile video -->
+		<source src="{{src.mobile}}" type="video/mp4" />
+	</video>
+	<video class="u-hide-until-desktop" autoplay muted loop playsinline preload="auto" aria-hidden="true">
+		<!-- Desktop video -->
+		<source src="{{src.desktop}}" type="video/mp4" />
+	</video>
+</div>
+{{/component}}

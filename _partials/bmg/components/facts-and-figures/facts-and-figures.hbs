@@ -1,0 +1,17 @@
+{{#> component renderAsComponent=true isSmallWrapper=true bgColor=bgColor}}
+<div class="facts-and-figures" data-component-class="FactsAndFigures">
+	<ul>
+        {{#each items}}
+        <li>
+            <div class="number h2">
+                {{#if plus}}<span class="number__icon">+</span>{{/if}}
+                <span class="number__value js-number-value" style="--number: {{number}}; --steps: {{steps}};">{{number}}</span>
+            </div>
+            <div class="text">
+                {{text}}
+            </div>
+        </li>
+        {{/each}}
+    </ul>
+</div>
+{{/component}}

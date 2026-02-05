@@ -1,0 +1,25 @@
+<section class="u-padding-top-large u-padding-bottom-large">
+	<div class="o-wrapper">
+		<h1>Buttons</h1>
+	</div>
+
+	{{#each buttonTypes}}
+	<section class="c-styleguide-button">
+		<div class="o-wrapper">
+			<h2>{{label}}</h2>
+		</div>
+
+		{{#each ../bgColors}}
+		<div class="o-wrapper u-padding-vertical {{#if bgColor}}{{bgColor}}{{/if}}">
+			<h2>{{../label}} button {{bgColorTitle}}</h2>
+			<div class="u-padding-vertical o-flex o-flex--wrap o-gap o-gap--small">
+				{{> common/atoms/button ../this text="As Link" }}
+				{{> common/atoms/button ../this text="As Link with download" isButton=true isDownload=true }}
+				{{> common/atoms/button ../this text="As Button" isButton=true }}
+				{{> common/atoms/button ../this text="As Button without icon" isButton=true hideIcon=true }}
+				{{> common/atoms/button ../this text="As Disabled button" isButton=true isDisabled=true }}
+			</div>
+			{{/each}}
+	</section>
+	{{/each}}
+</section>

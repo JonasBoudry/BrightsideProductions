@@ -1,0 +1,30 @@
+.a-back-to-top {
+	@include fixed(null, null, var(--brand__spacing--large), null);
+	margin-inline-start: var(--back-to-top--mis, calc(100% - 100px));
+	display: var(--back-to-top--display, none);
+	align-items: center;
+	justify-content: center;
+	z-index: var(--back-to-top--z-index, #{$brand__back-to-top--z-index});
+
+	@include mq($from: desktop) {
+		--back-to-top--display: flex;
+		--back-to-top--mis: calc(100% - 50px);
+		--brand__svg--width: 40px;
+		--brand__svg--height: 40px;
+	}
+
+	@include mq($from: large) {
+		--back-to-top--mis: calc(100% - var(--brand__spacing--large));
+	}
+
+	@include mq($from: larger) {
+		--back-to-top--mis: calc(100% - 100px);
+		--brand__svg--width: 60px;
+		--brand__svg--height: 60px;
+	}
+}
+
+.a-back-to-top__link {
+	display: flex;
+	align-items: center;
+}

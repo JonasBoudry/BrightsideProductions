@@ -1,0 +1,15 @@
+<div class="a-notation">
+    <ul class="a-notation__list">
+        {{#each notation.items}}
+        <li class="a-notation-item">
+            <div class="a-notation-item__icon {{#if isActive}}is-active{{/if}}">
+                {{> common/atoms/svg-icon
+                iconId="icon-favourite"
+                iconWidth="18"
+                iconHeight="18"
+                }}
+            </div>
+        </li>
+        {{/each}}
+    </ul>
+</div>

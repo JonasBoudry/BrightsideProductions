@@ -1,0 +1,27 @@
+{{#> component renderAsComponent=renderAsComponent}}
+	{{#with banner}}
+		<section class="c-banner {{#if rich-text}}has-caption{{/if}}">
+			<div class="c-banner__media">
+				{{> common/atoms/media/media-item}}
+			</div>
+
+			{{#if rich-text}}
+				<div class="c-banner__content u-bg-color-secondary-darker">
+					<div class="c-rich-text-wrapper">
+						<div class="c-rich-text">
+							{{{rich-text}}}
+
+							<p>
+								{{> common/atoms/button
+									../this
+									text=button.label
+									isSecondary=true
+								}}
+							</p>
+						</div>
+					</div>
+				</div>
+			{{/if}}
+		</section>
+	{{/with}}
+{{/component}}

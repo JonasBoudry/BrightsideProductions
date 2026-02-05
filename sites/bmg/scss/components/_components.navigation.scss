@@ -1,0 +1,55 @@
+.c-navigation {
+	margin: var(--brand__navigation--margin);
+	display: var(--navigation--display, none);
+
+	@include mq($from: tablet) {
+		--navigation--display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+}
+
+.c-navigation__list {
+	display: flex;
+	flex-direction: var(--brand__navigation-list--flex-direction);
+	justify-content: center;
+	align-items: center;
+	margin: 0;
+	@include list-unstyle();
+	background-color: rgba(var(--brand__color--black), 0.3);
+	border-radius: var(--brand__border-radius--large)
+}
+
+.c-navigation-item {
+	@include list-unstyle();
+	margin: var(--brand__navigation-item--margin, 0 var(--brand__spacing--tiny));
+	--brand__btn--text-align: center;
+	--brand__btn--text-transform: uppercase;
+
+	&.is-active {
+		.c-navigation-item__link {
+			text-decoration-color: rgb(var(--brand__color--white));
+			text-decoration-line: underline;
+			text-decoration-thickness: 1px;
+			text-underline-offset: 3px;
+		}
+	}
+}
+
+.c-navigation-item__link {
+	display: inline-block;
+	padding: var(--brand__spacing--tiny);
+	background-color: var(--brand__navigation-item-link--background-color);
+	text-align: center;
+	--brand__link--text-transform: uppercase;
+	--brand__link--color: var(--brand__navigation-item-link--color, rgb(var(--brand__color--white)));
+	--brand__link-hover--color: var(--brand__navigation-item-link-hover--color, rgb(var(--brand__color--white)));
+	--brand__link-active--color: var(--brand__navigation-item-link-focus--color, rgb(var(--brand__color--white)));
+
+	&:hover {
+		text-decoration-color: rgb(var(--brand__color--white));
+		text-decoration-line: underline;
+		text-decoration-thickness: 1px;
+		text-underline-offset: 3px;
+	}
+}

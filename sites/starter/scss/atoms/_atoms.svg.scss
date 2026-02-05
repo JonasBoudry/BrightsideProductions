@@ -1,0 +1,27 @@
+:root {
+	--brand__svg--fill: currentColor;
+	--brand__svg--height: unset;
+	--brand__svg--width: auto;
+	--brand__svg--max-width: auto;
+	--brand__svg--transform: none;
+}
+
+.a-svg {
+	fill: var(--set-brand__svg--fill, var(--brand__svg--fill, currentColor));
+	width: var(--brand__svg--width);
+	height: var(--brand__svg--height);
+	max-width: var(--brand__svg--max-width);
+	flex-shrink: 0;
+	transition: var(--set-brand__svg--transition, all 0.25s);
+	transform: var(--set-brand__svg--transform, var(--brand__svg--transform));
+	margin-top: var(--set-brand__svg--margin-top, var(--brand__svg--margin-top));
+	margin-inline-start: var(--set-brand__svg--margin-inline-start, var(--brand__svg--margin-inline-start));
+}
+
+.a-svg--nostroke {
+	stroke: none;
+}
+
+.a-svg--ghost {
+	fill: none;
+}

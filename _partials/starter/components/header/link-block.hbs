@@ -1,0 +1,20 @@
+<div class="c-link-block">
+	<ul class="c-link-block__list">
+		{{#each doormat.link-block.items}}
+		<li class="c-link-block-item">
+			<a class="c-link-block-item__link" href="{{link}}" title="{{title}}">
+				<span class="c-link-block-item__label">
+					{{label}}
+				</span>
+			</a>
+		</li>
+		{{/each}}
+	</ul>
+	<div class="c-link-block__cta">
+		{{> common/atoms/button
+            isPrimary=true
+            text=doormat.link-block.button.text
+            src=doormat.link-block.button.src
+        }}
+	</div>
+</div>

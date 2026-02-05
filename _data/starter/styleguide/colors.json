@@ -1,0 +1,69 @@
+{
+	"subject": [
+		{
+			"title": "Base",
+			"colors": [
+				{
+					"bgColor": "u-bg-color-white",
+					"value": "#FFFFFF",
+					"title": "White"
+				},
+				{
+					"bgColor": "u-bg-color-black",
+					"value": "#000000",
+					"title": "Black"
+				},
+				{
+					"bgColor": "u-bg-color-gray",
+					"value": "#2c2a29",
+					"title": "Gray"
+				},
+				{
+					"bgColor": "u-bg-color-gray-light",
+					"value": "#84888b",
+					"title": "Gray Light"
+				},
+				{
+					"bgColor": "u-bg-color-gray-lighter",
+					"value": "#e8e7e8",
+					"title": "Gray Lighter"
+				}
+			]
+		},
+		{
+			"title": "Brand",
+			"colors": [
+				{
+					"bgColor": "u-bg-color-primary",
+					"value": "#1a1a1a",
+					"title": "Primary"
+				},
+				{
+					"bgColor": "u-bg-color-secondary",
+					"value": "#84888b",
+					"title": "Secondary"
+				},
+				{
+					"bgColor": "u-bg-color-text",
+					"value": "#424242",
+					"title": "Text"
+				}
+			]
+		},
+		{
+			"title": "Background",
+			"colors": [
+				{
+					"bgColor": "u-bg-color-background-accent1",
+					"value": "#f2f5f8",
+					"title": "Accent1"
+				},
+				{
+					"bgColor": "u-bg-color-background-accent2",
+					"value": "SVG",
+					"title": "Accent2"
+				}
+			]
+		}
+	]
+}

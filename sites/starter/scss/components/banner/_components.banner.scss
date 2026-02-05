@@ -1,0 +1,57 @@
+:root {
+    --banner__content-after--width: 120px;
+    --banner__content-after--offset: -119px;
+}
+
+.c-banner {
+    direction: var(--banner--direction);
+
+    &.has-caption {
+        display: grid;
+        grid-template-columns: var(--banner--grid-template-columns, 1fr);
+        grid-template-rows: var(--banner--grid-template-rows, auto auto);
+        grid-template-areas: var(--banner--grid-template-areas, "media" "content");
+
+        @include mq($from: desktop) {
+            --banner--grid-template-columns: 1.25fr 2fr;
+            --banner--grid-template-rows: 1fr;
+            --banner--grid-template-areas: "content media";
+            --image--height: 100%;
+        }
+    }
+}
+
+.c-banner__media {
+    grid-area: media;
+    z-index: 1;
+    position: relative;
+    --image--width: 100%;
+}
+
+ .c-banner__content {
+    grid-area: content;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: var(--brand__spacing--large) var(--brand__spacing);
+    z-index: 2;
+
+    @include mq($from: desktop) {
+        padding-inline-start: var(--brand__spacing--huge);
+        padding-inline-end: var(--brand__spacing);
+        padding-top: var(--brand__spacing--large);
+        padding-bottom: var(--brand__spacing--large);
+
+        &::after {
+            content: "";
+            background-color: rgb(var(--brand__color--secondary-darker));
+            width: var(--banner__content-after--width);
+            height: 100%;
+            clip-path: var(--banner__content-after--cip-path, polygon(0 0, 100% 0%, 2% 100%, 0% 100%));
+            position: absolute;
+            right: var(--banner__content-after--right, var(--banner__content-after--offset));
+            left: var(--banner__content-after--left);
+            top: 0;
+        }
+    }
+}

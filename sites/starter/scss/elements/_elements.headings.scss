@@ -1,0 +1,74 @@
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+	color: var(--set-brand__typography--color, var(--brand__typography--color));
+	font-family: var(--brand__typography--font-family), var(--brand__typography-fallback--font-family);
+}
+
+h1, .h1 {
+	--brand__typography--color: var(--brand__typography-h1--color);
+	--brand__typography--font-family: var(--brand__typography-h1--font-family);
+	font-size: var(--brand__typography-h1-mobile--font-size);
+	line-height: var(--brand__typography-h1-mobile--line-height);
+	font-weight: var(--brand__typography-h1--font-weight);
+	letter-spacing: var(--brand__typography-h1--letter-spacing);
+	margin-bottom: var(--brand__typography-h1--margin-bottom);
+
+    @include mq($from: tablet){
+		--brand__typography-h1-mobile--font-size: var(--brand__typography-h1--font-size);
+		--brand__typography-h1-mobile--line-height: var(--brand__typography-h1--line-height);
+    }
+}
+
+h2, .h2 {
+	--brand__typography--color: var(--brand__typography-h2--color);
+	--brand__typography--font-family: var(--brand__typography-h2--font-family);
+	font-size: var(--brand__typography-h2--font-size);
+	line-height: var(--brand__typography-h2--line-height);
+	font-weight: var(--brand__typography-h2--font-weight);
+	letter-spacing: var(--brand__typography-h2--letter-spacing);
+	margin-bottom: var(--brand__typography-h2--margin-bottom);
+}
+
+h3, .h3 {
+	--brand__typography--color: var(--brand__typography-h3--color);
+	--brand__typography--font-family: var(--brand__typography-h3--font-family);
+	font-size: var(--brand__typography-h3--font-size);
+	line-height: var(--brand__typography-h3--line-height);
+	font-weight: var(--brand__typography-h3--font-weight);
+	letter-spacing: var(--brand__typography-h3--letter-spacing);
+	margin-bottom: var(--brand__typography-h3--margin-bottom);
+}
+
+h4, .h4 {
+	--brand__typography--color: var(--brand__typography-h4--color);
+	--brand__typography--font-family: var(--brand__typography-h4--font-family);
+	font-size: var(--brand__typography-h4--font-size);
+	line-height: var(--brand__typography-h4--line-height);
+	font-weight: var(--brand__typography-h4--font-weight);
+	letter-spacing: var(--brand__typography-h4--letter-spacing);
+	margin-bottom: var(--brand__typography-h4--margin-bottom);
+}
+
+h5, .h5 {
+	--brand__typography--color: var(--brand__typography-h5--color);
+	--brand__typography--font-family: var(--brand__typography-h5--font-family);
+	font-size: var(--brand__typography-h5--font-size);
+	line-height: var(--brand__typography-h5--line-height);
+	font-weight: var(--brand__typography-h5--font-weight);
+	letter-spacing: var(--brand__typography-h5--letter-spacing);
+	margin-bottom: var(--brand__typography-h5--margin-bottom);
+}
+
+h6, .h6 {
+	--brand__typography--color: var(--brand__typography-h6--color);
+	--brand__typography--font-family: var(--brand__typography-h6--font-family);
+	font-size: var(--brand__typography-h6--font-size);
+	line-height: var(--brand__typography-h6--line-height);
+	font-weight: var(--brand__typography-h6--font-weight);
+	letter-spacing: var(--brand__typography-h6--letter-spacing);
+	margin-bottom: var(--brand__typography-h6--margin-bottom);
+}

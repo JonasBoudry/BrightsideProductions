@@ -1,0 +1,38 @@
+.c-component {
+	position: relative;
+	margin-top: var(
+		--set-brand__component--margin-top,
+		var(--brand__component--margin-top)
+	);
+	margin-bottom: var(
+		--set-brand__component--margin-bottom,
+		var(--brand__component--margin-bottom, var(--brand__spacing--huge))
+	);
+
+	&[class*="u-bg-"] {
+		--brand__component-section--padding-top: var(--brand__spacing--huge);
+		--brand__component-section--padding-bottom: var(--brand__spacing--huge);
+	}
+
+	&.no-spacing-bottom {
+		--brand__component--margin-bottom: 0;
+		--brand__component--padding-bottom: 0;
+	}
+
+	section:nth-of-type(1) {
+		&:not(:where(section section)) {
+			position: relative;
+			z-index: 1;
+			padding-top: var(--set-brand__component-section--padding-top, var(--brand__component-section--padding-top));
+			padding-bottom: var(--set-brand__component-section--padding-bottom, var(--brand__component-section--padding-bottom));
+			margin-top: var(--set-brand__component-section--margin-top, var(--brand__component-section--margin-top));
+		}
+	}
+
+	&.has-watermark {
+		@include mq($from: desktop) {
+			--brand__component-section--margin-top: calc(0px - var(--watermark--height));
+			--vertical-text--top: var(--brand__spacing--huge);
+		}
+	}
+}

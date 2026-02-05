@@ -1,0 +1,7 @@
+{{#with card}}
+	{{#if isBlogCard}}
+		{{> common/molecules/cards/card-blog-article}}
+	{{else if isCropCard}}
+		{{> common/molecules/cards/card-crop-item}}
+	{{/if}}
+{{/with}}

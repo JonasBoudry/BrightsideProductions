@@ -1,0 +1,52 @@
+{
+	"teaser": {
+		"title": "Title",
+		"items": [
+			{
+				"image": {
+					"is16by9ratio": true,
+					"src": "/sites/starter/assets/media/images/placeholders/placeholder-16-9.png",
+					"alt": "card image"
+				},
+				"title": "Title",
+				"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt posuere lacus, eget accumsan ante laoreet vitae. Phasellus mattis sit amet diam sed ultrices. Curabitur tempus ultricies dui in ultricies. ",
+				"button": {
+					"isPrimary": true,
+					"isFullyClickable": true,
+					"label": "Call to action",
+					"link": "#"
+				}
+			},
+			{
+				"image": {
+					"is16by9ratio": true,
+					"src": "/sites/starter/assets/media/images/placeholders/placeholder-16-9.png",
+					"alt": "card image"
+				},
+				"title": "Title",
+				"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt posuere lacus, eget accumsan ante laoreet vitae. Phasellus mattis sit amet diam sed ultrices. Curabitur tempus ultricies dui in ultricies. ",
+				"button": {
+					"isPrimary": true,
+					"isFullyClickable": true,
+					"label": "Call to action",
+					"link": "#"
+				}
+			},
+			{
+				"image": {
+					"is16by9ratio": true,
+					"src": "/sites/starter/assets/media/images/placeholders/placeholder-16-9.png",
+					"alt": "card image"
+				},
+				"title": "Title",
+				"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt posuere lacus, eget accumsan ante laoreet vitae. Phasellus mattis sit amet diam sed ultrices. Curabitur tempus ultricies dui in ultricies. ",
+				"button": {
+					"isPrimary": true,
+					"isFullyClickable": true,
+					"label": "Call to action",
+					"link": "#"
+				}
+			}
+		]
+	}
+}

@@ -1,0 +1,19 @@
+.o-mask {
+	@include absolute(0, 0, 0, 0);
+	mix-blend-mode: multiply;
+	opacity: var(--mask--opacity, 0.5);
+	background: var(--set-mask--background, var(--mask--background, linear-gradient(
+		90deg,
+		rgb(var(--brand__color--text)) 0%,
+		rgb(var(--brand__color--white)) 100%
+	)));
+	border-radius: var(--mask--border-radius);
+
+	&--dark {
+		--mask--background: linear-gradient(
+			90deg,
+			rgb(var(--brand__color--text)) 0%,
+			rgb(var(--brand__color--gray-darker)) 100%
+		)
+	}
+}

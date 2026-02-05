@@ -1,0 +1,30 @@
+.o-grid-template {
+	// By default, we don't stretch cells over full width of the row.
+	// https://css-tricks.com/auto-sizing-columns-css-grid-auto-fill-vs-auto-fit/
+	--o-grid-template--column-size: auto-fill;
+
+	display: grid;
+	place-items: var(--o-grid-place-items, normal);
+	grid-template-columns: repeat(
+		var(--o-grid-template--column-size),
+		minmax(
+			min(var(--o-grid-cell--min-width, var(--brand__grid-cell--min-width, 300px)), 100%),
+			var(--o-grid-cell--max-width, 1fr)
+		)
+	);
+
+	grid-auto-rows: var(--o-grid-auto-rows, auto);
+	align-items: var(--o-grid-align-items, stretch);
+
+	&--small-cells {
+		--o-grid-cell--min-width: var(--brand__grid-cell-small--min-width, 200px);
+	}
+
+	&--large-cells {
+		--o-grid-cell--min-width: var(--brand__grid-cell-large--min-width, 400px);
+	}
+
+	&--stretch {
+		--o-grid-template--column-size: auto-fit;
+	}
+}

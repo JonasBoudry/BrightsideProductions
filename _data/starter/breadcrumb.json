@@ -1,0 +1,21 @@
+{
+	"breadcrumb": {
+		"items": [
+			{
+				"link": {
+					"src": "#",
+					"text": "Home"
+				}
+			},
+			{
+				"link": {
+					"src": "#",
+					"text": "Item 1"
+				}
+			},
+			{
+				"text": "Item 2"
+			}
+		]
+	}
+}

@@ -1,0 +1,53 @@
+.o-collapse {
+	border-block-end: var(--collapse__wrapper--bbe-width, 1px) solid rgb(var(--brand__color--border));
+	--brand__btn--justify-content: space-between;
+	--brand__btn-after--display: block;
+	--brand__btn-after--mis: var(--brand__spacing--tiny);
+	--brand__btn-after--background-image: var(--brand__arrow-down);
+
+	&:first-of-type {
+		border-block-start: var(--collapse-fot--bbs-width, 1px) solid rgb(var(--brand__color--border));
+	}
+
+	&.is-collapsed {
+		--collapse__panel--visibility: hidden;
+		--set-collapse__panel--height: 0;
+		--collapse__inner--pbe: 0;
+	}
+
+	&__heading {
+		width: 100%;
+		line-height: 1.2;
+		text-align: left;
+		--brand__btn-after-hover--transform: none;
+		--brand__btn--align-items: flex-start;
+
+		> * {
+			margin-inline-end: var(--brand__spacing--small);
+			margin-block-end: var(--brand__spacing--small);
+		}
+
+		&[aria-expanded="true"] {
+			--brand__btn-after-hover--transform: none;
+			--brand__btn-after--transform: scale(-1);
+			--brand__btn-after-hover--transform: scale(-1);
+		}
+
+		&::after {
+			margin-block-start: 0.3em;
+		}
+	}
+
+	&__panel {
+		transition: all 200ms ease-in;
+		transition-property: visibility, height, padding;
+		overflow: hidden;
+		visibility: var(--collapse__panel--visibility, visible);
+		height: var(--set-collapse__panel--height, var(--collapse__panel--height, 0));
+		margin: var(--collapse__panel--margin, 0);
+	}
+
+	&__inner {
+		padding-block-end: var(--collapse__inner--pbe, var(--brand__spacing));
+	}
+}

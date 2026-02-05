@@ -1,0 +1,229 @@
+// @import "~owl.carousel/dist/assets/owl.carousel";
+
+.owl-carousel {
+	display: block;
+}
+
+.c-carousel {
+	--video-youtube--height: 100%;
+}
+
+.c-carousel-navigation__button {
+	padding: var(--brand__spacing) var(--brand__spacing) var(--brand__spacing--small);
+	pointer-events: auto;
+	border: var(--carousel-navigation-button--border, 1px solid rgb(var(--brand__color--secondary)));
+	background-color: var(
+		--set-carousel-navigation-button--background-color,
+		var(--carousel-navigation-button--background-color)
+	);
+	margin-bottom: var(--carousel-navigation-button--margin-bottom, var(--brand__spacing--large));
+	transform: var(--carousel-navigation-button--transform);
+	--brand__svg--fill: rgb(var(--brand__color--secondary-darker));
+
+	@include mq($from: desktop) {
+		--carousel-navigation-button--background-color: rgba(var(--brand__color--white), 0.8);
+		--carousel-navigation-button--margin-bottom: 0;
+	}
+
+	&.prev {
+		margin-inline-end: var(--carousel-navigation-prev--margin-inline-end, var(--brand__spacing));
+	}
+
+	.disabled & {
+		opacity: 0.3;
+		cursor: default;
+	}
+
+	.owl-rtl & {
+		--owl-nav--right: auto;
+		--owl-nav--left: var(--brand__spacing--large);
+		--carousel-navigation-button--transform: rotate(180deg);
+	}
+}
+
+.c-carousel--simple {
+	--owl-dot-active--background-color: rgb(var(--brand__color--secondary-darker));
+	--carousel-navigation-button--border: 1px solid rgb(var(--brand__color--primary));
+	--set-brand__svg--fill: rgb(var(--brand__color--primary));
+
+	@include mq($from: desktop) {
+		--set-owl-nav--justify-content: space-between;
+		--set-carousel-navigation-button--background-color: transparent;
+		--carousel-navigation-prev--margin-inline-end: 0;
+		--carousel-navigation-button--border: 0;
+		--set-owl-nav--top: 50%;
+		--set-owl-nav--bottom: auto;
+		--set-owl-nav--left: -50px;
+		--set-owl-nav--right: -50px;
+		--owl-nav--transform: translateY(-50%);
+	}
+
+	.owl-nav {
+		.prev:not(.disabled) {
+			&:hover {
+				--owl-nav--left: 50px;
+			}
+		}
+		.next:not(.disabled) {
+			&:hover {
+				--owl-nav--right: 50px;
+			}
+		}
+	}
+}
+
+.c-carousel--product {
+	margin-top: 0;
+
+	@include mq($from: tablet) {
+		--owl-nav--position: absolute;
+		--set-owl-nav--left: var(--brand__spacing);
+		--set-owl-nav--right: var(--brand__spacing);
+		--set-owl-nav--bottom: var(--brand__spacing);
+	}
+}
+
+.c-carousel--rich-text {
+	--owl-dots--margin-bottom: 0;
+
+	@include mq($from: desktop) {
+		--owl-dots--position: absolute;
+		--owl-dots--left: var(--brand__spacing--large);
+		--owl-dots--right: var(--brand__spacing--large);
+		--owl-dots--bottom: 0;
+		--owl-dot--box-shadow: 0px 0px 7px rgba(var(--brand__color--gray), 0.5);
+		--owl-nav--transform: translateY(-50%);
+		--set-owl-nav--top: 50%;
+		--set-owl-nav--bottom: auto;
+		--set-owl-nav--left: var(--brand__spacing);
+		--set-owl-nav--right: var(--brand__spacing);
+		--set-owl-nav--justify-content: space-between;
+	}
+}
+
+.c-carousel--thumbnails {
+	margin-top: var(--brand__spacing);
+	display: var(--carousel-thumbnail--display, none) !important; //override default owl styling
+	--owl-stage--display: flex;
+	--owl-stage--align-items: stretch;
+	--image--height: 100%;
+
+	.owl-item {
+		cursor: pointer;
+	}
+
+	@include mq($from: tablet) {
+		--carousel-thumbnail--display: block;
+	}
+}
+
+.c-carousel--grid {
+	--owl-stage--display: flex;
+	--owl-stage--align-items: stretch;
+	--owl-dots--margin-bottom: 0;
+
+	.owl-item > div,
+	.owl-item > article {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: flex-start;
+		height: 100%;
+	}
+}
+
+@include mq($from: desktop) {
+	.c-carousel:not(.c-carousel--simple) {
+		.owl-nav {
+			button {
+				@include hover {
+					--set-carousel-navigation-button--background-color: rgb(var(--brand__color--secondary-darker));
+					--set-brand__svg--fill: rgb(var(--brand__color--white));
+				}
+			}
+		}
+	}
+}
+
+//override owl carousel
+.owl-carousel {
+	.owl-stage-outer {
+		min-height: 200px;
+	}
+
+	.owl-stage {
+		display: var(--owl-stage--display, flex);
+		align-items: var(--owl-stage--align-items, flex-start);
+		&::after {
+			width: 0;
+		}
+	}
+
+	.owl-item {
+		display: flex;
+	}
+
+	.owl-nav {
+		display: flex;
+		justify-content: var(--set-owl-nav--justify-content, var(--owl-nav--justify-content, center));
+		margin-inline-end: var(--owl-nav--margin-inline-end, var(--brand__spacing));
+		margin-top: var(--owl-nav--margin-top, var(--brand__spacing));
+		position: var(--set-owl-nav--position, var(--owl-nav--position));
+		top: var(--set-owl-nav--top, var(--owl-nav--top));
+		left: var(--set-owl-nav--left, var(--owl-nav--left));
+		right: var(--set-owl-nav--right, var(--owl-nav--right));
+		bottom: var(--set-owl-nav--bottom, var(--owl-nav--bottom));
+		transform: var(--set-owl-nav--transform, var(--owl-nav--transform));
+		pointer-events: var(--owl-nav--pointer-events);
+
+		@include mq($from: desktop) {
+			--owl-nav--pointer-events: none;
+			--owl-nav--position: absolute;
+			--owl-nav--top: auto;
+			--owl-nav--left: var(--brand__spacing--large);
+			--owl-nav--right: var(--brand__spacing--large);
+			--owl-nav--bottom: calc(38px + var(--brand__spacing--large)); // dots height + large spacing
+			--owl-nav--margin-inline-end: 0;
+			--owl-nav--justify-content: flex-end;
+			--owl-nav--margin-top: 0;
+		}
+	}
+
+	.owl-dots {
+		display: flex;
+		justify-content: center;
+		padding: var(--brand__spacing) 0;
+		position: var(--owl-dots--position);
+		top: var(--owl-dots--top);
+		left: var(--owl-dots--left);
+		right: var(--owl-dots--right);
+		bottom: var(--owl-dots--bottom);
+		margin-bottom: var(--owl-dots--margin-bottom, var(--brand__spacing--large));
+		pointer-events: var(--owl-dots--pointer-events);
+
+		@include mq($from: desktop) {
+			--owl-dots--pointer-events: none;
+		}
+	}
+
+	button.owl-dot {
+		width: 8px;
+		height: 8px;
+		background-color: var(--owl-dot--background-color, rgb(var(--brand__color--border)));
+		margin-inline-end: var(--brand__spacing--tiny);
+		margin-inline-start: var(--brand__spacing--tiny);
+		pointer-events: auto;
+		box-shadow: var(--owl-dot--box-shadow);
+
+		&.active,
+		&:hover {
+			background-color: var(--owl-dot-active--background-color, rgb(var(--brand__color--secondary-darker)));
+		}
+	}
+}
+
+// prevent layout shift
+.c-carousel:not(.owl-loaded):not(.c-carousel--grid) .owl-stage > div:not(:first-child),
+.c-carousel:not(.owl-loaded):not(.c-carousel--grid) .owl-stage > article:not(:first-child) {
+	display: none;
+}

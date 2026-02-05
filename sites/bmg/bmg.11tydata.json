@@ -1,0 +1,21 @@
+{
+	"siteName": "BMG",
+	"type": "Main",
+	"paths": {
+		"map": "bmg",
+		"root": "/bmg/",
+		"logo": "/assets/svg/icons/bmg.svg"
+	},
+	"cssFiles": [
+		{
+			"path": "/assets/css/bmg.css"
+		}
+	],
+	"jsFiles": [
+		{
+			"path": "/assets/js/bmg.js",
+			"module": true,
+			"defer": true
+		}
+	]
+}

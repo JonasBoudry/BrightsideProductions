@@ -1,0 +1,42 @@
+<section class="c-cookie-management">
+	<div class="o-wrapper u-padding-bottom-large">
+		<div class="c-cookie-management__content">
+			<form class="c-form">
+				<div class="Form__MainBody u-padding-right">
+					{{#each item}}
+					{{#if isDisabled}}
+					<div class="Form__Element FormChoice">
+						<label>
+							<input type="hidden" value="True">
+							<input checked="checked" class="FormChoice__Input FormChoice__Input--Checkbox"
+								disabled="disabled" type="checkbox" value="true">
+							<input type="hidden" value="false">
+							<span>
+								{{label}}
+							</span>
+						</label>
+					</div>
+					{{else}}
+					<div class="Form__Element FormChoice">
+						<label>
+							<input class="FormChoice__Input FormChoice__Input--Checkbox" type="checkbox" value="true">
+							<input type="hidden" value="false">
+							<span>
+								{{label}}
+							</span>
+						</label>
+					</div>
+					{{/if}}
+					{{/each}}
+				</div>
+				{{> common/atoms/button
+					text="Submit"
+					type="submit"
+					isButton=true
+					isPrimary=true
+					extraClasses="orm__Element FormSubmitButton"
+				}}
+			</form>
+		</div>
+	</div>
+</section>

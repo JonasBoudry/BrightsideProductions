@@ -1,0 +1,15 @@
+{
+	"image": {
+		"src": "/sites/starter/assets/media/images/placeholders/placeholder-3-2.png"
+	},
+	"bgColor": "u-bg-color-primary",
+	"rich-text": "<h2>Title</h2><p>Paragraph Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>",
+	"buttons": {
+		"items": [
+			{
+				"isPrimary": true,
+				"text": "Read more"
+			}
+		]
+	}
+}

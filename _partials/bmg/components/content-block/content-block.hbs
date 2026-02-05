@@ -1,0 +1,21 @@
+{{#> component renderAsComponent=true}}
+<div class="content-block {{backgroundColor}}" id="{{id}}">
+    <div class="content-block__content">
+        <h2>{{title}}</h2>
+        <div class="content-block__text-wrapper">
+            {{> common/atoms/rich-text rich-text=description-1}}
+
+            <div class="image u-hide-desktop">
+                <img class="o-fit" src="{{media.srcMobile}}" alt="{{media.alt}}" width="{{media.width}}"
+                    height="{{media.height}}" loading="{{loading}}" />
+            </div>
+
+            {{> common/atoms/rich-text rich-text=description-2}}
+        </div>
+    </div>
+    <div class="content-block__media u-hide-until-desktop">
+        <img class="o-fit" src="{{media.src}}" alt="{{media.alt}}" width="{{media.width}}" height="{{media.height}}"
+            loading="{{loading}}" />
+    </div>
+</div>
+{{/component}}

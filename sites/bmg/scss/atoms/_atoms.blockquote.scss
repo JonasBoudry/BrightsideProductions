@@ -1,0 +1,12 @@
+.a-quote-label {
+    display: flex;
+    justify-content: var(--quote-label--justify-content, center);
+    color: var(--quote-label--color, rgb(var(--brand__color--secondary)));
+    font-size: var(--quote__label--font-size, clamp(16px, calc(0.8846rem + 0.5128vw), 24px));
+	line-height: var(--quote__label--line-height, clamp(22px, calc(1.2308rem + 0.6410vw), 32px));
+    text-align: var(--quote-label--text-align, center);
+
+    @include mq($from: desktop){
+        --quote-label--justify-content: flex-start;
+    }
+}

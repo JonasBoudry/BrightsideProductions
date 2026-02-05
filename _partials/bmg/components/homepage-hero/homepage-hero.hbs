@@ -1,0 +1,34 @@
+{{#> component renderAsComponent=true}}
+<section class="c-homepage-intro">
+    <article class="hero-banner">
+        <div class="hero-banner__bg ">
+            <picture>
+                {{#if media.srcDesktopAvif}}
+                <!-- AVIF -->
+                <source srcset="{{media.srcDesktopAvif}} 1280w, {{media.srcMobileAvif}} 640w" type="image/avif">
+                {{/if}}
+                
+                {{#if media.srcDesktopWebp}}
+                <!-- WebP -->
+                <source srcset="{{media.srcDesktopWebp}} 1280w, {{media.srcMobileWebp}} 640w" type="image/webp">
+                {{/if}}
+
+                <!-- Fallback -->
+                <img class="o-fit" src="{{media.srcDesktop}}" srcset="{{media.srcDesktop}} 1280w, {{media.src}} 640w"
+                    sizes="(max-width: 768px) 100vw, 100vw" width="{{media.width}}" height="{{media.height}}"
+                    alt="{{media.alt}}" fetchpriority="high" decoding="async">
+            </picture>
+            <img class="o-fit" alt="{{media.alt}}" width="{{media.width}}" height="{{media.height}}"
+                src="{{media.srcDesktop}}" srcset="{{media.srcDesktop}} 1280w,{{media.src}} 640w" fetchpriority="high">
+        </div>
+        <div class="hero-banner__content">
+            <div class="title-accent">
+                <h1>{{title}}</h1>
+            </div>
+            <div class="hero-banner__cta">
+                <a class="a-btn a-btn--primary" href="#{{anchor.id}}">{{anchor.label}}</a>
+            </div>
+        </div>
+    </article>
+</section>
+{{/component}}

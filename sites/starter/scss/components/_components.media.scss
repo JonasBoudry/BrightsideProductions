@@ -1,0 +1,29 @@
+.c-media {
+    position: relative;
+    padding: var(--media--padding, var(--brand__spacing) 0);
+    margin-inline-start: var(--media--margin-left, 0);
+    margin-inline-end: var(--media--margin-right, 0);
+    width: var(--media--width, 100%);
+
+    &::after {
+        content: "";
+        background-color: rgb(var(--brand__color--background));
+        position: absolute;
+        top: var(--media-after--top, 0);
+        right: var(--media-after--right, var(--brand__spacing));
+        bottom: var(--media-after--bottom, 0);
+        left: var(--media-after--left, var(--brand__spacing));
+        z-index: -1;
+    }
+
+    @include mq($from: desktop) {
+        --media--padding: 0;
+        --media--margin-inline-end: auto;
+        --media--margin-inline-start: auto;
+        --media--width: 66.66666667%;
+        --media-after--top: var(--brand__spacing);
+        --media-after--right: calc(0px - var(--brand__spacing--large));
+        --media-after--bottom: var(--brand__spacing);
+        --media-after--left: calc(0px - var(--brand__spacing--large));
+    }
+}

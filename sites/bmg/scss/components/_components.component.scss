@@ -1,0 +1,95 @@
+.c-component {
+	position: relative;
+	margin-block-start: var(--set-brand__component--margin-block-start, var(--brand__component--margin-block-start));
+	margin-block-end: var(
+		--set-brand__component--margin-block-end,
+		var(--brand__component--margin-block-end, var(--brand__spacing--large))
+	);
+	background-color: rgb(var(--brand__color--white));
+
+	// scroll anchoring
+	scroll-margin-top: 30px;
+
+	&[class*="u-bg-"] {
+		--brand__component-section--padding-block-end: var(--component-bgc-section--pbe, var(--brand__spacing));
+		padding-block-start: var(--brand__component-bg--pbs, var(--brand__spacing));
+		padding-block-end: var(--set-brand__component-bg--pbe, var(--brand__component-bg--pbe, var(--brand__spacing)));
+	}
+
+	@include mq($from: large) {
+		--brand__component--margin-block-end: var(--brand__spacing);
+
+		&--small-spacing {
+			--brand__component--margin-block-end: var(--brand__spacing--large);
+		}
+
+		&[class*="u-bg-"] {
+			--brand__component-bg--pbs: var(--brand__spacing);
+			--brand__component-section--padding-block-start: var(--brand__spacing);
+			--brand__component-section--padding-block-end: var(--brand__spacing);
+		}
+	}
+
+	&.has-bg\@mobile[class*="u-bg-"] {
+		@include mq($until: tablet) {
+			--brand__component-section--padding-block-start: var(--brand__spacing--large);
+			--brand__component-section--padding-block-end: var(--brand__spacing--large);
+			--brand__component-bg--pbs: var(--brand__spacing--large);
+			--brand__component-bg--pbe: var(--brand__spacing--large);
+		}
+
+		@include mq($from: tablet) {
+			--brand__component-bg--pbs: 0;
+			--brand__component-bg--pbe: 0;
+			background-color: transparent !important;
+		}
+	}
+
+	&.no-spacing-bottom {
+		--brand__component--margin-block-end: 0;
+	}
+
+	section:nth-of-type(1) {
+		&:not(:where(section section)) {
+			position: relative;
+			z-index: 1;
+			padding-block-start: var(
+				--set-brand__component-section--padding-block-start,
+				var(--brand__component-section--padding-block-start)
+			);
+			padding-block-end: var(
+				--set-brand__component-section--padding-block-end,
+				var(--brand__component-section--padding-block-end)
+			);
+			margin-block-start: var(
+				--set-brand__component-section--margin-block-start,
+				var(--brand__component-section--margin-block-start)
+			);
+		}
+	}
+
+	&.has-watermark {
+		overflow: hidden;
+
+		&::after {
+			display: var(--brand__component-watermark-after--display, none);
+			content: "";
+			@include absolute(5%, -80px, null, null);
+			transform: translateY(-5%);
+			background-image: var(--brand__component-watermark-after--background-image, var(--brand__watermark));
+			background-size: cover;
+			background-repeat: no-repeat;
+			width: var(--brand__component-watermark-after--width, 400px);
+			height: var(--brand__component-watermark-after--height, 400px);
+		}
+
+		@include mq($from: large) {
+			--brand__component-watermark-after--display: block;
+		}
+
+		@include mq($from: larger) {
+			--brand__component-watermark-after--width: 480px;
+			--brand__component-watermark-after--height: 480px;
+		}
+	}
+}

@@ -1,0 +1,10 @@
+figure {
+	width: var(--brand__figure--width);
+	height: var(--brand__figure--height);
+}
+
+figcaption {
+	color: var(--brand__figcaption--color, rgb(var(--brand__color--gray-dark)));
+	padding: var(--brand__figcaption--padding, var(--brand__spacing--tiny));
+	font-size: calc(var(--brand__typography-p--font-size) - 2px);
+}

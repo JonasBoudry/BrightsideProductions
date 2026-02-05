@@ -1,0 +1,9 @@
+{{#if renderData}}
+    {{#if renderData.title}}
+        {{renderData.title}}
+    {{/if}}
+{{else if title}}
+    {{title}}
+{{else}}
+    {{siteName}}
+{{/if}}

@@ -1,0 +1,40 @@
+html {
+	scroll-behavior: smooth;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+}
+
+body {
+    width: 100%;
+	font-family: var(--brand__typography-p--font-family), var(--brand__typography-fallback--font-family);
+	font-size: var(--brand__typography-p--font-size, var(--brand__font-size));
+	font-weight: var(--brand__typography-p--font-weight);
+	line-height: var(--brand__typography-p--line-height);
+	color: var(--brand__typography-p--color, rgb(var(--brand__color--text)));
+	letter-spacing: var(--brand__typography-p--letter-spacing);
+
+	&.no-scroll {
+		max-height: 100vh;
+    	overflow: hidden;
+	}
+}
+
+p, ol, ul, li, div {
+	color: var(--brand__typography-p--color, rgb(var(--brand__color--text)));
+}
+
+p {
+	margin-bottom: var(--brand__typography-p--margin-bottom);
+}
+
+strong, b {
+    font-weight: $brand__font-weight--bold;
+}
+
+dd {
+	margin-inline-start: 0;
+}

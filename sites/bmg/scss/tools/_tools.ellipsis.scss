@@ -1,0 +1,16 @@
+@mixin truncate-single-line() {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	min-width: 0;
+	display: block;
+}
+
+@mixin truncate-multiline($number-of-lines: 1) {
+	overflow: hidden;
+	display: inline-block;
+	display: var(--line-clamp--display, -webkit-box);
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: var(--line-clamp, #{$number-of-lines});
+	white-space: normal;
+}

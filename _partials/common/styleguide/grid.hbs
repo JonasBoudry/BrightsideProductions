@@ -1,0 +1,19 @@
+<div class="u-padding-top-large u-padding-bottom">
+	<div class="o-wrapper">
+		<h1>Dynamic Grid</h1>
+	</div>
+	<section class="o-wrapper">
+		{{#each grid}}
+		<h4><strong>{{label}}</strong> - (<small>{{description}}</small>)</h4>
+		<div class="o-grid o-grid--4@desktop {{class}} u-margin-bottom-large">
+			{{#each items}}
+			<div class="u-bg-color-background-accent1 u-margin-bottom-none u-padding-large o-flex o-flex--align-items-center o-flex--justify-content-center"
+				{{#if height }}style="height:{{height}};{{/if}}">
+				{{this}}
+			</div>
+			{{/each}}
+		</div>
+		{{/each}}
+
+	</section>
+</div>

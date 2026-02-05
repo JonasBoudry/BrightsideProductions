@@ -1,0 +1,15 @@
+<label for="{{id}}"
+	class="a-field a-field--checkbox {{#if isReadonly}}is-ro{{/if}} {{#if hasAlert}}has-error{{/if}} {{#if value}}has-value{{/if}}"
+	{{#if isDisabled}}area-disabled="true" {{/if}}>
+	<div class="a-field__check">
+		<input id="{{id}}" type="{{#if checkbox}}checkbox{{^}}radio{{/if}}" value="{{value}}" {{#if
+			isRequired}}required{{/if}} {{#if isDisabled}}disabled{{/if}} {{#unless checkbox}}name="{{name}}"
+			{{/unless}} {{#if isChecked}}checked{{/if}}>
+		<span class="a-field__label">{{label}}
+			{{#unless hideRequiredStar}}{{#if isRequired}}<span class="is-required"
+				aria-label="required"></span>{{/if}}{{/unless}}</span>
+	</div>
+	{{#if message}}
+	<small class="a-field__info" {{#if hasAlertRole}}aria-live="assertive" role="alert" {{/if}}>{{message}}</small>
+	{{/if}}
+</label>

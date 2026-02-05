@@ -1,0 +1,25 @@
+.o-grid-align {
+    &--ac-c > * {
+        display: grid;
+        align-content: center;
+        justify-content: start;
+    }
+
+    &--ac-e > * {
+        display: grid;
+        align-content: end;
+        justify-content: start;
+    }
+
+    &--jc-e > * {
+        display: grid;
+        justify-content: end;
+        --grid-align--ta: right;
+    }
+
+    &--jc-c > * {
+        display: grid;
+        justify-content: center;
+        --grid-align--ta: center;
+    }
+}

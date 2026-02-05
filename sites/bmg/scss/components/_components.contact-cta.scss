@@ -1,0 +1,27 @@
+.c-contact-cta__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--brand__border-radius);
+    padding: var(--contact-cta__body--padding, var(--brand__spacing));
+
+        @include mq($from: desktop){
+        --contact-cta__body--padding: var(--brand__spacing--large);
+    }
+}
+
+.c-contact-cta__title {
+    text-align: center;
+}
+
+.c-contact-cta__description {
+    text-align: center;
+    margin-block-end: var(--brand__spacing--large);
+}
+
+.c-contact-cta__cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

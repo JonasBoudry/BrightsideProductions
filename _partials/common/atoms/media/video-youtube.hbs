@@ -1,0 +1,20 @@
+<div class="c-video-wrapper js-video-wrapper" {{#if image.src}}data-component-class="Video"{{/if}}>
+    {{#if image.src}}
+		{{> common/atoms/button
+			../this
+			isIcon=true
+			isButton=true
+			iconId="play"
+			ariaLabel="Play"
+			extraClasses="c-btn--play js-btn-play"
+		}}
+	{{/if}}
+    <div class="c-video-main">
+        {{#if image.src}}
+            {{> common/atoms/media/image extraClass="js-poster"}}
+        {{/if}}
+        <div class="c-video is-youtube js-video" data-youtubeid="{{youtubeID}}">
+            <iframe class="player" id="player{{youtubeID}}" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; playsinline" title="YouTube video player" width="560" height="315" src="https://www.youtube.com/embed/{{youtubeID}}?playsinline=1&amp;enablejsapi=1&amp;origin=http%3A%2F%2Flocalhost%3A9000&amp;widgetid=1"></iframe>
+        </div>
+    </div>
+</div>

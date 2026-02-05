@@ -1,0 +1,23 @@
+.list {
+	ul {
+		display: grid;
+		grid-gap: var(--brand__spacing--small);
+		@include list-unstyle();
+	}
+
+	li {
+		position: relative;
+
+		&::after {
+			content: '';
+			@include absolute(null, 0, calc(var(--brand__spacing--tiny) * -1), 0);
+			width: 100%;
+			height: 1px;
+			background-color: var(--list-li-after--background-color, rgba(var(--brand__color--white), 0.4));
+		}
+	}
+
+	&--dark {
+		--list-li-after--background-color: rgba(var(--brand__color--black), 0.4);
+	}
+}

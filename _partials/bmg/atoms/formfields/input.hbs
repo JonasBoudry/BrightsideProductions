@@ -1,0 +1,13 @@
+<label for="{{id}}"
+	class="a-field {{#if hasLabelTop}}a-field--top-label{{/if}} js-form-field {{#if hasAlert}}has-error{{/if}} {{#if value}}has-value{{/if}}"
+	{{#if isDisabled}}area-disabled="true" {{/if}}>
+	<span class="a-field__label">{{label}}
+		{{#unless hideRequiredStar}}{{#if isRequired}}<span class="is-required"
+			aria-label="required"></span>{{/if}}{{/unless}}</span>
+	<input id="{{id}}" type="{{#if fieldType}}{{fieldType}}{{^}}text{{/if}}" value="{{value}}" {{#if
+		isRequired}}required{{/if}} {{#if isDisabled}}disabled{{/if}} {{#if isReadOnly}}readonly{{/if}} {{#if
+		hasAutoComplete}}autocomplete{{/if}} {{#if placeholder}}placeholder="{{placeholder}}" {{/if}}>
+	{{#if message}}
+	<small class="a-field__info" {{#if hasAlertRole}}aria-live="assertive" role="alert" {{/if}}>{{message}}</small>
+	{{/if}}
+</label>

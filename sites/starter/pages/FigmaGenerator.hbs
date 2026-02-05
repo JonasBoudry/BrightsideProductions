@@ -1,0 +1,33 @@
+---
+layout: base
+title: "_Figma design token generator"
+tags: ["styleguide"]
+isApproved: true
+---
+
+<!--
+	ADD: tags: ["styleguide"] to preview/use on static site
+-->
+
+<div class="o-wrapper">
+	<div class="c-design-tokens" data-component-class="DesignToken">
+		<form class="c-form js-form" style="display: flex;
+		flex-direction: column; width: 50%;">
+			<div clss="c-form__item" style="margin-bottom: 10px">
+				<label style="padding-right: 10px;">Figma id</label>
+				<input class="js-figma-id" type="text" placeholder="Figma id">
+			</div>
+
+			<div clss="c-form__item" style="margin-bottom: 10px">
+				<label style="padding-right: 10px;">Figma personal token</label>
+				<input class="js-figma-token" type="password" placeholder="Figma personal token">
+			</div>
+
+			<div class="c-form__item">
+				<button type="button" class="c-btn c-btn--primary" id="btn">
+					Generate Figma Design Tokens
+				</button>
+			</div>
+		</form>
+	</div>
+</div>

@@ -1,0 +1,6 @@
+.u-visibility-hide {
+    visibility: hidden!important;
+    z-index: -1;
+    opacity: var(--set-brand__visibility-hide--opacity, var(--brand__visibility-hide--opacity));
+    transition: var(--set-brand__visibility-hide--transition, var(--brand__visibility-hide--transition));
+}

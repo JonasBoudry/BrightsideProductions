@@ -1,0 +1,50 @@
+{{!--
+	More info: https://css-tricks.com/accessible-svgs/
+
+	Meaningful Standalone SVG Icon  e.g
+	<div class="icon">
+		<svg aria-labelledby="mobileSupport" role="img">
+			<title id="mobileSupport">Supports Mobile Devices</title>
+			<use xlink:href="#icon-phone"></use>
+		</svg>
+	</div>
+ --}}
+{{#if isMeaningfull}}
+<svg width="{{#if iconWidth}}{{iconWidth}}{{^}}15{{/if}}"
+	height="{{#if iconHeight}}{{iconHeight}}{{^}}17{{/if}}" role="img" aria-labelledby="{{iconId}}" focusable="false">
+	<title id="{{iconId}}">{{title}}</title>
+	<use xlink:href="/assets/svg/svg-symbols.svg#{{iconId}}"></use>
+</svg>
+{{^}}
+{{!--
+	Decorative Standalone Icon  e.g
+	<div class="icon success">
+		<svg aria-hidden="true">
+			<title>checkmark</title>
+			<use xlink:href="#icon-checkmark"></use>
+		</svg>
+		Success! Your order went through.
+	</div>
+ --}}
+{{#if isDecorative}}
+<svg width="{{#if iconWidth}}{{iconWidth}}{{^}}15{{/if}}"
+	height="{{#if iconHeight}}{{iconHeight}}{{^}}17{{/if}}" aria-hidden="true" focusable="false">
+	<title>{{title}}</title>
+	<use xlink:href="/assets/svg/svg-symbols.svg#{{iconId}}"></use>
+</svg>
+
+{{^}}
+{{!--
+	used for icons that are inside a link are belonge to a bigger element e.g
+	  <a href="link" aria-label="Go back to Picked Pens">
+		<svg>
+			<use xlink:href="#icon-codepen"></use>
+		</svg> CodePen
+	</a>
+ --}}
+<svg width="{{#if iconWidth}}{{iconWidth}}{{^}}15{{/if}}"
+	height="{{#if iconHeight}}{{iconHeight}}{{^}}17{{/if}}" focusable="false" aria-hidden="true">
+	<use xlink:href="/assets/svg/svg-symbols.svg#{{iconId}}"></use>
+</svg>
+{{/if}}
+{{/if}}

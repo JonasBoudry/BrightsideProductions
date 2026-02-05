@@ -1,0 +1,19 @@
+<label for="{{id}}"
+	class="a-field a-field--select {{#if hasLabelTop}}a-field--top-label{{/if}} js-form-field  {{#if hasAlert}}has-error{{/if}}  {{#if is-selected}}has-value{{/if}}"
+	{{#if isDisabled}}area-disabled="true" {{/if}} {{#unless hideSelectLabel}}data-selected="selected" {{/unless}}>
+	<span class="a-field__label">{{label}} {{#unless hideRequiredStar}}{{#if isRequired}}<span class="is-required"
+			aria-label="required"></span>{{/if}}{{/unless}}</span>
+
+	<select id="{{id}}" value="{{value}}" {{#if isRequired}}required{{/if}} {{#if isDisabled}}disabled{{/if}} {{#if
+		isReadOnly}}readonly{{/if}} {{#if hasAutoComplete}}autocomplete{{/if}}>
+		<option value="-1" selected></option>
+		<option value="Option 1" {{#if isLang}}lang="be-fr" {{/if}}>Option 1</option>
+		<option value="Option 2" {{#if isLang}}lang="be-nl" {{/if}}>Option 2</option>
+		<option value="Option 3" {{#if isLang}}lang="fr-fr" {{/if}}>Option 3</option>
+		<option value="Option 4" {{#if isLang}}lang="es-es" {{/if}}>Option 4</option>
+	</select>
+
+	{{#if message}}
+	<small class="a-field__info" {{#if hasAlertRole}}aria-live="assertive" role="alert" {{/if}}>{{message}}</small>
+	{{/if}}
+</label>

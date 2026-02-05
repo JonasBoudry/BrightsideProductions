@@ -1,0 +1,11 @@
+# Ignore StaticSite files.
+node_modules
+bower_components
+.out
+dist
+**/svg-symbols.svg
+**/svg-view.hbs
+.DS_Store
+
+# Ignore generated typescript files
+*.js.map

@@ -1,0 +1,15 @@
+{
+	"media": {
+        "src": "/assets/media/images/hero-banner.png",
+        "srcDesktop": "/assets/media/images/hero-banner.png",
+		"alt": "Foto dark clouds banner image",
+		"width": "1280",
+		"height": "720",
+		"loading": "eager"
+	},
+	"title": "The one stop shop for media funding in Flanders",
+	"anchor": {
+		"id": "about-us",
+		"label": "Get to know us"
+	}
+}

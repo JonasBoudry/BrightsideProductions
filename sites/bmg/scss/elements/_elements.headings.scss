@@ -1,0 +1,137 @@
+:root {
+	--h1-clamp--font-size: calc(1.9712rem + 0.9615vw);
+	--h1-clamp--line-height: calc(2.1394rem + 1.6026vw);
+	--h2-clamp--font-size: calc(1.3462rem + 0.9615vw);
+	--h2-clamp--line-height: calc(1.9712rem + 0.9615vw);
+	--h3-clamp--font-size: calc(1.1058rem + 0.641vw);
+	--h3-clamp--line-height: calc(1.3462rem + 0.9615vw);
+	--h4-clamp--font-size: calc(1.0192rem + 0.1923vw);
+	--h4-clamp--line-height: calc(1.2308rem + 0.641vw);
+	--h5-clamp--font-size: calc(1.0481rem + 0.0641vw);
+	--h5-clamp--line-height: calc(1.3462rem + 0.1282vw);
+	--h6-clamp--font-size: calc(1.0625rem + 0vw);
+	--h6-clamp--line-height: calc(1.3462rem + 0vw);
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+	color: var(--set-brand__typography--color, var(--brand__typography--color));
+	font-family: var(--brand__typography--font-family), var(--brand__typography-fallback--font-family);
+	font-size: var(--brand__typography--font-size);
+	line-height: var(--set-brand__typography--line-height, var(--brand__typography--line-height));
+	margin-bottom: var(--set-brand__typography--margin-bottom, var(--brand__typography--margin-bottom));
+	font-weight: var(--brand__typography--font-weight);
+	letter-spacing: var(--brand__typography--letter-spacing);
+	transition: color 0.3s ease-in-out;
+	text-transform: var(--brand__typography--text-transform);
+
+	&::selection {
+		background-color: var(--heading-selection--background-color, rgba(var(--brand__color--primary), 0.4));
+	}
+}
+
+h1,
+.h1 {
+	--brand__typography--color: var(--brand__typography-h1--color);
+	--brand__typography--font-family: var(--brand__typography-h1--font-family);
+	--brand__typography--margin-bottom: var(--brand__typography-h1--margin-bottom);
+	--brand__typography--font-size: clamp(var(--brand__typography-h1-mobile--font-size),
+			var(--h1-clamp--font-size),
+			var(--brand__typography-h1--font-size));
+	--brand__typography--line-height: clamp(var(--brand__typography-h1-mobile--line-height),
+			var(--h1-clamp--line-height),
+			var(--brand__typography-h1--line-height));
+	--brand__typography--font-weight: var(--brand__typography-h1--font-weight);
+	--brand__typography--letter-spacing: var(--brand__typography-h1--letter-spacing);
+	--brand__typography--text-transform: var(--brand__typography-h1--text-transform, uppercase);
+}
+
+h2,
+.h2 {
+	--brand__typography--color: var(--brand__typography-h2--color);
+	--brand__typography--font-family: var(--brand__typography-h2--font-family);
+	--brand__typography--margin-bottom: var(--brand__typography-h2--margin-bottom);
+	--brand__typography--font-size: clamp(var(--brand__typography-h2-mobile--font-size),
+			var(--h2-clamp--font-size),
+			var(--brand__typography-h2--font-size));
+	--brand__typography--line-height: clamp(var(--brand__typography-h2-mobile--line-height),
+			var(--h2-clamp--line-height),
+			var(--brand__typography-h2--line-height));
+	--brand__typography--font-weight: var(--brand__typography-h2--font-weight);
+	--brand__typography--letter-spacing: var(--brand__typography-h2--letter-spacing);
+	--brand__typography--text-transform: var(--brand__typography-h2--text-transform);
+}
+
+h3,
+.h3 {
+	--brand__typography--color: var(--brand__typography-h3--color);
+	--brand__typography--font-family: var(--brand__typography-h3--font-family);
+	--brand__typography--margin-bottom: var(--brand__typography-h3--margin-bottom);
+	--brand__typography--font-size: clamp(var(--brand__typography-h3-mobile--font-size),
+			var(--h3-clamp--font-size),
+			var(--brand__typography-h3--font-size));
+	--brand__typography--line-height: clamp(var(--brand__typography-h3-mobile--line-height),
+			var(--h3-clamp--line-height),
+			var(--brand__typography-h3--line-height));
+	--brand__typography--font-weight: var(--brand__typography-h3--font-weight);
+	--brand__typography--letter-spacing: var(--brand__typography-h3--letter-spacing);
+	--brand__typography--text-transform: var(--brand__typography-h3--text-transform);
+}
+
+h4,
+.h4 {
+	--brand__typography--color: var(--brand__typography-h4--color);
+	--brand__typography--font-family: var(--brand__typography-h4--font-family);
+	--brand__typography--margin-bottom: var(--brand__typography-h4--margin-bottom);
+	--brand__typography--font-size: clamp(var(--brand__typography-h4-mobile--font-size),
+			var(--h4-clamp--font-size),
+			var(--brand__typography-h4--font-size));
+	--brand__typography--line-height: clamp(var(--brand__typography-h4-mobile--line-height),
+			var(--h4-clamp--line-height),
+			var(--brand__typography-h4--line-height));
+	--brand__typography--font-weight: var(--brand__typography-h4--font-weight);
+	--brand__typography--letter-spacing: var(--brand__typography-h4--letter-spacing);
+	--brand__typography--text-transform: var(--brand__typography-h4--text-transform);
+}
+
+h5,
+.h5 {
+	--brand__typography--color: var(--brand__typography-h5--color);
+	--brand__typography--font-family: var(--brand__typography-h5--font-family);
+	--brand__typography--margin-bottom: var(--brand__typography-h5--margin-bottom);
+	--brand__typography--font-size: clamp(var(--brand__typography-h5-mobile--font-size),
+			var(--h5-clamp--font-size),
+			var(--brand__typography-h5--font-size));
+	--brand__typography--line-height: clamp(var(--brand__typography-h5-mobile--line-height),
+			var(--h5-clamp--line-height),
+			var(--brand__typography-h5--line-height));
+	--brand__typography--font-weight: var(--brand__typography-h5--font-weight);
+	--brand__typography--letter-spacing: var(--brand__typography-h5--letter-spacing);
+	--brand__typography--text-transform: var(--brand__typography-h5--text-transform);
+}
+
+h6,
+.h6 {
+	--brand__typography--color: var(--brand__typography-h6--color);
+	--brand__typography--font-family: var(--brand__typography-h6--font-family);
+	--brand__typography--margin-bottom: var(--brand__typography-h6--margin-bottom);
+	--brand__typography--font-size: clamp(var(--brand__typography-h6-mobile--font-size),
+			var(--h6-clamp--font-size),
+			var(--brand__typography-h6--font-size));
+	--brand__typography--line-height: clamp(var(--brand__typography-h6-mobile--line-height),
+			var(--h6-clamp--line-height),
+			var(--brand__typography-h6--line-height));
+	--brand__typography--font-weight: var(--brand__typography-h6--font-weight);
+	--brand__typography--letter-spacing: var(--brand__typography-h6--letter-spacing);
+	--brand__typography--text-transform: var(--brand__typography-h6--text-transform);
+}

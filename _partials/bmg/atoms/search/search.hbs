@@ -1,0 +1,54 @@
+<div class="a-search">
+	<div class="a-search__input">
+		<input class="js-input-search" type="search" placeholder="{{search.placeholder}}"
+			aria-label="Search content through website" required />
+		{{#if isButton}}
+		<button type="button" class="a-search__icon">
+			{{> common/atoms/svg-icon
+			iconId="search-icon"
+			iconWidth=20
+			iconHeight=20
+			}}
+		</button>
+		{{^}}
+		<span class="a-search__icon">
+			{{> common/atoms/svg-icon
+			iconId="search-icon"
+			iconWidth=20
+			iconHeight=20
+			}}
+		</span>
+		{{/if}}
+		{{#if search.suggestion}}
+		<div class="a-search__suggestion">
+			<div class="a-search__suggestion-content">
+				{{#each search.suggestion.block}}
+				<div class="a-search__block">
+					<div class="a-search__category h5">
+						{{category}}
+					</div>
+					<ul class="a-search__list">
+						{{#each items}}
+						<li class="a-search-item">
+							<a href="#" class="a-search-item__link">
+								{{label}}
+							</a>
+						</li>
+						{{/each}}
+					</ul>
+				</div>
+				{{/each}}
+			</div>
+		</div>
+		{{/if}}
+	</div>
+	{{#if search.button}}
+	<div class="a-search__cta">
+		{{> common/atoms/button
+		isPrimary=true
+		src="#"
+		text="Search"
+		}}
+	</div>
+	{{/if}}
+</div>

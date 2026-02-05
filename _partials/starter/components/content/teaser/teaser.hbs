@@ -1,0 +1,10 @@
+<div class="c-teaser">
+	<div class="c-teaser__title h2">
+		{{teaser.title}}
+	</div>
+	<div class="c-teaser__grid">
+		{{#> grid renderAsGrid=true items=teaser.items }}
+		{{> starter/molecules/cards/card}}
+		{{/grid}}
+	</div>
+</div>

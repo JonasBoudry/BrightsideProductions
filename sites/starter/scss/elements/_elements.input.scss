@@ -1,0 +1,69 @@
+$form__spacing: 0 12px !default;
+$form__spacing--select: 0 12px !default;
+$form__input--font-size: 15px !default;
+$form__input--line-height: 1.2 !default;
+$form__input--font-weight: var(--brand__font-weight) !default;
+$form__input--border: 1px solid var(--brand__color--secondary) !default;
+$form__select--padding: 0 24px !default;
+
+button {
+	font-family: $brand__font-family;
+	font-weight: var(--brand__font-weight);
+	cursor: pointer;
+}
+
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="range"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"],
+textarea {
+	font-size: $form__input--font-size;
+	line-height: $form__input--line-height;
+	color: var(--brand__color--primary);
+	font-family: $brand__font-family;
+	font-weight: $form__input--font-weight;
+	padding: $form__spacing;
+	border: $form__input--border;
+	width: 100%;
+	height: 50px;
+}
+
+input[type="range"] {
+	border: none;
+	width: auto;
+}
+
+textarea {
+	height: auto;
+}
+
+select {
+	font-size: $form__input--font-size;
+	line-height: $form__input--line-height;
+	font-family: $brand__font-family;
+	color: var(--brand__color--primary);
+	padding: $form__select--padding;
+	border: $form__input--border;
+	width: 100%;
+}
+
+select:not([multiple]) {
+	height: 50px;
+}
+
+option {
+	padding: 2px 0;
+	font-family: $brand__font-family;
+	font-size: $form__input--font-size;
+	line-height: $form__input--line-height;
+}

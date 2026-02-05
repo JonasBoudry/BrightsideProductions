@@ -1,0 +1,27 @@
+$grid__gap-sizes: (
+	null: var(--brand__spacing),
+	"-none": 0,
+	"-tiny": var(--brand__spacing--tiny),
+	"-small": var(--brand__spacing--small),
+	"-large": var(--brand__spacing--large),
+	"-huge": var(--brand__spacing--huge),
+);
+
+.o-gap {
+	column-gap: var(--set-o-gap--column,var(--o-gap--column, 0));
+	row-gap: var(--set-o-gap--row, var(--o-gap--row, 0));
+
+	@each $key, $value in $grid__gap-sizes {
+		&.o-gap#{if($key != null, "-", "")}#{$key} {
+			--o-gap--column: #{$value};
+			--o-gap--row: #{$value};
+		}
+	}
+}
+
+@include mq($until: tablet) {
+	.o-gap--large {
+		--o-gap--column: var(--brand__spacing);
+		--o-gap--row: var(--brand__spacing);
+	}
+}

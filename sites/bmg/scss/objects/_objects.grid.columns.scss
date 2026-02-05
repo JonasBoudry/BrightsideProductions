@@ -1,0 +1,24 @@
+$grid__max-columns: 6 !default;
+$grid__breakpoints: map-merge(
+    (
+        null: null,
+    ),
+    $mq-breakpoints
+) !default;
+
+.o-grid {
+    --grid--active: 1;
+
+    display: grid;
+    grid-template-columns: repeat(var(--o-grid--columns, 1), 1fr);
+
+    @each $key, $value in $grid__breakpoints {
+        @for $i from 1 through $grid__max-columns {
+            @include mq($from: $key, $responsive: if($key != null, true, false)) {
+                &--#{$i}#{if($key != null, "\\@" + $key, "")} {
+                    --o-grid--columns: #{$i};
+                }
+            }
+        }
+    }
+}

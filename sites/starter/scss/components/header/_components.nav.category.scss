@@ -1,0 +1,45 @@
+.c-nav--category {
+	width: var(--brand__nav-category--width);
+    display: var(--brand__nav-category--display, none);
+    --brand__doormat--top: 54px; // nav item height
+
+    @include mq($until: large) {
+        --brand__nav-list--margin: 0 #{$header__spacing} #{$header__spacing};
+        --brand__nav-link--background-color: rgba(var(--brand__color--gray-lighter));
+        --brand__nav-link--color: #{rgb(var(--brand__color--gray))};
+        --brand__nav-link--font-weight: 400;
+    }
+
+    @include mq($from: large) {
+        direction: var(--brand__header-nav--direction);
+        position: absolute;
+        left: var(--brand__nav-category--left, #{$header__gutter});
+        right: var(--brand__nav-category--right);
+		--brand__nav-category--width: 100%;
+        --brand__nav-item--display: flex;
+        --brand__nav-item--justify-content: center;
+        --brand__nav-item--position: relative;
+        --brand__nav-list--display: flex;
+        --brand__nav-link--color: rgba(var(--brand__color--white));
+        --brand__nav-link--margin-inline-end: 0;
+        --brand__nav-link--font-weight: 400;
+        --brand__nav-link--padding: calc(#{$header__spacing} * 1.5) calc(#{$header__spacing} * 2);
+        --brand__nav-link-active--background-color: rgba(var(--brand__color--white));
+        --brand__nav-link-active--color: #{rgb(var(--brand__color--gray))};
+        --brand__nav-link--border-top: 0;
+        --brand__nav-link-active--border-top: 0;
+        --brand__nav-link--border-bottom: 0;
+        --brand__nav-link-active--border-bottom: 0;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: #{- $header__gutter};
+            bottom: 0;
+            left: #{- $header__gutter};
+            z-index: -1;
+            background-color: var(--brand__nav-category-after--background-color, rgba(var(--brand__color--primary)));
+        }
+    }
+}

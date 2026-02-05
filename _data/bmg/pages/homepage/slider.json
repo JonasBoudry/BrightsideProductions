@@ -1,0 +1,306 @@
+{
+    "bgColor": "u-bg-color-black",
+    "items": [
+        {
+            "src": "/assets/media/images/slider/2dezit.png",
+            "alt": "Productie 2 de zit foto",
+            "width": "570",
+            "height": "380",
+            "loading": "eager"
+        },
+        {
+            "src": "/assets/media/images/slider/circus-camille.png",
+            "alt": "Productie Circus Camille foto",
+            "width": "570",
+            "height": "380",
+            "loading": "eager"
+        },
+        {
+            "src": "/assets/media/images/slider/9-feestjes-voor-de-kater.png",
+            "alt": "Productie 9 feestjes voor de kater foto",
+            "width": "570",
+            "height": "380",
+            "loading": "eager"
+        },
+        {
+            "src": "/assets/media/images/slider/alex-agnew.png",
+            "alt": "Productie Alex Agnew foto",
+            "width": "570",
+            "height": "380",
+            "loading": "eager"
+        },
+        {
+            "src": "/assets/media/images/slider/wtfock-anais.png",
+            "alt": "Productie WTFock Anais foto",
+            "width": "570",
+            "height": "380",
+            "loading": "eager"
+        },
+        {
+            "src": "/assets/media/images/slider/holy-rosita.png",
+            "alt": "Productie Holy rosita foto",
+            "width": "570",
+            "height": "380",
+            "loading": "eager"
+        },
+        {
+            "src": "/assets/media/images/slider/holy-shit.png",
+            "alt": "Productie Holy shit foto",
+            "width": "570",
+            "height": "380",
+            "loading": "eager"
+        },
+        {
+            "src": "/assets/media/images/slider/julie-zwijgt.png",
+            "alt": "Productie Julie zwijgt foto",
+            "width": "570",
+            "height": "380",
+            "loading": "eager"
+        },
+        {
+            "src": "/assets/media/images/slider/milo.png",
+            "alt": "Productie Milo foto",
+            "width": "570",
+            "height": "380",
+            "loading": "eager"
+        },
+        {
+            "src": "/assets/media/images/slider/onder-vuur.png",
+            "alt": "Productie Onder vuur foto",
+            "width": "570",
+            "height": "380",
+            "loading": "lazy"
+        },
+        {
+            "src": "/assets/media/images/slider/over-geld-gesproken.png",
+            "alt": "Productie Over geld gesproken foto",
+            "width": "570",
+            "height": "380",
+            "loading": "lazy"
+        },
+        {
+            "src": "/assets/media/images/slider/patrick-lefevere.png",
+            "alt": "Productie Patrick Levefere foto",
+            "width": "570",
+            "height": "380",
+            "loading": "lazy"
+        },
+        {
+            "src": "/assets/media/images/slider/like-me.png",
+            "alt": "Productie Like Me foto",
+            "width": "570",
+            "height": "380",
+            "loading": "lazy"
+        },
+        {
+            "src": "/assets/media/images/slider/xander-de-rycke.png",
+            "alt": "Productie Xander De Rycke foto",
+            "width": "570",
+            "height": "380",
+            "loading": "lazy"
+        },
+        {
+            "src": "/assets/media/images/slider/shalom-allemaal.png",
+            "alt": "Productie Shalom allemaal foto",
+            "width": "570",
+            "height": "380",
+            "loading": "lazy"
+        },
+        {
+            "src": "/assets/media/images/slider/aspe.png",
+            "alt": "Productie Aspe foto",
+            "width": "570",
+            "height": "380",
+            "loading": "lazy"
+        },
+        {
+            "src": "/assets/media/images/slider/auwch.png",
+            "alt": "Productie Auwch foto",
+            "width": "570",
+            "height": "380",
+            "loading": "lazy"
+        },
+        {
+            "src": "/assets/media/images/slider/beautiful-men.png",
+            "alt": "Productie Beautiful men foto",
+            "width": "570",
+            "height": "380",
+            "loading": "lazy"
+        },
+        {
+            "src": "/assets/media/images/slider/bilie-vs-benjamin.png",
+            "alt": "Productie Bilie vs Benjamin foto",
+            "width": "570",
+            "height": "380",
+            "loading": "lazy"
+        },
+        {
+            "src": "/assets/media/images/slider/bim.png",
+            "alt": "Productie Bim foto",
+            "width": "570",
+            "height": "380",
+            "loading": "lazy"
+        },
+        {
+            "src": "/assets/media/images/slider/broer.png",
+            "alt": "Productie Broer foto",
+            "width": "570",
+            "height": "380",
+            "loading": "lazy"
+        },
+        {
+            "src": "/assets/media/images/slider/bros.png",
+            "alt": "Productie Bros foto",
+            "width": "570",
+            "height": "380",
+            "loading": "lazy"
+        },
+        {
+            "src": "/assets/media/images/slider/buitenbeentjes.png",
+            "alt": "Productie Buitenbeentjes foto",
+            "width": "570",
+            "height": "380",
+            "loading": "lazy"
+        },
+        {
+            "src": "/assets/media/images/slider/de-dag-dat-het-zonlicht-niet-meer-scheen.png",
+            "alt": "Productie De dag dat het zonlicht niet meer scheen",
+            "width": "570",
+            "height": "380",
+            "loading": "lazy"
+        },
+        {
+            "src": "/assets/media/images/slider/de-leider-komt.png",
+            "alt": "Productie De leider komt foto",
+            "width": "570",
+            "height": "380",
+            "loading": "lazy"
+        },
+        {
+            "src": "/assets/media/images/slider/de-peatles.png",
+            "alt": "Productie De peatles foto",
+            "width": "570",
+            "height": "380",
+            "loading": "lazy"
+        },
+        {
+            "src": "/assets/media/images/slider/fore-shadow.png",
+            "alt": "Productie Fore Shadow foto",
+            "width": "570",
+            "height": "380",
+            "loading": "lazy"
+        },
+        {
+            "src": "/assets/media/images/slider/grand-me.png",
+            "alt": "Productie Grand me foto",
+            "width": "570",
+            "height": "380",
+            "loading": "lazy"
+        },
+        {
+            "src": "/assets/media/images/slider/het-wonder-daaronder.png",
+            "alt": "Productie Het wonder daaronder foto",
+            "width": "570",
+            "height": "380",
+            "loading": "lazy"
+        },
+        {
+            "src": "/assets/media/images/slider/made-in-cite.png",
+            "alt": "Productie Made in cite foto",
+            "width": "570",
+            "height": "380",
+            "loading": "lazy"
+        },
+        {
+            "src": "/assets/media/images/slider/rewind.png",
+            "alt": "Productie Rewind foto",
+            "width": "570",
+            "height": "380",
+            "loading": "lazy"
+        },
+        {
+            "src": "/assets/media/images/slider/ridder-muis.png",
+            "alt": "Productie Ridder muis foto",
+            "width": "570",
+            "height": "380",
+            "loading": "lazy"
+        },
+        {
+            "src": "/assets/media/images/slider/roomies.png",
+            "alt": "Productie Roomies foto",
+            "width": "570",
+            "height": "380",
+            "loading": "lazy"
+        },
+        {
+            "src": "/assets/media/images/slider/soundtrack-to-a-coup-d-etat.png",
+            "alt": "Productie Soundtrack to a coup d'etat foto",
+            "width": "570",
+            "height": "380",
+            "loading": "lazy"
+        },
+        {
+            "src": "/assets/media/images/slider/the-best-threesome.png",
+            "alt": "Productie The best threesome foto",
+            "width": "570",
+            "height": "380",
+            "loading": "lazy"
+        },
+        {
+            "src": "/assets/media/images/slider/the-good-daughter.png",
+            "alt": "Productie The good daughter foto",
+            "width": "570",
+            "height": "380",
+            "loading": "lazy"
+        },
+        {
+            "src": "/assets/media/images/slider/the-great-escape.png",
+            "alt": "Productie The great escape foto",
+            "width": "570",
+            "height": "380",
+            "loading": "lazy"
+        },
+        {
+            "src": "/assets/media/images/slider/the-jacket.png",
+            "alt": "Productie The jacket foto",
+            "width": "570",
+            "height": "380",
+            "loading": "lazy"
+        },
+        {
+            "src": "/assets/media/images/slider/two-to-tango.png",
+            "alt": "Productie Two to tango foto",
+            "width": "570",
+            "height": "380",
+            "loading": "lazy"
+        },
+        {
+            "src": "/assets/media/images/slider/une-femme-qui-part.png",
+            "alt": "Productie Une femme qui part foto",
+            "width": "570",
+            "height": "380",
+            "loading": "lazy"
+        },
+        {
+            "src": "/assets/media/images/slider/uw-rider-is-onderweg.png",
+            "alt": "Productie Uw ridder is onderweg foto",
+            "width": "570",
+            "height": "380",
+            "loading": "lazy"
+        },
+        {
+            "src": "/assets/media/images/slider/voorbij-de-schaamte.png",
+            "alt": "Productie Voorbij de schaamte foto",
+            "width": "570",
+            "height": "380",
+            "loading": "lazy"
+        },
+        {
+            "src": "/assets/media/images/slider/zlata.png",
+            "alt": "Productie Zlata foto",
+            "width": "570",
+            "height": "380",
+            "loading": "lazy"
+        }
+    ]
+}

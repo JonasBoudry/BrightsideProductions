@@ -1,0 +1,27 @@
+.c-nav--secondary {
+    grid-area: secondary;
+
+    @include mq($until: large) {
+        --brand__nav-link--padding: calc(#{$header__spacing} / 2) calc(#{$header__spacing} / 2);
+        --brand__nav-item--border-bottom: 1px solid rgba(var(--brand__color--border));
+    }
+
+    @include mq($from: large) {
+        direction: var(--brand__header-nav--direction);
+        --brand__nav-link--color: var(--brand__nav-secondary-link--color);
+        --brand__nav-item--position: relative;
+        --brand__nav-list--display: flex;
+        --brand__nav-list--justify-content: flex-end;
+        --brand__nav-link--padding: calc(#{$header__spacing} / 2) 0 calc(#{$header__spacing} / 2) calc(#{$header__spacing} * 2);
+        --brand__nav-link-active--color: var(--brand__nav-secondary-link-active--color, rgba(255, 255, 255, 0.7));
+        --brand__doormat--padding: 0;
+
+        .has-doormat {
+            --brand__nav-link-after--content: "\e901";
+        }
+
+        [dir="rtl"] & {
+            --brand__nav-list--justify-content: flex-start;
+        }
+    }
+}

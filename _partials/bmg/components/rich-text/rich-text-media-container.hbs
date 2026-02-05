@@ -1,0 +1,17 @@
+{{#> component renderAsComponent=true boxed=boxed bgColor=bgColor}}
+<section class="c-rich-text-media-container">
+	{{#each items}}
+		<article class="c-rich-text-media c-rich-text-media--tiny">
+			<div class="c-rich-text-media__section is-media">
+				{{> common/atoms/media/media-item}}
+			</div>
+			<div class="c-rich-text-media__section">
+				<div class="c-rich-text-media__body">
+					{{> common/molecules/expand-collapse}}
+					{{> common/atoms/rich-text }}
+				</div>
+			</div>
+		</article>
+	{{/each}}
+</section>
+{{/component}}

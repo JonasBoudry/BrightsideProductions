@@ -1,0 +1,44 @@
+<li
+	class="c-nav__item {{#if isActive}}is-active{{/if}} {{#if isOpen}}is-open{{/if}} {{#if hasSubnav}}has-subnav{{/if}} {{#if hasDoormat}}has-doormat js-doormat{{/if}} {{#if hasPopup}}has-popup js-toggle-popup{{/if}}">
+	<a class="c-nav__link {{#if hasSubnav}}js-toggle-subnav{{/if}} {{#if hasDoormat}}js-toggle-doormat{{/if}}"
+		{{#if isLanguageSwitch}}data-open="popup-overlay" data-popup-id="language-selection" href="javascript:void(0);"
+		{{else}}href="{{link}}{{/if}}">
+
+		{{#if isLanguageSwitch}}
+			{{> common/atoms/svg-icon
+			iconId="globe"
+			title="globe"
+			}}
+		{{/if}}
+
+		{{{label}}}
+
+		{{#if imgUrl}}
+			<img src="{{imgUrl}}" alt="{{label}}">
+		{{/if}}
+	</a>
+
+	{{#if hasSubnav}}
+		{{> common/components/header/nav type="category" items=sub-navigation.items doormat=doormat}}
+	{{/if}}
+
+	{{#with doormat}}
+		{{#if hasImageColumns}}
+			{{> common/components/header/doormat/doormat-image-columns}}
+		{{else if hasMixedContent}}
+			{{> common/components/header/doormat/doormat-mixed-content}}
+		{{else if hasThumbnails}}
+			{{> common/components/header/doormat/doormat-thumbnails}}
+		{{else if hasProducts}}
+			{{> common/components/header/doormat/doormat-products}}
+		{{else}}
+			{{> common/components/header/doormat/doormat-default}}
+		{{/if}}
+	{{/with}}
+
+	{{#if hasPopup}}
+		<div class="c-popup js-popup">
+			<img class="c-popup__image" src="assets/images/QRWechat.jpg" alt="QR code wechat">
+		</div>
+	{{/if}}
+</li>

@@ -1,0 +1,23 @@
+{
+    "compilerOptions": {
+        "moduleResolution": "Node",
+        "target": "ES6",
+        "module": "ESNext",
+        "typeRoots": [
+            "./node_modules/@types",
+            "./src/types"
+        ],
+        "lib": [
+            "es6",
+            "dom",
+            "dom.iterable"
+        ],
+        "allowSyntheticDefaultImports": true,
+        "esModuleInterop": true
+    },
+    "compileOnSave": false,
+    "exclude": [
+        "obj",
+        "node_modules"
+    ]
+}

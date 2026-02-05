@@ -1,0 +1,18 @@
+<div class="c-highlighted-block">
+	<div class="c-highlighted-block__image">
+		<img src="{{doormat.highlighted-block.image.src}}" alt="{{doormat.highlighted-block.image.alt}}"
+			title="{{doormat.highlighted-block.image.title}}" />
+	</div>
+	<div class="c-highlighted-block__text">
+		{{> common/atoms/rich-text
+            rich-text=doormat.highlighted-block.rich-text
+        }}
+	</div>
+	<div class="c-highlighted-block__cta">
+		{{> common/atoms/button
+			isSecondary=doormat.highlighted-block.button.isSecondary
+            text=doormat.highlighted-block.button.text
+            src=doormat.highlighted-block.button.src
+        }}
+	</div>
+</div>

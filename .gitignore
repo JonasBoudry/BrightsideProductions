@@ -1,0 +1,18 @@
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Ignore StaticSite files.
+/node_modules
+/bower_components
+/.out
+/bin
+/dist
+/obj
+**/svg-view.hbs
+
+# Ignore generated typescript files
+*.js.map
+/.vs/slnx.sqlite

@@ -1,0 +1,30 @@
+.facts-and-figures {
+    padding: var(--facts-and-figures--padding, var(--brand__spacing--small) 0);
+
+    @include mq($from: desktop) {
+        --facts-and-figures--padding: var(--brand__spacing) 0;
+    }
+
+    ul {
+        display: grid;
+        grid-template-columns: var(--facts-and-figures-ul--gtc, 1fr 1fr);
+        grid-gap: var(--facts-and-figures-ul--grid-gap, var(--brand__spacing));
+        @include list-unstyle();
+        align-items: flex-start;
+
+        @include mq($from: desktop) {
+            --facts-and-figures-ul--gtc: 1fr 1fr 1fr 1fr;
+            --facts-and-figures-ul--grid-gap: var(--brand__spacing--medium);
+        }
+    }
+
+    li {
+        display: grid;
+        grid-gap: var(--brand__spacing--tiny);
+        --brand__typography-h2--margin-bottom: 0;
+
+        .text {
+            text-transform: uppercase;
+        }
+    }
+}

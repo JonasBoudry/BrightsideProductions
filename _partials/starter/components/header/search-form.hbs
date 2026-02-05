@@ -1,0 +1,13 @@
+<form class="c-form">
+	<input type="text" class="c-input c-input--text-box" placeholder="{{search.placeholder}}" value="{{value}}">
+	<div class="c-form__submit">
+		{{> common/atoms/button
+            isButton=true
+            isPrimary=true
+			isIcon=true
+			iconId="arrow-right-light"
+            src=search.button.src
+            title="Search"
+        }}
+	</div>
+</form>

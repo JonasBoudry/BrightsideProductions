@@ -1,0 +1,32 @@
+{{#if renderAsComponent}}
+<section class="c-component
+	{{#if hasSmallSpacingBottom}}c-component--small-spacing{{/if}}
+	{{#if boxed}}is-boxed{{/if}}
+	{{#if isSmallWrapper}}is-small-wrapper{{/if}}
+	{{#if bgColor}}{{bgColor}}{{/if}}
+	{{#if noSpacingBottom}}no-spacing-bottom{{/if}}
+
+	{{#if hasWatermark}}has-watermark{{/if}}
+	{{#if bgOnMobile}}has-bg@mobile{{/if}}" {{#if hasModal}}data-component-class="Modal" {{/if}} {{#if id}}id="{{id}}"
+	{{/if}}>
+	{{#if boxed}}
+	<div class="o-wrapper">
+		{{/if}}
+		{{#if isSmallWrapper}}
+		<div class="o-wrapper o-wrapper--small">
+			{{/if}}
+			{{#if isTinyWrapper}}
+			<div class="o-wrapper o-wrapper--tiny">
+				{{/if}}
+				{{/if}}
+
+				{{> @partial-block}}
+
+				{{#if renderAsComponent}}
+				{{#if boxed}}</div>{{/if}}
+			{{#if isSmallWrapper}}
+		</div>{{/if}}
+		{{#if isTinyWrapper}}
+	</div>{{/if}}
+</section>
+{{/if}}

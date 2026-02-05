@@ -1,0 +1,24 @@
+.a-form-element {
+	display: flex;
+	flex-direction: var(--form-element--flex-direction);
+	flex-wrap: wrap;
+	align-items: var(--form-element--align-items, center);
+	margin: var(--form-element--margin);
+	margin-block-end: var(--set-form-element--margin-block-end, var(--form-element--margin-block-end));
+
+	&--multi-select {
+		--select-item-label-before--display: inline-block;
+		--select-item-label--margin: 0 0 0 var(--brand__spacing);
+		--form-element--flex-direction: column;
+		--form-element--align-items: flex-start;
+
+		@include mq($from: desktop) {
+			--form-element--flex-direction: row;
+			--form-element--align-items: center;
+		}
+	}
+
+	&.has-error {
+		--select__trigger--background-color: rgba(var(--brand__color--alert), 0.1)
+	}
+}

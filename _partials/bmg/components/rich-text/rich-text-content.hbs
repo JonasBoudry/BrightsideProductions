@@ -1,0 +1,18 @@
+{{#> component renderAsComponent=true boxed=true bgColor=bgColor}}
+<section class="c-rich-text-content
+	{{#if bodyFirst}}c-rich-text-content--reversed{{/if}}">
+
+	{{#with content}}
+		<div class="c-rich-text-content__section is-content {{bgColor}}">
+			FORM...
+		</div>
+	{{/with}}
+
+	<div class="c-rich-text-content__section">
+		<div class="c-rich-text-content__body">
+			{{> common/molecules/expand-collapse}}
+			{{> common/atoms/rich-text }}
+		</div>
+	</div>
+</section>
+{{/component}}

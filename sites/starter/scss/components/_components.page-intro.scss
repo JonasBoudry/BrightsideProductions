@@ -1,0 +1,5 @@
+.c-page-intro {
+	@include mq($from: desktop) {
+		--set-brand__component-section--padding-top: calc(var(--brand__spacing--huge) * 1.5);
+	}
+}

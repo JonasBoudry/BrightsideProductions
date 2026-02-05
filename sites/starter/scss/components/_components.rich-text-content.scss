@@ -1,0 +1,67 @@
+.c-rich-text-content {
+	display: flex;
+	flex-direction: var(--rich-text-content--flex-direction, column);
+	align-items: var(--rich-text-content--align-items, stretch);
+	margin-bottom: var(--rich-text-content--margin-bottom);
+	position: relative;
+	z-index: 1;
+
+	@include mq($from: tablet) {
+		--rich-text-content--flex-direction: row;
+		--rich-text-content__body--padding-inline-start: var(--rich-text-media--spacing);
+		--rich-text-content__body--padding-inline-end: var(--brand__spacing);
+
+		&--reversed {
+			--rich-text-content--flex-direction: row-reverse;
+			--rich-text-content__body--padding-inline-start: var(--brand__spacing);
+			--rich-text-content__body--padding-inline-end: var(--rich-text-media--spacing);
+			--rich-text-content__section--padding-inline-start: #{$brand__wrapper-spacing-to-simulate-wrapping};
+			--rich-text-content__section--padding-inline-end: 0;
+		}
+	}
+
+	.is-boxed & {
+		@include mq($from: tablet) {
+			--rich-text-content__body--padding-inline-start: var(--rich-text-media--spacing);
+
+			&--reversed {
+				--rich-text-content__body--padding-inline-end: var(--rich-text-media--spacing);
+				--rich-text-content__body--padding-inline-start: 0;
+			}
+		}
+	}
+
+	.is-boxed[class*="u-bg-"] & {
+		--set-brand__component-section--padding-top: var(--brand__spacing--huge);
+		--set-brand__component-section--padding-bottom: var(--brand__spacing--huge);
+	}
+}
+
+.c-rich-text-content__section {
+	flex-basis: var(--set-rich-text-content__section--flex-basis, var(--rich-text-content__section--flex-basis, 100%));
+	overflow: hidden;
+
+	@include mq($from: tablet) {
+		--rich-text-content__section--flex-basis: 50%;
+
+		&:last-child {
+			padding-inline-end: var(--rich-text-content__section--padding-inline-end, #{$brand__wrapper-spacing-to-simulate-wrapping});
+			padding-inline-start: var(--rich-text-content__section--padding-inline-start, 0);
+		}
+	}
+
+	&.is-content {
+		padding: var(--rich-text-content__section-content--padding, var(--brand__spacing--large));
+
+		@include mq($from: desktop) {
+			--rich-text-content__section-content--padding: var(--brand__spacing--huge);
+		}
+	}
+}
+
+.c-rich-text-content__body {
+	padding-top: var(--set-rich-text-content__body--padding-top, var(--rich-text-content__body--padding-top, var(--brand__spacing--large)));
+	padding-bottom: var(--set-rich-text-content__body--padding-bottom, var(--rich-text-content__body--padding-bottom, var(--brand__spacing--large)));
+	padding-inline-start: var(--set-rich-text-content__body--padding-inline-start, var(--rich-text-content__body--padding-inline-start, var(--brand__spacing--large)));
+	padding-inline-end: var(--set-rich-text-content__body--padding-inline-end, var(--rich-text-content__body--padding-inline-end, var(--brand__spacing--large)));
+}

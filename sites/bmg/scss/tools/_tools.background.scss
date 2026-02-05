@@ -1,0 +1,6 @@
+@mixin backgroundImage($image, $position: center, $size: contain) {
+	background-image: $image;
+	background-size: $size;
+	background-repeat: no-repeat;
+	background-position: $position;
+}

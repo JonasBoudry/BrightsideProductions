@@ -1,0 +1,36 @@
+:root {
+	--collapse__content--max-height: 500px;
+}
+
+.o-collapse {
+	cursor: pointer;
+	display: flex;
+	flex-direction: column;
+
+	&__checkbox {
+		display: none;
+
+		&:checked ~ .o-collapse__content {
+			visibility: visible;
+			overflow: visible;
+			max-height: var(--collapse__content--max-height);
+		}
+
+		&:checked ~ .o-collapse__trigger .o-collapse__icon {
+			transform: rotate(-180deg);
+		}
+	}
+
+	&__content {
+		visibility: hidden;
+		overflow: hidden;
+		max-height: 0;
+		transition: all 0.3s ease;
+		display: block;
+		width: 100%;
+	}
+
+	&__icon {
+		transition: transform 0.2s ease;
+	}
+}

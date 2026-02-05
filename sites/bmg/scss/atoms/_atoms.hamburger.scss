@@ -1,0 +1,57 @@
+.a-hamburger__trigger {
+	min-width: var(--hamburger__trigger--min-width, 46px);
+	max-width: var(--hamburger__trigger--max-width, 46px);
+	min-height: var(--hamburger__trigger--max-height, 46px);
+	max-height: var(--hamburger__trigger--max-height, 46px);
+	justify-content: var(--hamburger__trigger--justify-content, center);
+	padding: var(--hamburger__trigger--padding);
+	background-color: var(--hamburger__trigger--background-color);
+	border-radius: var(--hamburger__trigger--border-radius);
+	--brand__btn--padding: var(--brand__spacing--tiny) 0 var(--brand__spacing--tiny) var(--brand__spacing--tiny);
+	--brand__btn--color: rgb(var(--brand__color--text));
+	--brand__btn-hover--color: rgb(var(--brand__color--text));
+	--brand__btn--transition: none;
+
+	.a-btn__label {
+		display: var(--hamburger-label--display);
+		padding-inline-end: var(--brand__spacing--small);
+	}
+
+	.a-btn__icon {
+		position: relative;
+		display: block;
+		height: 2px;
+		width: 20px;
+		background-color: var(--hamburger-icon--background-color, rgb(var(--brand__color--text)));
+		border-radius: var(--brand__border-radius);
+
+		&::before,
+		&::after {
+			display: block;
+			content: "";
+			@include absolute(
+				var(--set-hamburger-icon--top, var(--hamburger-icon--top)),
+				0,
+				var(--set-hamburger-icon--bottom, var(--hamburger-icon--bottom)),
+				0
+			);
+			height: 2px;
+			width: 100%;
+			background-color: rgb(var(--brand__color--text));
+			border-radius: var(--brand__border-radius);
+			transition: 0.3 ease;
+		}
+
+		&::before {
+			transform: var(--hamburger-icon-before--transform);
+			--hamburger-icon--top: 7px;
+			--hamburger-icon--bottom: auto;
+		}
+
+		&::after {
+			transform: var(--hamburger-icon-after--transform);
+			--hamburger-icon--top: auto;
+			--hamburger-icon--bottom: 7px;
+		}
+	}
+}

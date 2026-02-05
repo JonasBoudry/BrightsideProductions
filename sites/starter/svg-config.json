@@ -1,0 +1,21 @@
+{
+	"shape": {
+		"dimension": {
+			"maxWidth": 32
+		}
+	},
+	"svg": {
+		"doctypeDeclaration": false,
+		"xmlDeclaration": false
+	},
+	"mode": {
+		"symbol": {
+			"dest": "sites/starter/assets/svg",
+			"sprite": "svg-symbols.svg",
+			"example": {
+				"template": "_tmpl/starter-svg-view.hbs",
+				"dest": "../../pages/styleguide/svg-icons.hbs"
+			}
+		}
+	}
+}

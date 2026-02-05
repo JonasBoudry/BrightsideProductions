@@ -1,0 +1,21 @@
+$brand__wrapper-width: 1200px !default;
+$brand__wrapper-spacing-to-simulate-wrapping: calc((100% - (#{$brand__wrapper-width})) / 2);
+
+:root {
+	--brand__wrapper--width: #{$brand__wrapper-width};
+	--brand__wrapper--width-small: 785px;
+}
+
+.o-wrapper {
+	padding-right: var(--brand__spacing);
+	padding-left: var(--brand__spacing);
+	margin-inline-end: auto;
+	margin-inline-start: auto;
+	max-width: var(--brand__wrapper--width);
+
+	&::after {
+		content: "" !important;
+		display: block !important;
+		clear: both !important;
+	}
+}

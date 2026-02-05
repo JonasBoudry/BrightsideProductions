@@ -1,0 +1,28 @@
+<div class="c-overview">
+	<nav class="c-nav u-padding-top-large u-padding-bottom-large">
+		<a class="c-nav-link" href="/index.html">
+			<span class="c-nav-link__title">{{title}}</span>
+		</a>
+	</nav>
+
+	<section class="c-nav-content">
+		{{> overview-page/navigation-content-legend isDesktop=false}}
+
+		<div class="o-grid o-grid--2@tablet o-gap o-gap-small js-theme-url">
+			<div class="o-span">
+				{{> overview-page/block-wrapper title="Components"
+				collection=collections.components}}
+			</div>
+
+			<div class="o-span">
+				{{> overview-page/block-wrapper title="Styleguide"
+				collection=collections.styleguide}}
+
+				{{> overview-page/block-wrapper title="Pages"
+				collection=collections.pages}}
+			</div>
+		</div>
+
+		{{> overview-page/navigation-content-legend isDesktop=true}}
+	</section>
+</div>

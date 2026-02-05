@@ -1,0 +1,53 @@
+<div class="c-overview">
+	<nav class="c-nav u-padding-top-large u-padding-bottom-large">
+		<a class="c-nav-link" href="/index.html">
+			{{!-- <span class="c-nav-link__logo"><img src="/sites/overview-page/assets/media/logos/digital.svg"
+					alt="Delaware Digital" width="100%"></span> --}}
+			<small class="c-nav-link__sub-title">{{title}}</small>
+		</a>
+
+		<ul class="c-nav__list">
+			{{#each (sortByTitle collections.sites)}}
+			{{#unless this.data.hideInOverview}}
+			<li class="c-nav__item ">
+				<a class="c-nav__link" href="{{this.url}}">
+					<div class="c-nav-link__text">
+						{{this.data.title}}
+					</div>
+					<div class="c-nav-link__icon">
+						<img src="/sites/overview-page/assets/media/icons/Arrow%20right.svg">
+					</div>
+				</a>
+			</li>
+			{{/unless}}
+			{{/each}}
+		</ul>
+	</nav>
+	<section class="c-nav-content">
+		<div class="o-grid o-grid--3@desktop o-gap">
+			{{#each (sortByTitle collections.sites)}}
+			{{#unless this.data.hideInOverview}}
+			<div class="o-span">
+				<div class="c-block-wrapper c-block-wrapper--overview">
+					<div class="c-block">
+						<div class="c-block__item">
+							<a class="c-block-item__link" href="{{this.url}}">
+								<div class="c-block-item-link__text">
+									{{this.data.title}}
+								</div>
+								<div class="c-block-item-link__info">
+									[{{this.data.type}}]
+								</div>
+								<div class="c-block-item-link__icon">
+									<img src="/sites/overview-page/assets/media/icons/plus.svg" />
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			{{/unless}}
+			{{/each}}
+		</div>
+	</section>
+</div>

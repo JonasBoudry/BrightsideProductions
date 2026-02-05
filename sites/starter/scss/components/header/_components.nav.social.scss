@@ -1,0 +1,20 @@
+.c-nav--social {
+    grid-area: social;
+    direction: var(--brand__header-nav--direction);
+    align-self: center;
+    --brand__nav-list--display: flex;
+    --brand__nav-link--padding: 0 0 0 calc(#{$header__spacing} * 1.5);
+    --brand__nav-list--justify-content: flex-end;
+    --brand__nav-link--opacity: 1;
+    --brand__nav-link-active--opacity: .7;
+    --brand__nav-list--flex-direction: row;
+    --brand__nav-link--filter: var(--brand__nav-social-link--filter, invert(1));
+	--brand__nav-item--text-indent: -9999px;
+	--brand__nav-item--overflow: hidden;
+
+    @include mq($until: large) {
+        padding: $header__spacing;
+        --brand__nav-list--justify-content: center;
+        --brand__nav-link--padding: #{$header__spacing};
+    }
+}

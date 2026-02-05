@@ -1,0 +1,32 @@
+[dir="rtl"] {
+    --brand__header--direction: ltr;
+    --brand__header-nav--direction: rtl;
+    --brand__nav-category--left: auto;
+    --brand__nav-category--right: 40px;
+    --brand__nav-link-before--margin: 0 0 0 calc(#{$header__spacing} / 2);
+    --brand__nav-link-after--margin: 0 calc(#{$header__spacing} / 2) 0 0;
+    --brand__nav-link-language-switch--order: -1;
+    --brand__doormat-tab-content-wrapper--left: auto;
+    --brand__doormat-tab-content-wrapper--right: 285px;
+    --brand__doormat-card-title-after--transform: rotate(-180deg);
+    --brand__doormat-link-after--right: auto;
+    --brand__doormat-link-after--left: 0;
+    --brand__doormat-link--padding-right: 0;
+    --brand__doormat-link--padding-left: 30px;
+    --brand__header-search-submit-after--right: auto;
+    --brand__header-search-submit-after--left: 30px;
+    --brand__header-search-submit--padding-right: 20px;
+    --brand__header-search-submit--padding-left: 60px;
+    --brand__nav-overview-link-after--transform: rotate(180deg);
+    --brand__nav-back-link--content: "\e904";
+    --brand__header-search--direction: rtl;
+
+    .c-header.is-non-global {
+        --brand__nav-wrapper--template-areas: "social secondary search" "divider divider  divider" "primary primary primary";
+        --brand__nav-wrapper--template-columns: 1fr auto auto auto;
+    }
+
+    .c-nav--social {
+        --brand__nav-list--justify-content: flex-start;
+    }
+}

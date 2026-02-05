@@ -1,0 +1,30 @@
+.a-logo {
+	min-width: var(--set-logo--min-width, var(--logo--min-width, 190px));
+	max-width: var(--set-logo--max-width, var(--logo--max-width, 190px));
+	min-height: var(--set-logo--min-height, var(--logo--min-height, 41px));
+	max-height: var(--set-logo--max-height, var(--logo--max-height, 41px));
+
+	@include mq($from: larger){
+		--logo--min-width: 230px;
+		--logo--max-width: 230px;
+		--logo--min-height: 50px;
+		--logo--max-height: 50px;
+	}
+}
+
+.a-logo__icon {
+	display: flex;
+	align-items: center;
+	width: var(--logo__icon--width, 190px);
+	height: var(--logo__icon--height, 41px);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-image: var(--set-logo__icon--background-image, 
+	var(--logo__icon--background-image, var(--brand__full-logo-mobile)));
+
+	@include mq($from: larger){
+		--logo__icon--width: 230px;
+		--logo__icon--height: 50px;
+		--brand__full-logo-mobile: var(--brand__full-logo-desktop);
+	}
+}

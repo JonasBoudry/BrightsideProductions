@@ -1,0 +1,26 @@
+@mixin before($content: "") {
+	&::before {
+		content: $content;
+		@content;
+	}
+}
+
+@mixin after($content: "") {
+	&::after {
+		content: $content;
+		@content;
+	}
+}
+
+@mixin hide-pseudo-selectors($position: null) {
+	@if ($position) {
+		&:#{$position} {
+			display: none;
+		}
+	} @else {
+		&::after,
+		&::before {
+			display: none;
+		}
+	}
+}

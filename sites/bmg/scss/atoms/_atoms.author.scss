@@ -1,0 +1,31 @@
+.a-author {
+	display: grid;
+	grid-template-columns: var(--author--grid-template-columns, 90px 1fr);
+	grid-gap: var(--author--grid-gap, var(--brand__spacing));
+	--brand__typography-h4--margin-bottom: calc(var(--brand__spacing--tiny) / 2);
+
+	@include mq($from: large, $until: larger) {
+		--author--grid-template-columns: 73px 1fr;
+	}
+}
+
+.a-author__object {
+	--brand__img--border-radius: 50%;
+	--brand__img--min-height: auto;
+	--brand__img--height: auto;
+}
+
+.a-author__description {
+	font-size: calc(var(--brand__typography-p--font-size) - 4px);
+	line-height: calc(var(--brand__typography-p--line-height) - 12px);
+}
+
+.a-author__link {
+	margin-block-start: calc(var(--brand__spacing--tiny) / 2);
+	--brand__link--text-transform: var(--author__link--text-transform);
+	--brand__link--font-size: calc(var(--brand__typography-p--font-size) - 2px);
+	--brand__link--font-weight: var(--author__link--font-weight, #{$brand__font-weight--medium});
+	--brand__link--color: rgb(var(--brand__color--primary));
+	--brand__link-hover--font-weight: var(--author__link-hover--font-weight, #{$brand__font-weight--medium});
+	--brand__link-hover--color: var(--author__link-hover--color, rgb(var(--brand__color--primary)));
+}

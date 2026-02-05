@@ -1,0 +1,25 @@
+<section class="o-wrapper">
+	<h1>Spacings</h1>
+
+	<div class="c-spacing-grid u-padding-bottom">
+		{{#with bmg.design-tokens}}
+		{{#each token.spacings}}
+		<div class="c-card-spacing">
+			<div style="background-color: black; width: {{value}}; height: {{value}};"></div>
+
+			<div class="c-card-spacing__title">
+				<strong>{{name}}</strong><br />
+				<small>
+					{{value}}<br />
+					{{#if (eq name "default")}}
+					--brand__{{type}}
+					{{else}}
+					--brand__{{type}}--{{name}}
+					{{/if}}
+				</small>
+			</div>
+		</div>
+		{{/each}}
+		{{/with}}
+	</div>
+</section>

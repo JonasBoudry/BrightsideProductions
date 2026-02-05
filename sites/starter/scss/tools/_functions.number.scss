@@ -1,0 +1,4 @@
+// strip the unit from the value
+@function strip-unit($number) {
+	@return calc(#{$number} / (#{$number} * 0 + 1));
+}

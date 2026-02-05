@@ -1,0 +1,13 @@
+{
+	"image": {
+		"is16by9ratio": true,
+		"src": "https://via.placeholder.com/1600x900",
+		"alt": "card image"
+	},
+	"title": "Title",
+	"text": "This is a short text.",
+	"button": {
+		"label": "button",
+		"link": "#"
+	}
+}

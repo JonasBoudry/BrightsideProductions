@@ -1,0 +1,10 @@
+@mixin hide-scrollbar-on-mobile() {
+	@include mq($until: large) {
+		overflow-y: scroll;
+		scrollbar-width: none;
+		&::-webkit-scrollbar {
+			width: 0;
+			height: 0;
+		}
+	}
+}

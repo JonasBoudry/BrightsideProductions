@@ -1,0 +1,27 @@
+.a-download {
+	display: flex;
+	align-items: var(--download--align-items);
+
+	&__icon {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		text-transform: uppercase;
+		font-size: var(--download__icon--font-size, 1em);
+		line-height: 1.2;
+		border-radius: var(--brand__border-radius);
+		padding: var(--download__icon--padding, 0);
+		background-color: var(--download__icon--bgc, transparent);
+		color: var(--download__icon--color, inherit);
+		> * {
+			margin-block-end: 6px;
+		}
+	}
+
+	&__name {
+		word-break: break-all;
+		margin-inline-start: var(--download__name--mis, var(--brand__spacing--tiny));
+		font-weight: $brand__font-weight--medium;
+		color: inherit;
+	}
+}

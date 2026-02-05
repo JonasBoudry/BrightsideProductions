@@ -1,0 +1,34 @@
+<div class="c-page-intro
+    {{#if bgColor}} u-padding-bottom-large {{bgColor}}{{/if}} ">
+	<div class="c-page-intro__header">
+		<div class="c-page-intro__breadcrumb">
+			<div class="o-wrapper">
+				{{#if breadcrumb}}
+				{{> starter/components/content/breadcrumb/breadcrumb}}
+				{{/if}}
+			</div>
+		</div>
+
+		{{#if title}}
+		<div class="o-wrapper">
+			<h1 class="c-page-intro__title">{{title}}</h1>
+		</div>
+		{{/if}}
+	</div>
+
+	<div class="c-page-intro__media">
+		{{#if banner}}
+		{{> starter/components/content/banner/banner }}
+		{{/if}}
+	</div>
+
+	{{#if textBlock}}
+	<div class="o-wrapper">
+		<div class="c-page-intro__text">
+			{{> common/atoms/rich-text
+				rich-text=textBlock.rich-text
+			}}
+		</div>
+	</div>
+	{{/if}}
+</div>

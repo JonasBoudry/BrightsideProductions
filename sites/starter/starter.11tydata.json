@@ -1,0 +1,33 @@
+{
+	"siteName": "Starter",
+	"type": "Main",
+	"paths": {
+		"root": "/starter/",
+		"logo": "/assets/media/starter.svg"
+	},
+	"fontFiles": [
+		{
+			"path": "/sites/starter/assets/fonts/roboto-v27-latin-regular.woff2"
+		},
+		{
+			"path": "/sites/starter/assets/fonts/roboto-v27-latin-700.woff2"
+		}
+	],
+	"cssFiles": [
+		{
+			"path": "/sites/starter/assets/css/design-tokens.css"
+		},
+		{
+			"path": "/sites/starter/assets/css/starter.css"
+		}
+	],
+	"jsFiles": [
+		{
+			"path": "/sites/starter/assets/js/starter.js",
+			"module": true
+		},
+		{
+			"path": "https://code.jquery.com/jquery-3.2.1.slim.min.js"
+		}
+	]
+}

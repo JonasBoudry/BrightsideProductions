@@ -1,0 +1,30 @@
+.u-padding-top {
+	padding-top: var(--brand__spacing);
+}
+
+.u-padding-bottom {
+	padding-bottom: var(--brand__spacing);
+}
+
+.u-padding-top-large {
+	padding-top: var(--brand__spacing--large);
+}
+
+.u-padding-bottom-large {
+	padding-top: var(--brand__spacing--large);
+}
+
+.u-padding-vertical {
+	padding-top: var(--brand__spacing);
+	padding-bottom: var(--brand__spacing);
+}
+
+.u-padding-vertical-large {
+	padding-top: var(--brand__spacing--large);
+	padding-bottom: var(--brand__spacing--large);
+}
+
+.no-spacing-bottom {
+	padding-block-end: 0 !important;
+	margin-block-end: 0 !important;
+}

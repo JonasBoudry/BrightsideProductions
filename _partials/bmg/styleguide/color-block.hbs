@@ -1,0 +1,23 @@
+<section class="o-wrapper u-padding-top-large u-padding-bottom-large">
+	<h1>Colors</h1>
+
+	<div class="c-image-grid u-padding-bottom">
+		{{#> grid renderAsGrid=true items=colors small=true }}
+		{{#with bmg.design-tokens}}
+		{{#each token.colors}}
+		<div class="c-card-color" style="background-color: rgb({{rgb}});">
+			<div class="c-card-color__title">
+				<strong>{{name}}</strong><br />
+				<small>--brand__{{type}}--{{name}}</small>
+
+				<div class="c-card-color__value">
+					<div class="c-card-color__value-item"><span>rgb</span> {{rgb}}</div>
+					<div class="c-card-color__value-item"><span>hex</span> {{hex}}</div>
+				</div>
+			</div>
+		</div>
+		{{/each}}
+		{{/with}}
+		{{/grid}}
+	</div>
+</section>

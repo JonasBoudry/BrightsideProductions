@@ -1,0 +1,16 @@
+.u-hide {
+	display: none;
+}
+
+@each $breakpoint, $value in $mq-breakpoints {
+	.u-hide-#{$breakpoint} {
+		@include mq($from: $breakpoint) {
+			display: none !important;
+		}
+	}
+	.u-hide-until-#{$breakpoint} {
+		@include mq($until: $breakpoint) {
+			display: none !important;
+		}
+	}
+}

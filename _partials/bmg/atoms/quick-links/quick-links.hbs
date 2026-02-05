@@ -1,0 +1,10 @@
+<ul class="o-list a-quick-links">
+	{{#each links}}
+	<li class="a-quick-links__item h5 {{#if isActive}}is-active{{/if}}">
+		<a href="#" class="a-quick-links__link js-quicklinks__trigger" target="{{target}}" {{#if
+			image}}data-media-src="{{image.src}}" {{/if}}>
+			{{linkLabel}}
+		</a>
+	</li>
+	{{/each}}
+</ul>

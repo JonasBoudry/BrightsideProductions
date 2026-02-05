@@ -1,0 +1,7 @@
+{
+    "bgColor": "u-bg-color-black",
+    "src": {
+        "mobile": "/assets/media/videos/bmg-logos-mobile.mp4",
+        "desktop": "/assets/media/videos/bmg-logos.mp4"
+    }
+}

@@ -1,0 +1,21 @@
+{{#> component renderAsComponent=true isSmallWrapper=true bgColor=bgColor}}
+<section class="c-contact-cta" id="{{id}}">
+    <div class="c-contact-cta__body {{bodyColor}}">
+        {{#if title}}
+        <div class="c-contact-cta__title">
+            <h2>{{title}}</h2>
+        </div>
+        {{/if}}
+        {{#if description}}
+        <div class="c-contact-cta__description">
+            {{> common/atoms/rich-text rich-text=description}}
+        </div>
+        {{/if}}
+        {{#if button}}
+        <div class="c-contact-cta__cta">
+            {{> common/atoms/button isPrimary=true text=button.label src=button.link}}
+        </div>
+        {{/if}}
+    </div>
+</section>
+{{/component}}

@@ -1,0 +1,14 @@
+<div class="c-block-wrapper">
+	<div class="c-block">
+		<div class="c-block__title">
+			{{title}}
+		</div>
+		<div class="c-block__list">
+			{{#each (sortByTitle collection)}}
+			{{#unless this.data.hideInOverview}}
+				{{> overview-page/navigation-content-link}}
+			{{/unless}}
+			{{/each}}
+		</div>
+	</div>
+</div>

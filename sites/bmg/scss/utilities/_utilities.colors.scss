@@ -1,0 +1,51 @@
+.u-bg-color-background {
+	background-color: rgb(var(--brand__color--background));
+}
+
+.u-bg-color-primary {
+	background-color: rgb(var(--brand__color--primary));
+
+}
+
+.u-bg-color-black {
+	background-color: rgb(var(--brand__color--black));
+	--set-brand__typography--color: rgb(var(--brand__color--white));
+	--brand__typography-p--color: rgb(var(--brand__color--white));
+	--brand__typography-h1--color: rgb(var(--brand__color--white));
+	--brand__typography-h2--color: rgb(var(--brand__color--white));
+	--brand__typography-h3--color: rgb(var(--brand__color--white));
+	--brand__typography-h4--color: rgb(var(--brand__color--white));
+	--brand__typography-h5--color: rgb(var(--brand__color--white));
+	--brand__typography-h6--color: rgb(var(--brand__color--white));
+	
+	--rich-text-a--text-decoration-color: rgb(var(--brand__color--white));
+
+	--brand__btn-primary--background-color: rgb(var(--brand__color--white));
+}
+
+.u-bg-color-white {
+	background-color: rgb(var(--brand__color--white));
+	--set-brand__typography--color: rgb(var(--brand__color--black));
+	--brand__typography-p--color: rgb(var(--brand__color--black));
+	--brand__btn-primary--background-color: rgb(var(--brand__color--primary));
+	--set-brand__btn--color: rgb(var(--brand__color--text));
+}
+
+.u-bg-color-primary-lighter {
+	background-color: var(--bg-color-primary-lighter, rgb(var(--brand__color--primary-lighter)));
+}
+
+// Not used on component level as background
+.u-bg-color-secondary {
+	background-color: var(--bg-color-secondary, rgb(var(--brand__color--secondary)));
+}
+
+//
+
+.u-color-primary {
+	color: rgb(var(--brand__color--primary));
+}
+
+.u-color-secondary-light {
+	color: var(--bg-color-secondary-light, rgb(var(--brand__color--secondary-light)));
+}

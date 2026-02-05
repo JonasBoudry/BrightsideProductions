@@ -1,0 +1,235 @@
+{
+    "token": {
+        "colors": {
+            "primary": {
+                "name": "primary",
+                "rgb": "196, 40, 40",
+                "hex": "#C42828",
+                "hsl": "hsl(0, 66%, 46%)",
+                "type": "color"
+            },
+            "secondary": {
+                "name": "secondary",
+                "rgb": "148, 25, 20",
+                "hex": "#941914",
+                "hsl": "hsl(2, 76%, 33%)",
+                "type": "color"
+            },
+            "background": {
+                "name": "background",
+                "rgb": "232,234,235",
+                "hex": "#e8eaeb",
+                "hsl": "hsl(200,7%,91.6%)",
+                "type": "color"
+            },
+            "gray": {
+                "name": "gray",
+                "rgb": "29,29,27",
+                "hex": "#1d1d1b",
+                "hsl": "hsl(60,3.6%,11%)",
+                "type": "color"
+            },
+            "gray-light": {
+                "name": "gray-light",
+                "rgb": "165,170,174",
+                "hex": "#a5aaae",
+                "hsl": "hsl(207,5.3%,66.5%)",
+                "type": "color"
+            },
+            "border": {
+                "name": "border",
+                "rgb": "210,212,214",
+                "hex": "#d2d4d6",
+                "hsl": "hsl(210,4.7%,83.1%)",
+                "type": "color"
+            },
+            "gray-lighter": {
+                "name": "gray-lighter",
+                "rgb": "232,234,235",
+                "hex": "#e8eaeb",
+                "hsl": "hsl(200,7%,91.6%)",
+                "type": "color"
+            },
+            "white": {
+                "name": "white",
+                "rgb": "255,255,255",
+                "hex": "#ffffff",
+                "hsl": "hsl(0,0%,100%)",
+                "type": "color"
+            },
+            "text": {
+                "name": "text",
+                "rgb": "28,28,24",
+                "hex": "#1c1c18",
+                "hsl": "hsl(60,7.7%,10.2%)",
+                "type": "color"
+            },
+            "text-light": {
+                "name": "text-light",
+                "rgb": "118,118,116",
+                "hex": "#767674",
+                "hsl": "hsl(60,0.9%,45.9%)",
+                "type": "color"
+            }
+        },
+        "typography": {
+            "h1": {
+                "name": "h1",
+                "fontFamily": "Roboto",
+                "fontPostScriptName": "Roboto-Bold",
+                "fontSize": "46px",
+                "fontWeight": 700,
+                "lineHeightPercentFontSize": "120%",
+                "letterSpacing": "0px",
+                "paragraphSpacing": "15px",
+                "rgb": "200,16,46",
+                "hex": "#c8102e",
+                "type": "typography"
+            },
+            "h1-mobile": {
+                "name": "h1-mobile",
+                "fontFamily": "Roboto",
+                "fontPostScriptName": "Roboto-Bold",
+                "fontSize": "40px",
+                "fontWeight": 700,
+                "lineHeightPercentFontSize": "120%",
+                "letterSpacing": "0px",
+                "paragraphSpacing": "10px",
+                "rgb": "200,16,46",
+                "hex": "#c8102e",
+                "type": "typography"
+            },
+            "h2": {
+                "name": "h2",
+                "fontFamily": "Roboto",
+                "fontPostScriptName": "Roboto-Bold",
+                "fontSize": "32px",
+                "fontWeight": 700,
+                "lineHeightPercentFontSize": "120%",
+                "letterSpacing": "0px",
+                "paragraphSpacing": "25px",
+                "rgb": "28,28,24",
+                "hex": "#1c1c18",
+                "type": "typography"
+            },
+            "h3": {
+                "name": "h3",
+                "fontFamily": "Roboto",
+                "fontPostScriptName": "Roboto-Bold",
+                "fontSize": "26px",
+                "fontWeight": 700,
+                "lineHeightPercentFontSize": "130%",
+                "letterSpacing": "0px",
+                "paragraphSpacing": "10px",
+                "rgb": "28,28,24",
+                "hex": "#1c1c18",
+                "type": "typography"
+            },
+            "h4": {
+                "name": "h4",
+                "fontFamily": "Roboto",
+                "fontPostScriptName": "Roboto-Bold",
+                "fontSize": "22px",
+                "fontWeight": 700,
+                "lineHeightPercentFontSize": "120%",
+                "letterSpacing": "0px",
+                "paragraphSpacing": "10px",
+                "rgb": "28,28,24",
+                "hex": "#1c1c18",
+                "type": "typography"
+            },
+            "h5": {
+                "name": "h5",
+                "fontFamily": "Roboto",
+                "fontPostScriptName": "Roboto-Bold",
+                "fontSize": "20px",
+                "fontWeight": 700,
+                "lineHeightPercentFontSize": "120%",
+                "letterSpacing": "0px",
+                "paragraphSpacing": "7px",
+                "rgb": "28,28,24",
+                "hex": "#1c1c18",
+                "type": "typography"
+            },
+            "h6": {
+                "name": "h6",
+                "fontFamily": "Roboto",
+                "fontPostScriptName": "Roboto-Bold",
+                "fontSize": "16px",
+                "fontWeight": 700,
+                "lineHeightPercentFontSize": "120%",
+                "letterSpacing": "0px",
+                "paragraphSpacing": "7px",
+                "rgb": "28,28,24",
+                "hex": "#1c1c18",
+                "type": "typography"
+            },
+            "p": {
+                "name": "p",
+                "fontFamily": "Roboto",
+                "fontPostScriptName": "Roboto-Regular",
+                "fontSize": "16px",
+                "fontWeight": 400,
+                "lineHeightPercentFontSize": "130%",
+                "letterSpacing": "0px",
+                "paragraphSpacing": "10px",
+                "rgb": "28,28,24",
+                "hex": "#1c1c18",
+                "type": "typography"
+            },
+            "p-bold": {
+                "name": "p-bold",
+                "fontFamily": "Roboto",
+                "fontPostScriptName": "Roboto-Bold",
+                "fontSize": "16px",
+                "fontWeight": 700,
+                "lineHeightPercentFontSize": "140%",
+                "letterSpacing": "0px",
+                "paragraphSpacing": "20px",
+                "rgb": "28,28,24",
+                "hex": "#1c1c18",
+                "type": "typography"
+            },
+            "text-link": {
+                "name": "text-link",
+                "fontFamily": "Roboto",
+                "fontPostScriptName": "Roboto-Regular",
+                "fontSize": "16px",
+                "fontWeight": 400,
+                "lineHeightPercentFontSize": "140%",
+                "letterSpacing": "0px",
+                "paragraphSpacing": "20px",
+                "rgb": "29,29,27",
+                "hex": "#1d1d1b",
+                "type": "typography"
+            }
+        },
+        "spacings": {
+            "tiny": {
+                "name": "tiny",
+                "value": "5px",
+                "type": "spacing"
+            },
+            "small": {
+                "name": "small",
+                "value": "10px",
+                "type": "spacing"
+            },
+            "default": {
+                "name": "default",
+                "value": "20px",
+                "type": "spacing"
+            },
+            "large": {
+                "name": "large",
+                "value": "40px",
+                "type": "spacing"
+            },
+            "huge": {
+                "name": "huge",
+                "value": "60px",
+                "type": "spacing"
+            }
+        }
+    }
+}

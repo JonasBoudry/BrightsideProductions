@@ -1,0 +1,108 @@
+:root {
+	--rich-text-media--spacing: var(--brand__spacing--large);
+
+	@include mq($from: large) {
+		--rich-text-media--spacing: var(--brand__spacing--medium);
+	}
+}
+
+.c-rich-text-media {
+	display: flex;
+	flex-direction: var(--rich-text-media--flex-direction, column);
+	align-items: var(--rich-text-media--align-items, stretch);
+	margin-bottom: var(--rich-text-media--margin-bottom);
+	position: relative;
+	z-index: 1;
+	--brand__component-section--padding-top: 0;
+	--brand__component-section--padding-bottom: 0;
+	--image--width: 100%;
+
+	@include mq($from: tablet) {
+		--rich-text-media--flex-direction: row;
+		--rich-text-media__body--padding-inline-start: var(--rich-text-media--spacing);
+		--rich-text-media__body--padding-inline-end: var(--brand__spacing);
+
+		&--reversed {
+			--rich-text-media--flex-direction: row-reverse;
+			--rich-text-media__body--padding-inline-start: var(--brand__spacing);
+			--rich-text-media__body--padding-inline-end: var(--rich-text-media--spacing);
+			--rich-text-media__section--padding-inline-start: #{$brand__wrapper-spacing-to-simulate-wrapping};
+			--rich-text-media__section--padding-inline-end: 0;
+		}
+	}
+
+	&--small {
+		@include mq($from: tablet) {
+			--rich-text-media__body--padding-top: 0;
+			--set-rich-text-media__section--flex-basis: 75%;
+			--set-rich-text-media-media__section--flex-basis: 25%;
+			--rich-text-media__section-media--align-items: flex-start;
+		}
+	}
+
+	&--tiny {
+		--rich-text-media__body--padding-top: 0;
+		--rich-text-media__section-media--align-items: flex-start;
+
+		@include mq($from: tablet) {
+			--set-rich-text-media__section--flex-basis: calc(100% - 100px);
+			--set-rich-text-media-media__section--flex-basis: 100px;
+		}
+
+		@include mq($until: tablet) {
+			--set-rich-text-media__section--flex-basis: calc(100% - 85px);
+			--set-rich-text-media-media__section--flex-basis: 85px;
+			--set-rich-text-media__body--padding-inline-start: var(--brand__spacing--large);
+		}
+	}
+
+	.is-boxed & {
+		--rich-text-media__body--padding-inline-start: 0;
+		--rich-text-media__body--padding-inline-end: 0;
+		--rich-text-media__body--padding-bottom: 0;
+
+		@include mq($from: tablet) {
+			--rich-text-media__body--padding-inline-start: var(--rich-text-media--spacing);
+
+			&--reversed {
+				--rich-text-media__body--padding-inline-end: var(--rich-text-media--spacing);
+				--rich-text-media__body--padding-inline-start: 0;
+			}
+		}
+	}
+
+	.is-boxed[class*="u-bg-"] & {
+		--set-brand__component-section--padding-top: var(--brand__spacing--huge);
+		--set-brand__component-section--padding-bottom: var(--brand__spacing--huge);
+	}
+}
+
+.c-rich-text-media__section {
+	display: flex;
+	align-items: center;
+	flex-basis: var(--set-rich-text-media__section--flex-basis, var(--rich-text-media__section--flex-basis, 100%));
+	overflow: hidden;
+
+	&.is-media {
+		display: flex;
+		align-items: var(--rich-text-media__section-media--align-items, center);
+		flex-basis: var(--set-rich-text-media-media__section--flex-basis, var(--rich-text-media-media__section--flex-basis, 100%));
+	}
+
+	@include mq($from: tablet) {
+		--rich-text-media__section--flex-basis: 50%;
+		--rich-text-media-media__section--flex-basis: 50%;
+
+		&:last-child {
+			padding-inline-end: var(--rich-text-media__section--padding-inline-end, #{$brand__wrapper-spacing-to-simulate-wrapping});
+			padding-inline-start: var(--rich-text-media__section--padding-inline-start, 0);
+		}
+	}
+}
+
+.c-rich-text-media__body {
+	padding-top: var(--set-rich-text-media__body--padding-top, var(--rich-text-media__body--padding-top, var(--brand__spacing--large)));
+	padding-bottom: var(--set-rich-text-media__body--padding-bottom, var(--rich-text-media__body--padding-bottom, var(--brand__spacing--large)));
+	padding-inline-start: var(--set-rich-text-media__body--padding-inline-start, var(--rich-text-media__body--padding-inline-start, var(--brand__spacing--large)));
+	padding-inline-end: var(--set-rich-text-media__body--padding-inline-end, var(--rich-text-media__body--padding-inline-end, var(--brand__spacing--large)));
+}

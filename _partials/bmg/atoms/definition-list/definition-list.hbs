@@ -1,0 +1,66 @@
+{{#if headers}}
+<dl class="a-definition-list  a-definition-list--alternate  a-definition-list--headers">
+	<dt class="a-definition-list__header"></dt>
+	<dd class="a-definition-list__header">
+		{{#each headers}}
+		<div>{{this}}</div>
+		{{/each}}
+	</dd>
+
+	{{#each items}}
+	<dt {{#if tooltip}}labeled-by="{{tooltip.id}}" {{/if}}>
+		{{#if tooltip}}{{label}}&nbsp;<button class="a-btn a-tippy-cta" type="button"
+			data-component-class="TippyTooltip" data-content="tooltip-{{tooltip.id}}">
+			<sup>{{> common/atoms/svg-icon iconId="info-circle" iconWidth="12" iconHeight="12"}}</sup>
+		</button>
+		<template id="tooltip-{{tooltip.id}}">
+			<div class="a-tippy">
+				{{{tooltip.content}}}
+			</div>
+		</template>
+		{{^}}
+		{{label}}
+		{{/if}}
+	</dt>
+	<dd>
+		{{#each valueList}}
+		{{#if isDate}}
+		<time class="a-definition-list__cell" data-label="{{label}}">{{value}}</time>
+		{{^}}
+		<div class="a-definition-list__cell" data-label="{{label}}">
+			{{{value}}}
+		</div>
+		{{/if}}
+		{{/each}}
+	</dd>
+	{{/each}}
+</dl>
+
+{{^}}
+
+<dl class="a-definition-list  a-definition-list--alternate">
+	{{#each items}}
+	<dt>
+		{{#if tooltip}}{{label}}&nbsp;<button class="a-btn a-tippy-cta" type="button"
+			data-component-class="TippyTooltip" data-content="tooltip-{{tooltip.id}}">
+			<sup>{{> common/atoms/svg-icon iconId="info-circle" iconWidth="12" iconHeight="12"}}</sup>
+		</button>
+		<template id="tooltip-{{tooltip.id}}">
+			<div class="a-tippy">
+				{{{tooltip.content}}}
+			</div>
+		</template>
+		{{^}}
+		{{label}}
+		{{/if}}
+	</dt>
+	<dd>
+		{{#if isDate}}
+		<time>{{value}}</time>
+		{{^}}
+		{{{value}}}
+		{{/if}}
+	</dd>
+	{{/each}}
+</dl>
+{{/if}}

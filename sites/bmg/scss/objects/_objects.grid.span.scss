@@ -1,0 +1,27 @@
+.o-span {
+	grid-column: span var(--o-grid--span, 1);
+
+	@each $key, $value in $grid__breakpoints {
+		@for $i from 1 through $grid__max-columns {
+			@include mq($from: $key, $responsive: if($key != null, true, false)) {
+				&--#{$i}#{if($key != null, "\\@" + $key, "")} {
+					--o-grid--span: #{$i};
+				}
+			}
+		}
+	}
+}
+
+.o-span-row {
+	grid-row: span var(--o-grid-row--span, 1);
+
+	@each $key, $value in $grid__breakpoints {
+		@for $i from 1 through 3 {
+			@include mq($from: $key, $responsive: if($key != null, true, false)) {
+				&--#{$i}#{if($key != null, "\\@" + $key, "")} {
+					--o-grid-row--span: #{$i};
+				}
+			}
+		}
+	}
+}

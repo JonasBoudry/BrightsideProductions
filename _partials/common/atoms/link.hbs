@@ -1,0 +1,8 @@
+{{!-- aria-label has to be filled in when button exist only of image or icon --}}
+<a href="{{src}}" class="a-link
+	{{#if isLinkArrow}}a-link--arrow{{/if}}
+	{{#if isLinkDownload}}a-link--download{{/if}}
+    {{extraClasses}}
+    {{#if isDisabled}}disabled{{/if}}" {{#if isDisabled}}disabled{{/if}} {{#if download}}download{{/if}}>
+	{{#if text}}{{text}}{{/if}}
+</a>

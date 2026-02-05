@@ -1,0 +1,93 @@
+[dir="rtl"] {
+    --banner--direction: rtl;
+    --hero-banner__media--cip-path: polygon(0 0, 100% 0%, 100% 85%, 0 100%);
+    @include mq($from: desktop) {
+        --hero-banner--grid-template-columns: 2fr 1.7fr;
+        --banner--grid-template-areas: "media content";
+        --hero-banner__content--cip-path: polygon(15% 0, 100% 0%, 100% 100%, 0% 100%);
+    }
+}
+
+
+.c-hero-banner {
+    min-height: 500px;
+
+    &.has-caption {
+        display: grid;
+        grid-template-columns: var(--hero-banner--grid-template-columns, 1fr);
+        grid-template-rows: var(--hero-banner--grid-template-rows, auto auto);
+        grid-template-areas: var(--hero-banner--grid-template-areas, "media" "content");
+
+        @include mq($from: desktop) {
+            --hero-banner--grid-template-columns: 1.7fr 2fr;
+            --hero-banner--grid-template-rows: 1fr;
+            --hero-banner--grid-template-areas: "content media";
+            --image--height: 100%;
+        }
+    }
+
+    &.is-playing:not(.caption-stays-visible) {
+        --hero-banner-content--opacity: 0;
+        --hero-banner-content--visibility: hidden;
+    }
+}
+
+.c-hero-banner__media {
+    grid-area: media;
+    z-index: 1;
+    position: relative;
+    grid-column: 1 / -1;
+    max-height: 95vh;
+    overflow: hidden;
+    --image--width: 100%;
+
+    @include mq($until: desktop) {
+        clip-path: var(--hero-banner__media--cip-path, polygon(0 0, 100% 0%, 100% 100%, 0 85%));
+    }
+
+    .c-video {
+        object-fit: cover;
+        object-position: center center;
+        font-family: 'object-fit: cover;object-position: center center;';
+        width: 100%;
+        --video--align-self: stretch;
+    }
+
+    .c-video-wrapper {
+        overflow: hidden;
+        max-height: 95vh;
+    }
+
+    .c-video-main {
+        align-self: center;
+    }
+}
+
+ .c-hero-banner__content {
+    grid-area: content;
+    display: flex;
+    align-items: flex-end;
+    z-index: 2;
+    padding: var(--brand__spacing);
+    opacity: var(--hero-banner-content--opacity);
+    visibility: var(--hero-banner-content--visibility);
+	--brand__typography-h2--color: rgb(var(--brand__color--secondary-darker));
+
+    @include mq($from: desktop) {
+        padding: 0;
+        margin-bottom: calc(var(--brand__spacing--huge) + var(--brand__spacing));
+        margin-top: var(--brand__spacing--large);
+    }
+
+    .c-rich-text-wrapper {
+        @include mq($from: desktop) {
+            padding: var(--brand__spacing--large) var(--brand__spacing);
+            background-color: rgba(white, .6);
+            clip-path: var(--hero-banner__content--cip-path, polygon(0 0, 100% 0%, 85% 100%, 0% 100%));
+            padding-inline-start: var(--brand__spacing--huge);
+            padding-inline-end: calc(var(--brand__spacing--huge) * 2);
+            padding-top: var(--brand__spacing--huge);
+            padding-bottom: var(--brand__spacing--huge);
+        }
+    }
+}

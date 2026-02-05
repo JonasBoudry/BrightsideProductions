@@ -1,0 +1,27 @@
+@mixin set-bold($font-weight: $brand__font-weight--set-bold) {
+	font-weight: $font-weight;
+}
+
+@mixin set-font-zero {
+	font-size: 0;
+	line-height: 0;
+	color: transparent;
+}
+
+@mixin font-family(
+  $font-name,
+  $font-path-woff2,
+  $font-weight,
+  $unicode-range: null,
+  $font-style: normal,
+  $font-display: swap
+) {
+  @font-face {
+    font-family: $font-name;
+    src: url($brand__path--fonts + $font-path-woff2) format('woff2');
+    font-weight: $font-weight;
+    font-style: $font-style;
+    font-display: $font-display;
+    unicode-range: $unicode-range;
+  }
+}

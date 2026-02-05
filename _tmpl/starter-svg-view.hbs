@@ -1,0 +1,38 @@
+---
+layout: styleguide
+title: "SVG Icons sprite preview"
+tags: ["styleguide"]
+isWaitingForApproval: true
+---
+
+<section class="u-padding-top-large u-padding-bottom-large">
+	<div class="o-wrapper">
+		<h1>SVG <symbol> sprite preview</h1>
+
+				<!--
+B) Inline SVG with external sprite (IE 9-11 with polyfill only)
+====================================================================================================
+These SVG images make use of an URL + fragment identifiers (IDs) and refer to the regular external
+SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
+-->
+		<div class="c-styleguide-icons o-grid-template o-grid-template--small-cells o-grid-gap">
+			{{#shapes}}
+			<div class="c-card-icon" title="{{name}}">
+				<div class="o-ratio">
+					<div class="o-ratio__content c-card-icon__wrapper">
+						<!-- {{name}} -->
+						<svg
+							class="c-card-icon__svg {{#selector.dimensions}}{{#last}}{{#classname}}{{raw}}{{/classname}}{{/last}}{{/selector.dimensions}}">
+							<use xlink:href="/sites/starter/assets/svg/svg-symbols.svg#{{name}}"></use>
+						</svg>
+					</div>
+				</div>
+				<div class="c-card-icon__body">{{name}}</div>
+			</div>
+			{{/shapes}}
+		</div>
+				<!--
+====================================================================================================
+-->
+	</div>
+</section>

@@ -1,0 +1,18 @@
+@mixin render-properties($properties) {
+	@each $property, $value in $properties {
+		#{$property}: $value;
+	}
+}
+
+@mixin fluid-width() {
+	width: calc(100% + #{$grid-gutter-width});
+	margin-inline-start: -#{$grid-gutter-width / 2};
+}
+
+@mixin hover() {
+	&:hover, &:focus-within {
+		&:not(.disabled, :disabled) {
+			@content;
+		}
+	}
+}

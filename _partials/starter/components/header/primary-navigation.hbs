@@ -1,0 +1,25 @@
+<div class="c-nav-primary-heading">
+	{{> starter/components/header/logo}}
+
+	{{> starter/components/header/menu-hamburger}}
+</div>
+
+<div class="c-nav-primary__list-wrapper">
+	<ul class="c-nav-primary__list">
+		{{#each primary-navigation.items}}
+		{{> starter/components/header/primary-navigation-item}}
+		{{/each}}
+	</ul>
+
+	{{#if search}}
+	<div class="c-nav-primary__search">
+		{{> starter/components/header/search}}
+	</div>
+	{{/if}}
+
+	<ul class="c-nav-secondary__list">
+		{{#each secondary-navigation.items}}
+		{{> starter/components/header/secondary-navigation-item}}
+		{{/each}}
+	</ul>
+</div>

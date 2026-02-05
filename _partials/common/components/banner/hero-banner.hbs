@@ -1,0 +1,27 @@
+{{#> component renderAsComponent=renderAsComponent}}
+	{{#with banner}}
+	<section class="c-hero-banner {{#if rich-text}}has-caption{{/if}} {{#if captionStaysVisible}}caption-stays-visible{{/if}} js-hero-banner">
+		<div class="c-hero-banner__media">
+			{{> common/atoms/media/media-item}}
+		</div>
+
+		{{#if rich-text}}
+			<div class="c-hero-banner__content">
+				<div class="c-rich-text-wrapper">
+					<div class="c-rich-text">
+						{{{rich-text}}}
+
+						<p>
+							{{> common/atoms/button
+								../this
+								text=button.label
+								isPrimary=true
+							}}
+						</p>
+					</div>
+				</div>
+			</div>
+		{{/if}}
+	</section>
+	{{/with}}
+{{/component}}

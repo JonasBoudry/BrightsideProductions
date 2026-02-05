@@ -1,0 +1,11 @@
+{{#with media}}
+	{{#if hasImage}}
+		{{> common/atoms/media/image}}
+	{{else if hasVideo}}
+		{{#if youtubeID}}
+			{{> common/atoms/media/video-youtube}}
+		{{^}}
+			{{> common/atoms/media/video}}
+		{{/if}}
+	{{/if}}
+{{/with}}

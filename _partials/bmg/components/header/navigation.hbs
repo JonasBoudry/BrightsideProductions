@@ -1,0 +1,14 @@
+<nav class="c-navigation js-navigation" aria-label="Main navigation" role="navigation">
+	<ul class="c-navigation__list">
+		{{#each navigation.items}}
+		<li class="c-navigation-item {{#if isActive}}is-active{{/if}}">
+			<a class="
+			{{#if islink}}c-navigation-item__link c-link js-navigation-item-link{{/if}}" href="{{link}}" title="{{label}}" {{#if
+				isExternalLink}}target="_blank" rel="noopener noreferrer" {{/if}} {{#if isActive}}aria-current="page"
+				{{/if}}>
+				{{label}}
+			</a>
+		</li>
+		{{/each}}
+	</ul>
+</nav>

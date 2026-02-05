@@ -1,0 +1,21 @@
+:root {
+	--brand__typography-fallback--font-family: Arial, sans-serif;
+	--brand__font-size--small: calc(var(--brand__typography-p--font-size) - 3px);
+}
+
+// Font family
+$brand__path--fonts: "../fonts/" !default;
+$brand__font-family: "Nunito Sans";
+
+// Font weights
+$brand__font-weight--thin: 100 !default;
+$brand__font-weight--lighter: 200 !default;
+$brand__font-weight--light: 300 !default;
+$brand__font-weight--regular: 400 !default;
+$brand__font-weight--medium: 500 !default;
+$brand__font-weight--semibold: 600 !default;
+$brand__font-weight--bold: 700 !default;
+$brand__font-weight--extrabold: 800 !default;
+$brand__font-weight--black: 900 !default;
+
+$brand__font-weight--set-bold: $brand__font-weight--bold !default;

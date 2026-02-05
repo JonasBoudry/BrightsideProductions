@@ -1,0 +1,8 @@
+﻿<parameters>
+  <parameter name="Username" defaultValue="" tags="" >
+    <parameterEntry kind="XmlFile" scope="Web.config" match="/configuration/system.web/authentication/forms/credentials/user/@name" />
+  </parameter>
+  <parameter name="Password" defaultValue="" tags="" >
+    <parameterEntry kind="XmlFile" scope="Web.config" match="/configuration/system.web/authentication/forms/credentials/user/@password" />
+  </parameter>
+</parameters>

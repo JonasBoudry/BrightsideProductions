@@ -1,0 +1,55 @@
+a {
+	display: inline;
+	font-size: var(--brand__link--font-size);
+	font-weight: var(--brand__link--font-weight);
+	line-height: var(--brand__link--line-height);
+	text-decoration: var(--brand__link--text-decoration);
+	text-decoration-line: var(--brand__link--text-decoration);
+	text-decoration-style: solid;
+	text-underline-position: var(--brand__link--text-underline-position);
+	text-underline-offset: var(--brand__link--text-underline-offset);
+	text-decoration-thickness: var(--brand__link--text-decoration-thickness);
+	text-decoration-color: var(--brand__link--text-decoration-color);
+	text-transform: var(--brand__link--text-transform);
+	text-align: var(--brand__link--text-align);
+	color: var(--set-brand__link--color, var(--brand__link--color));
+	transition: var(--brand__link--transition, 0.3s ease);
+	margin-block-end: var(--brand__link--margin-block-end, 0);
+	padding: var(--set-brand__link--padding, var(--brand__link--padding, 0));
+	pointer-events: var(--set-brand__link--pointer-events, var(--brand__link--pointer-events, auto));
+	cursor: var(--brand__link--cursor);
+
+	&:hover {
+		--brand__link--cursor: pointer;
+		--brand__link--color: var(--set-brand__link-hover--color, var(--brand__link-hover--color));
+		--brand__link--font-weight: var(--brand__link-hover--font-weight);
+		--brand__link--border-bottom-color: var(
+			--set-brand__link-hover--border-bottom-color,
+			var(--brand__link--border-bottom-color)
+		);
+		--brand__link-text-decoration-color: var(
+			--set-brand__link-hover--text-decoration-color,
+			var(--brand__link-hover--text-decoration-color)
+		);
+	}
+
+	&:active {
+		--brand__link--color: var(--set-brand__link-active--color, var(--brand__link-active--color));
+		--brand__link--border-bottom-color: var(
+			--set-brand__link-active--border-bottom-color,
+			var(--brand__link--border-bottom-color)
+		);
+		--brand__link-text-decoration-color: var(
+			--set-brand__link-active--text-decoration-color,
+			var(--brand__link-active--text-decoration-color)
+		);
+	}
+
+	&:disabled, &.disabled {
+		--brand__link--cursor: not-allowed;
+	}
+
+	&::selection {
+		background-color: var(--selection--background-color, rgb(var(--brand__color--primary-light)));
+	}
+}

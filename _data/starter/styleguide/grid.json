@@ -1,0 +1,70 @@
+{
+	"grid": [
+		{
+			"label": "Default grid",
+			"description": "No gap",
+			"class": "",
+			"items": ["1", "2", "3"]
+		},
+		{
+			"label": "Default grid",
+			"description": "Tiny gap",
+			"class": "o-grid-gap--tiny",
+			"items": ["1", "2", "3"]
+		},
+		{
+			"label": "Default grid",
+			"description": "Small gap",
+			"class": "o-grid-gap--small",
+			"items": ["1", "2", "3"]
+		},
+		{
+			"label": "Default grid",
+			"description": "Default gap",
+			"class": "o-grid-gap",
+			"items": ["1", "2", "3"]
+		},
+		{
+			"label": "Default grid",
+			"description": "Large gap",
+			"class": "o-grid-gap--large",
+			"items": ["1", "2", "3"]
+		},
+		{
+			"label": "Default grid",
+			"description": "Huge gap",
+			"class": "o-grid-gap--huge",
+			"items": ["1", "2", "3"]
+		},
+		{
+			"label": "Small grid",
+			"description": "Large gap",
+			"class": "o-grid-gap--large o-grid-template--small-cells",
+			"items": ["1", "2", "3", "4"]
+		},
+		{
+			"label": "Large grid",
+			"description": "Large gap - 2 item",
+			"class": "o-grid-gap--large o-grid-template--large-cells",
+			"items": ["1", "2"]
+		},
+		{
+			"label": "Large grid",
+			"description": "Large gap - 1 item",
+			"class": "o-grid-gap--large o-grid-template--large-cells",
+			"items": ["1"]
+		},
+		{
+			"label": "Large grid",
+			"description": "Large gap - stretched 2 items",
+			"class": "o-grid-gap--large o-grid-template--large-cells o-grid-template--stretch",
+			"items": ["1", "2"]
+		},
+		{
+			"label": "Large grid",
+			"description": "Large gap - stretched 1 item",
+			"class": "o-grid-gap--large o-grid-template--large-cells o-grid-template--stretch",
+			"items": ["1"]
+		}
+	]
+}

@@ -1,0 +1,29 @@
+@mixin placeholder($color: currentColor) {
+	&::-webkit-input-placeholder {
+		/* Chrome/Opera/Safari */
+		color: $color;
+		font-size: 1rem;
+		opacity: 0.5;
+	}
+
+	&::-moz-placeholder {
+		/* Firefox 19+ */
+		color: $color;
+		font-size: 1rem;
+		opacity: 0.5;
+	}
+
+	& :-ms-input-placeholder {
+		/* IE 10+ */
+		color: $color;
+		font-size: 1rem;
+		opacity: 0.5;
+	}
+
+	&:-moz-placeholder {
+		/* Firefox 18- */
+		color: $color;
+		font-size: 1rem;
+		opacity: 0.5; // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526
+	}
+}

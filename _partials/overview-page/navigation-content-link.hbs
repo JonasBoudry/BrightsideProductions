@@ -1,0 +1,16 @@
+{{#eq this.data.siteName @root.siteName}}
+<div class="c-block__item">
+	<a class="c-block-item__link" href="{{this.url}}">
+		<div class="c-block-item-link__icon">
+			{{#if this.data.isApproved}}<img src="/sites/overview-page/assets/media/icons/Approved.svg" />{{/if}}
+			{{#if this.data.isOngoing}}<img src="/sites/overview-page/assets/media/icons/Ongoing.svg" />{{/if}}
+			{{#if this.data.isWaitingForApproval}}<img
+				src="/sites/overview-page/assets/media/icons/Waiting.svg" />{{/if}}
+			{{#if this.data.isOutOfSync}}<img src="/sites/overview-page/assets/media/icons/Out-of-sync.svg" />{{/if}}
+		</div>
+		<div class="c-block-item-link__text">
+			{{{this.data.title}}}
+		</div>
+	</a>
+</div>
+{{/eq}}

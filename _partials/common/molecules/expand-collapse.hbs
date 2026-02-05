@@ -1,0 +1,29 @@
+{{#with expand-collapse}}
+<div class="c-expand-collapse js-expand-collapse is-collapsed" data-component-class="ExpandCollapse">
+    <div class="c-expand-collapse__short-desc">
+        <div class="c-rich-text">
+			{{{rich-text}}}
+			<button class="c-expand-collapse__button js-trigger-expand">More</button>
+			</p> <!-- NEEDED TO RENDER EXPAND COLLAPSE TRIGGER INLINE -->
+
+			{{#if ../buttons}}
+				{{#each ../buttons.items}}
+					{{> common/atoms/button
+						isPrimary=isPrimary
+						isSecondary=isSecondary
+						iconId=iconId
+						isIconRight=isIconRight
+						src='#'
+						text=text
+					}}
+				{{/each}}
+			{{/if}}
+        </div>
+    </div>
+    <div class="c-expand-collapse__full-desc">
+        <div class="c-rich-text">
+            {{{rich-text-full-desc}}}
+        </div>
+    </div>
+</div>
+{{/with}}

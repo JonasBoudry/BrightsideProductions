@@ -1,0 +1,22 @@
+:root {
+	--brand__number-of-lines: 2;
+}
+
+.o-ellipsis-single {
+	@include truncate-single-line();
+}
+
+.o-ellipsis-multi {
+	overflow: hidden;
+	display: inline-block;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	white-space: normal;
+	-webkit-line-clamp: var(--set-brand__number-of-lines, var(--brand__number-of-lines));
+
+	@each $number in $number-of-lines {
+		&--#{$number} {
+			--set-brand__number-of-lines: #{$number};
+		}
+	}
+}

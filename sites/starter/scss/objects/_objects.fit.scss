@@ -1,0 +1,15 @@
+// Fit element within container.
+// By default object-fit is cover
+
+.o-fit {
+	object-fit: cover;
+	object-position: center center;
+	font-family: "object-fit: cover;object-position: center center;";
+	height: 100%;
+	width: 100%;
+
+	&--contain {
+		object-fit: contain;
+		font-family: "object-fit: contain;object-position: center center;";
+	}
+}

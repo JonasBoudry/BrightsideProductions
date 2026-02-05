@@ -1,0 +1,14 @@
+{
+	"image": {
+		"is16by9ratio": true,
+		"src": "https://via.placeholder.com/1600x900",
+		"alt": "card image"
+	},
+	"title": "Title",
+	"date": "01/01/2020",
+	"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt posuere lacus, eget accumsan ante laoreet vitae. Phasellus mattis sit amet diam sed ultrices. Curabitur tempus ultricies dui in ultricies. ",
+	"button": {
+		"label": "button",
+		"link": "#"
+	}
+}

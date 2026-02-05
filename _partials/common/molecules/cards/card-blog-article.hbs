@@ -1,0 +1,24 @@
+<article class="o-card m-card m-card--blog-article u-scroll-margin ">
+	<div class="o-card__obj-wrapper">
+		{{> common/atoms/media/media-item}}
+	</div>
+    <div class="o-card__body-wrapper">
+        <h3 class="o-card__title u-txt-breakword">
+            {{title}}
+        </h3>
+		<div class="o-card__body">
+			{{#if text}}
+				<p>{{text}}</p>
+			{{else}}
+				{{> common/molecules/expand-collapse}}
+			{{/if}}
+		</div>
+		<div class="o-card__footer">
+			{{> common/atoms/button
+				../this
+				text="Read more"
+				isSecondary=true
+			}}
+		</div>
+    </div>
+</article>

@@ -1,0 +1,50 @@
+$brand__body-width: 1920px !default;
+$brand__wrapper-width: 1740px !default;
+$brand__wrapper-small-width: 1200px !default;
+$brand__wrapper-tiny-width: 1000px !default;
+
+:root {
+	--brand__body--width: #{$brand__body-width};
+	--brand__wrapper--width: #{$brand__wrapper-width};
+	--set-brand__wrapper-small--width: #{$brand__wrapper-small-width};
+	--set-brand__wrapper-tiny--width: #{$brand__wrapper-tiny-width};
+	--brand__wrapper--padding-inline-start: var(--brand__spacing);
+	--brand__wrapper--padding-inline-end: var(--brand__spacing);
+	--brand__wrapper-single-spacing: var(--brand__wrapper--padding-inline-start);
+
+	@media (min-width: 980px) {
+		--brand__wrapper--padding-inline-start: var(--brand__spacing--large);
+		--brand__wrapper--padding-inline-end: var(--brand__spacing--large);
+		--brand__wrapper--width: calc(#{$brand__wrapper-width} + (var(--brand__spacing--large) * 2));
+		--set-brand__wrapper-small--width: calc(#{$brand__wrapper-small-width} + (var(--brand__spacing--large) * 2));
+		--set-brand__wrapper-tiny--width: calc(#{$brand__wrapper-tiny-width} + (var(--brand__spacing--large) * 2));
+	}
+
+	@media (min-width: 1260px) {
+		--brand__wrapper--padding-inline-start: var(--brand__spacing--medium);
+		--brand__wrapper--padding-inline-end: var(--brand__spacing--medium);
+		--brand__wrapper--width: calc(#{$brand__wrapper-width} + (var(--brand__spacing--medium) * 2));
+		--set-brand__wrapper-small--width: calc(#{$brand__wrapper-small-width} + (var(--brand__spacing--medium) * 2));
+		--set-brand__wrapper-tiny--width: calc(#{$brand__wrapper-tiny-width} + (var(--brand__spacing--medium) * 2));
+	}
+
+	@media (min-width: 1600px) {
+		--brand__wrapper--padding-inline-start: var(--brand__spacing--huge);
+		--brand__wrapper--padding-inline-end: var(--brand__spacing--huge);
+		--brand__wrapper--width: calc(#{$brand__wrapper-width} + (var(--brand__spacing--huge) * 2));
+		--set-brand__wrapper-small--width: calc(#{$brand__wrapper-small-width} + (var(--brand__spacing--huge) * 2));
+		--set-brand__wrapper-tiny--width: calc(#{$brand__wrapper-tiny-width} + (var(--brand__spacing--huge) * 2));
+	}
+
+	@media (min-width: ($brand__wrapper-width + 30px)) {
+		--brand__wrapper-single-spacing: (
+			((100vw - var(--brand__wrapper--width)) / 2) + (var(--brand__wrapper--padding-inline-start) / 1.6)
+		);
+	}
+
+	@media (min-width: ($brand__body-width + 30px)) {
+		--brand__wrapper-single-spacing: (
+			((#{$brand__body-width} - var(--brand__wrapper--width)) / 2) + (var(--brand__wrapper--padding-inline-start))
+		);
+	}
+}

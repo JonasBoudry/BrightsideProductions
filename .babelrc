@@ -1,0 +1,13 @@
+﻿{
+	"presets": [
+		[
+			"@babel/preset-env",
+			{
+				"useBuiltIns": "entry",
+				"targets": {
+					"browsers": ["last 2 versions", "safari >= 8"]
+				}
+			}
+		]
+	]
+}

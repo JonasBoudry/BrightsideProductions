@@ -1,0 +1,57 @@
+// Basic show/hide  implementation for Collapse
+.o-dropdown {
+	display: block;
+
+	&.is-active {
+		--brand__dropdown-panel--display: block;
+		--brand__dropdown-panel--z-index: #{$brand__dropdown-panel--z-index};
+		--brand__dropdown-icon--padding-left: 0;
+		--brand__dropdown-icon--padding-right: var(--brand__spacing--small);
+		--brand__dropdown-icon--transform: scale(-1);
+	}
+}
+
+.o-dropdown__panel {
+	outline: none;
+	z-index: var(--brand__dropdown-panel--z-index, -1);
+	display: var(--brand__dropdown-panel--display, none);
+	position: var(--brand__dropdown-panel--position, absolute);
+	top: var(--brand__dropdown-panel--top, calc(100% + var(--brand__spacing--small)));
+	bottom: var(--brand__dropdown-panel--bottom, null);
+	left: var(--brand__dropdown-panel--left, 0);
+	right: var(--brand__dropdown-panel--right, 0);
+	background-color: var(--brand__dropdown-panel--background-color, var(--brand__color--white));
+	box-shadow: var(--brand__dropdown-panel--box-shadow, 2px 2px 4px rgba(44, 42, 41, 0.25));
+	min-width: var(--brand__dropdown-panel--min-width, 225px);
+}
+
+.o-dropdown__list {
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+	padding: var(--brand__spacing);
+	--set-brand__form--flex-direction: column;
+}
+
+.o-dropdown-item {
+	position: relative;
+	display: flex;
+	width: 100%;
+	margin-top: var(--brand__spacing--small);
+	margin-bottom: var(--brand__spacing--small);
+
+	&:first-child {
+		margin-top: 0;
+	}
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.o-dropdown__icon {
+	padding-left: var(--brand__dropdown-icon--padding-left, var(--brand__spacing--small));
+	padding-right: var(--brand__dropdown-icon--padding-right, 0);
+	transform: var(--brand__dropdown-icon--transform, none);
+	--brand__svg--fill: var(--brand__dropdown-icon--color, currentColor);
+}

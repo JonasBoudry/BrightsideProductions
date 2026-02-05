@@ -1,0 +1,14 @@
+$mq-breakpoints: (
+	mobile: 375px,
+	tablet: 740px,
+	desktop: 980px,
+	large: 1260px,
+	wide: 1600px,
+	huge: 1800px,
+) !default;
+
+:root {
+	@each $key, $value in $mq-breakpoints {
+		--brand__mq--#{$key}: #{strip-unit($value)};
+	}
+}

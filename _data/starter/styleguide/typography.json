@@ -1,0 +1,50 @@
+{
+	"fontShortName": "It",
+	"fontName": "Inter",
+	"block": [
+		{
+			"title": "<h1 style='font-family: Inter';>Heading 1</h1>",
+			"description": ""
+		},
+		{
+			"title": "<h2 style='font-family: Inter';>Heading 2</h2>",
+			"description": ""
+		},
+		{
+			"title": "<h3 style='font-family: Inter';>Heading 3</h3>",
+			"description": ""
+		},
+		{
+			"title": "<h4 style='font-family: Inter';>Heading 4</h4>",
+			"description": ""
+		},
+		{
+			"title": "<h5 style='font-family: Inter';>Heading 5</h5>",
+			"description": ""
+		},
+		{
+			"title": "<h6 style='font-family: Inter';>Heading 6</h6>",
+			"description": ""
+		},
+		{
+			"title": "<div class=\"c-rich-text\"><a href\"#\">Lorem ipsum dolor sit amet</a></div>",
+			"description": "<strong>Link</strong>"
+		},
+		{
+			"title": "<div class=\"c-rich-text\"><blockquote>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras aliquet sit amet nibh porta fringilla.</blockquote></div>",
+			"description": "<strong>Quote</strong>"
+		},
+		{
+			"title": "<div class=\"c-rich-text\"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras aliquet sit amet nibh porta fringilla. Nullam vulputate, sem non luctus semper, ligula tortor cursus ante, vitae sagittis velit magna nec lacus. Integer imperdiet consequat metus quis dapibus. Integer vestibulum dui at massa finibus consectetur eget vel odio. </p></div>",
+			"description": "<strong>Paragraph</strong>"
+		},
+		{
+			"title": "<div class=\"c-rich-text\"><ul><li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li><li>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</li></ul></div>",
+			"description": "<strong>unordered List</strong>"
+		},
+		{
+			"title": "<div class=\"c-rich-text\"><ol><li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li><li>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</li></ol></div>",
+			"description": "<strong>Ordered List</strong>"
+		}
+	]
+}

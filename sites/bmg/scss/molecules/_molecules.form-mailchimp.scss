@@ -1,0 +1,51 @@
+.m-form-mailchimp {
+	display: flex;
+	width: 100%;
+	--label--color: rgb(var(--brand__color--primary));
+
+	#mc_embed_shell,
+	#mc_embed_signup,
+	#mc-embedded-subscribe-form {
+		width: 100%;
+	}
+
+	.mc-field-group {
+		display: grid;
+		grid-gap: var(--brand__spacing--tiny);
+		margin-block-end: var(--mc-field-group--mbe, var(--brand__spacing--small));
+	}
+
+	.datefield {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-gap: 5px;
+	}
+
+	.asterisk {
+		color: rgb(var(--brand__color--primary));
+	}
+
+	input,
+	select,
+	textarea {
+		border: 1px solid rgb(var(--brand__color--grey-light));
+		border-radius: 50px;
+		margin-inline-start: 0 !important;
+
+		&:focus-visible {
+			border: 1px solid rgb(var(--brand__color--primary));
+		}
+	}
+}
+
+.m-form-mailchimp__wrapper {
+	display: grid;
+	grid-template-columns: var(--form-mailchimp__wrapper--gtc, auto);
+	grid-gap: var(--brand__spacing--tiny);
+	margin-block-end: var(--brand__spacing--small);
+	--mc-field-group--mbe: 0;
+
+	@include mq($from: larger) {
+		--form-mailchimp__wrapper--gtc: 1fr 1fr;
+	}
+}

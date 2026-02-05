@@ -1,0 +1,24 @@
+{{#> component renderAsComponent=true boxed=true}}
+	<nav aria-label="Breadcrumb" class="c-breadcrumb">
+		<ol class="c-breadcrumb-list {{#if hasEllipsis}}has-ellipsis{{/if}} o-list">
+			{{#each breadcrumb.items}}
+			<li class="c-breadcrumb-item">
+				{{#if link}}
+				<a href="{{link.src}}" class="c-breadcrumb-item__link">
+					{{link.text}}
+				</a>
+				{{else}}
+				<span class="c-breadcrumb-item__text">
+					{{text}}
+				</span>
+				{{/if}}
+
+				<span class="c-breadcrumb-item__icon u-color-secondary">
+					>
+				</span>
+			</li>
+			{{/each}}
+		</ol>
+	</nav>
+</section>
+{{/component}}

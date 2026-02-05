@@ -1,0 +1,16 @@
+{
+    "id": "about-us",
+    "backgroundColor": "u-bg-color-black",
+    "title": "We handle the business, you create the story.",
+    "description-1": "<p>Brightside Media Group consists of four specialist firms that strengthen one another.</p></p><a href='www.media-partners.be' target='_blank'>Media Partners</a> offers strategic and operational expertise: from budget control and legal advice, to establishing clear production structures and providing production management.</p><p><a href='https://flanderstaxshelter.be/' target='_blank'>Flanders Tax Shelter</a> connects Belgian companies with Flemish productions through a fully transparent and closely involved process. Investors benefit from a legal tax advantage and additional remuneration, while every euro remains traceable and every investment makes an impact.</p>",
+    "description-2": "<p><a href='https://www.brightsideproductions.be/' target='_blank'>Brightside Productions</a> realizes projects in the audiovisual and performing arts sectors. We assemble creative teams, manage cash flow, and ensure that the production is on a sound business footing.</p><p><a href='https://www.famework.io/nl/' target='_blank'>Famework</a> is an online matching platform for content makers and brands. We guide marketeers, agencies and content makers in their search for product placement and relevant partnerships.</p><p>We are not generalists, but specialists with a deep understanding of the media sector. Thanks to the combined expertise of these enterprises, every phase of a project runs clearly, transparently and efficiently - allowing makers to focus fully on what they do best: creating.</p>",
+    "media": {
+        "src": "/assets/media/images/content-block.png",
+        "srcMobile": "/assets/media/images/content-block.png",
+        "alt": "Olja and Pieter giving a speech on a conference",
+        "width": "1200",
+        "height": "800",
+        "loading": "lazy"
+    }
+}
+

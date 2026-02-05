@@ -1,0 +1,34 @@
+.m-card--blog-article {
+	--card__title--padding: var(--brand__spacing) 0 0;
+	--card__footer--margin-top: auto;
+}
+
+.m-card--crop-item {
+	--card__title--padding: var(--brand__spacing) 0;
+	--card__title--background-color: rgb(var(--brand__color--white));
+	--card__title--transition: all .3s;
+	--card__body--background-color: rgba(var(--brand__color--primary), .7);
+	--card__body--padding: var(--brand__spacing--large);
+	--card__body--transition: opacity 1s;
+	--card__body--opacity: 0;
+	--brand__typography-p--color: rgb(var(--brand__color--white));
+	--brand__typography-h3--margin-bottom: 0;
+
+	.o-card__body {
+		@include absolute(0, 0, 0, 2);
+	}
+
+	@include mq($until: tablet) {
+		--card--flex-direction: row;
+		--card--align-items: center;
+		--card__obj-wrapper--flex-basis: 25%;
+		--card__obj-wrapper--margin-inline-end: var(--brand__spacing--large);
+	}
+
+	@include hover {
+		--card--box-shadow: 0 0 24px 0 rgba(var(--brand__color--gray), .1);
+		--card__title--padding: var(--brand__spacing);
+		--card__title--z-index: 3;
+		--card__body--opacity: 1;
+	}
+}

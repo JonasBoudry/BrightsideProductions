@@ -1,0 +1,28 @@
+<nav aria-label="Breadcrumb" class="c-breadcrumb">
+	<ol class="c-breadcrumb-list">
+		{{#each breadcrumb.items}}
+		<li class="c-breadcrumb-item">
+			{{#if link}}
+			<a href="{{link.src}}" class="c-breadcrumb-item__link">
+				<span class="c-breadcrumb-item__text">
+					{{link.text}}
+				</span>
+			</a>
+			{{else}}
+			<span class="c-breadcrumb-item__text">
+				{{text}}
+			</span>
+			{{/if}}
+			<span class="c-breadcrumb-item__icon">
+				{{> common/atoms/svg-icon
+					iconId="chevron-right"
+					iconHeight=8
+					iconWidth=6
+					isDecorative=true
+					title="divider"
+				}}
+			</span>
+		</li>
+		{{/each}}
+	</ol>
+</nav>

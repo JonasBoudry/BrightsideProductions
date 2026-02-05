@@ -1,0 +1,136 @@
+.o-tabs-acc {
+	&__tabs {
+		display: var(--tabs-acc__tabs--display, flex);
+		text-transform: uppercase;
+		margin-inline-end: calc(var(--brand__spacing--tiny) * -1);
+
+		> * {
+			margin-inline-end: var(--brand__spacing);
+			margin-block-end: var(--brand__spacing--tiny);
+		}
+	}
+
+	&__tabs-trigger {
+		display: var(--tabs-acc__tabs-trigger--display, none);
+		flex-direction: column;
+		font-weight: $brand__font-weight--bold;
+
+		&::after {
+			content: "";
+			display: inline-block;
+			height: 3px;
+			width: var(--tabs-acc__tabs-trigger-after--width, 0);
+			background-color: var(--tabs-acc__tabs-trigger--color, rgb(var(--brand__color--secondary)));
+			transition: color 0.3s ease, width 0.3s ease-in-out 0.15s;
+		}
+
+		&:focus-visible {
+			outline: none;
+			color: var(--tabs-acc__tabs-trigger--color, rgb(var(--brand__color--secondary)));
+		}
+
+		&.is-selected,
+		&:hover {
+			color: var(--tabs-acc__tabs-trigger--color, rgb(var(--brand__color--secondary)));
+			--tabs-acc__tabs-trigger-after--width: 34px;
+		}
+
+		&.is-selected {
+			font-weight: $brand__font-weight--bold;
+		}
+	}
+
+	&__panel {
+		display: var(--set-tabs-acc__panel--display, var(--tabs-acc__panel--display, block));
+		margin: 0;
+		padding: 0;
+		opacity: var(--tabs-acc__panel--opacity, 1);
+		transition: opacity 0.4s ease-in;
+
+		&:active,
+		&:focus {
+			outline: none;
+		}
+
+		&.is-hidden {
+			--tabs-acc__body--display: none;
+			--tabs-acc__panel--opacity: var(--tabs-acc__panel-hidden--opacity, 1);
+		}
+
+		&.label--open {
+			--tabs-acc__panel--display: var(--tabs-acc__panel-is-open--display, block);
+		}
+
+		&.is-open {
+			--tabs-acc__acc-trigger--bbe-width: 0;
+		}
+	}
+
+	&__body {
+		--brand__wrapper--margin-inline-start: 0;
+		--set-brand__wrapper--padding-inline-start: 0;
+		--set-brand__wrapper--padding-inline-end: 0;
+		--rich-text-media__section--align-self: flex-start;
+		display: var(--tabs-acc__body--display, block);
+		padding-block-start: var(--tabs-acc__body--pbs, 0);
+		padding-block-end: var(--tabs-acc__body--pbe, var(--brand__spacing--small));
+		border-block-end: var(--tabs-acc__body--bbe--width, 1px) solid rgb(var(--brand__color--border));
+	}
+
+	&__acc-trigger {
+		display: var(--tabs-acc__acc-trigger--display, flex);
+		align-items: flex-start;
+		justify-content: space-between;
+		cursor: pointer;
+		color: var(--tabs-acc__acc-trigger--color, currentColor);
+		padding: var(--tabs-acc__acc-trigger--padding, var(--brand__spacing--small) 0);
+		font-size: calc(var(--brand__typography-p--font-size) + 1px);
+		font-weight: $brand__font-weight--semibold;
+		text-transform: var(--tabs-acc__acc-trigger--transform);
+		border-block-end: var(--tabs-acc__acc-trigger--bbe-width, 1px) solid rgb(var(--brand__color--border));
+		border-inline-start: var(--tabs-acc__acc-trigger--bis-width, 0px) solid rgb(var(--brand__color--secondary));
+		border-inline-end: var(--tabs-acc__acc-trigger--bie-width, 0px) solid rgb(var(--brand__color--gray));
+		border-block-start: var(--tabs-acc__acc-trigger--bbs-width, 0px) solid rgb(var(--brand__color--gray));
+
+		> * {
+			margin-inline-end: var(--brand__spacing--tiny);
+			margin-block-end: var(--brand__spacing--tiny);
+		}
+
+		&[aria-expanded="true"] {
+			--tabs-acc__acc-trigger-after--transform: scale(-1);
+		}
+
+		&::after {
+			content: "";
+			width: 13px;
+			height: 13px;
+			margin-block-start: var(--brand__spacing--tiny);
+			background-image: var(--brand__arrow-down);
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-position: center;
+			transition: transform 0.2s ease-in-out;
+			transform: var(--tabs-acc__acc-trigger-after--transform, none);
+		}
+	}
+
+	&.is-initialized.tabs-allowed {
+		--tabs-acc__panel--display: inherit;
+	}
+
+	@include mq($from: tablet) {
+		--set-rich-text-media__body--padding-block-start: 0;
+
+		&.tabs-allowed {
+			--tabs-acc__acc-trigger--display: none;
+			--tabs-acc__tabs-trigger--display: inline-flex;
+			--tabs-acc__panel--display: none;
+			--tabs-acc__panel-is-open--display: block;
+			--tabs-acc__body--bbe--width: 0;
+			--tabs-acc__body--pbe: 0;
+			--tabs-acc__body--pbs: var(--brand__spacing);
+			--tabs-acc__panel-hidden--opacity: 0.2;
+		}
+	}
+}

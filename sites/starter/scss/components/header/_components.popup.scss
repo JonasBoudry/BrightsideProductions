@@ -1,0 +1,43 @@
+.c-popup {
+    display: var(--popup--display, none);
+    position: absolute;
+    left: var(--popup--left, calc(50% + 7.5px));
+    transform: translateX(-50%);
+    padding-top: 5px;
+
+    @include mq($until: large) {
+        bottom: 35px;
+        --popup-before--display: none;
+        --popup-after--display: flex;
+        --popup--left: 50%;
+    }
+
+    &::before {
+        display: var(--popup-before--display, flex);
+    }
+
+    &::after {
+        display: var(--popup-after--display, none);
+        --popup-before--clip-path: polygon(0 0, 50% 100%, 100% 0);
+    }
+
+    &::before, &::after {
+        content: '';
+        width: 15px;
+        height: 7.5px;
+        background-color: rgba(var(--brand__color--white));
+        margin: 0 auto;
+        clip-path: var(--popup-before--clip-path, polygon(50% 0%, 0% 100%, 100% 100%));
+    }
+
+    &.is-active {
+        --popup--display: block;
+    }
+}
+
+.c-popup__image {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, .25);
+    width: var(--c-popup__image--width, 150px);
+    height: var(--c-popup__image--height, 150px);
+    max-width: none;
+}

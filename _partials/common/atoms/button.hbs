@@ -1,0 +1,13 @@
+{{!-- aria-label has to be filled in when button exist only of image or icon --}}
+<{{#if isButton}}button type="{{#if type}}{{type}}{{^}}button{{/if}}" {{else}}a href="{{src}}" {{/if}} class="a-btn
+    {{#if isPrimary}}a-btn--primary{{/if}}
+    {{#if isSecondary}}a-btn--secondary{{/if}}
+	{{#if isLink}}a-btn--link{{/if}}
+	{{#if hideIcon}}hide-icon{{/if}}
+    {{extraClasses}}
+    {{#if isDisabled}}disabled{{/if}}" {{#if id}} id="{{id}}" {{/if}} {{#if isDisabled}}disabled{{/if}} {{#if
+	isIcon}}{{#if ariaLabel}}aria-label="{{ariaLabel}}" {{/if}} {{/if}}>
+	{{#if text}}
+	<span>{{text}}</span>
+	{{/if}}
+</{{#if isButton}}button{{else}}a{{/if}}>

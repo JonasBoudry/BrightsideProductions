@@ -1,0 +1,21 @@
+.o-cell-align {
+    display: grid;
+
+    &--ac-c {
+        align-content: center;
+        justify-content: start;
+    }
+
+    &--ac-e {
+        align-content: end;
+        justify-content: start;
+    }
+
+    &--jc-e {
+        justify-content: end;
+    }
+
+    &--jc-c {
+        justify-content: center;
+    }
+}

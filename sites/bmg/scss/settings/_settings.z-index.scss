@@ -1,0 +1,10 @@
+$brand__back-to-top--z-index: 9999 !default;
+$brand__header--z-index: 10000 !default;
+$brand__modal--z-index: $brand__header--z-index + 2 !default;
+$brand__loading-spinner--z-index: $brand__header--z-index + 3 !default;
+$brand__sticky-contact--z-index: $brand__header--z-index - 1000 !default;
+$brand__filter-bar--z-index: $brand__modal--z-index - 6 !default;
+$brand__floating-panel--z-index: $brand__modal--z-index !default;
+$brand__anchor-bar--z-index: $brand__back-to-top--z-index - 2 !default;
+$brand__shared-bar--z-index: $brand__back-to-top--z-index - 2 !default;
+$brand__filter-bar--z-index: 1000 !default;

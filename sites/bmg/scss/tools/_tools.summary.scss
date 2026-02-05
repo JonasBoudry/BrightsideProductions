@@ -1,0 +1,9 @@
+@mixin clearSummary() {
+	list-style: none;
+	-webkit-appearance: none;
+
+	&::marker, /* Latest Chrome, Edge, Firefox */
+		&::-webkit-details-marker /* Safari */ {
+		display: none;
+	}
+}

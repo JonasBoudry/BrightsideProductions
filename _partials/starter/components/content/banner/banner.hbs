@@ -1,0 +1,46 @@
+<div class="c-banner
+            {{#if banner.textIsCentered}} c-banner--text-centered{{/if}}
+            {{#if banner.textIsEnd}} c-banner--text-end@desktop{{/if}}">
+	<div class="c-banner__media-wrapper">
+		{{#if banner.hasMask}}
+		<div class="o-mask"></div>
+		{{/if}}
+		{{#unless banner.video}}
+		{{#if banner.img-mobile}}
+		<img class="o-fit u-hide-desktop" src="{{banner.img-mobile}}" alt="" title="" />
+		{{/if}}
+
+		{{#if banner.img-desktop}}
+		<img class="o-fit {{#if banner.img-mobile}}u-hide-until-desktop{{/if}}" src="{{banner.img-desktop}}" alt=""
+			title="" />
+		{{/if}}
+		{{else}}
+		{{#if banner.img-mobile}}
+		<img class="o-fit u-hide-desktop" src="{{banner.img-mobile}}" alt="" title="" />
+		{{/if}}
+
+		{{#if banner.img-desktop}}
+		<img class="o-fit u-hide-desktop" src="{{banner.img-desktop}}" alt="" title="" />
+		{{/if}}
+
+		<video class="o-fit u-hide-until-desktop" src="{{banner.video.src}}" type="video/{{banner.video.type}}"
+			preload="metadata" loop="" poster="{{banner.img-desktop}}" autoplay="autoplay" muted=""
+			onloadedmetadata="this.muted=true" controlslist="nodownload"></video>
+		{{/unless}}
+	</div>
+
+	{{#if banner.rich-text}}
+	<div class="c-banner__content-wrapper">
+		<div class="o-wrapper">
+			<div class="c-banner__content {{#if banner.captionBgColor}}{{banner.captionBgColor}}{{/if}}">
+				<!-- start rich text -->
+				{{> common/atoms/rich-text
+					rich-text=banner.rich-text
+					buttons=banner.buttons
+				}}
+				<!-- end rich text -->
+			</div>
+		</div>
+	</div>
+	{{/if}}
+</div>

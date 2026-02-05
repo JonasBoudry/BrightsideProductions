@@ -1,0 +1,123 @@
+.a-definition-list {
+	display: grid;
+	grid-template-columns: var(--definition-list--gtc, auto 1fr);
+	line-height: 1.5;
+	margin-block-start: var(--definition-list--mbs, var(--brand__spacing));
+	margin-block-end: var(--definition-list--mbe, var(--brand__spacing--small));
+
+	@include mq($until: tablet) {
+		--definition-list-item-alternate--pbs: var(--brand__spacing--tiny);
+		--definition-list-item-alternate--pbe: var(--brand__spacing--tiny);
+		--definition-list-item-alternate--pis: var(--brand__spacing--small);
+		--definition-list-item-alternate--pie: var(--brand__spacing--small);
+		--definition-list-dd--pbs: 0px;
+		--definition-list-dt--pbe: var(--definition-list-dd--pbs);
+		--definition-list-dt-alternate--pbe: 0px;
+		--definition-list-dd-alternate--pbs: var(--definition-list-dt-alternate--pbe);
+		--definition-list__header--display: none;
+		--definition-list--gtc: 1fr;
+		--definition-list-alternate--gtc: 1fr;
+	}
+
+	@include mq($from: tablet) {
+		--definition-list-header-dd--gtc: 1fr 1fr;
+		--definition-list-dd--border-radius: 0 var(--brand__border-radius--small) var(--brand__border-radius--small) 0;
+		--definition-list-dt--border-radius: var(--brand__border-radius--small) 0 0 var(--brand__border-radius--small);
+		--definition-list-dd--pis: var(--brand__spacing--tiny);
+	}
+
+	&--headers {
+		--definition-list-dd--gtc: var(--definition-list-header-dd--gtc, 1fr);
+
+		@include mq($until: tablet) {
+			--definition-list__item-before--content: attr(data-label) ": ";
+		}
+	}
+
+	&--alternate {
+		--definition-list-item-odd--bgc: rgb(var(--brand__color--background));
+		--definition-list-item--pbs: var(
+			--definition-list-item-alternate--pbs,
+			calc(var(--brand__spacing--small) + 5px)
+		);
+		--definition-list-item--pbe: var(
+			--definition-list-item-alternate--pbe,
+			calc(var(--brand__spacing--small) + 5px)
+		);
+		--definition-list-item--pis: var(--definition-list-item-alternate--pis, 38px);
+		--definition-list-item--pie: var(--definition-list-item-alternate--pie, 38px);
+		--definition-list-dd--pis: var(--definition-list-item-alternate--pie);
+		--definition-list-dt--pbe: var(--definition-list-dt-alternate--pbe, calc(var(--brand__spacing--small) + 5px));
+		--definition-list-dd--pbs: var(--definition-list-dd-alternate--pbs, calc(var(--brand__spacing--small) + 5px));
+		--definition-list-dd--display: grid;
+		--definition-list--gtc: var(--definition-list-alternate--gtc, 0.8fr 1fr);
+		--definition-list-dd--bbe-width: 1px;
+
+		@include mq($from: tablet) {
+			--definition-list-dt--bbe-width: 1px;
+		}
+	}
+
+	dt,
+	dd {
+		padding-inline-start: var(--definition-list-item--pis, 0px);
+		padding-inline-end: var(--definition-list-item--pie, 0px);
+		padding-block-start: var(--definition-list-item--pbs, var(--brand__spacing--tiny));
+		padding-block-end: var(--definition-list-item--pbe, var(--brand__spacing--small));
+
+		&:nth-of-type(odd) {
+			--definition-list-dd--bbe-width: 0px;
+			--definition-list-dt--bbe-width: 0px;
+			background-color: var(--definition-list-item-odd--bgc, transparent);
+		}
+	}
+
+	dt {
+		--definition-list-item--pbe: var(--definition-list-dt--pbe);
+		border-radius: var(
+			--definition-list-dt--border-radius,
+			var(--brand__border-radius--small) 0 0 var(--brand__border-radius--small)
+		);
+		font-weight: var(--definition-list-dt--font-weight, #{$brand__font-weight--semibold});
+
+		&:last-of-type {
+			border-block-end: var(--definition-list-dt--bbe-width, 0px) solid rgb(var(--brand__color--gray));
+		}
+	}
+
+	dd {
+		--definition-list-item--pbs: var(--definition-list-dd--pbs);
+		border-radius: var(
+			--definition-list-dd--border-radius,
+			0 var(--brand__border-radius--small) var(--brand__border-radius--small) 0
+		);
+		display: var(--definition-list-dd--display, block);
+		grid-template-columns: var(--definition-list-dd--gtc, 1fr);
+		padding-inline-start: var(--definition-list-dd--pis, 0px);
+		font-weight: var(--definition-list-dt--font-weight, #{$brand__font-weight--medium});
+
+		&:last-of-type {
+			border-block-end: var(--definition-list-dd--bbe-width, 0px) solid rgb(var(--brand__color--gray));
+		}
+	}
+
+	&__cell {
+		@include before(var(--definition-list__item-before--content, none)) {
+			display: inline-block;
+			margin-inline-end: 2px;
+			font-weight: $brand__font-weight--semibold;
+			min-width: 110px;
+			flex-basis: 50%;
+		}
+
+		@include mq($until: tablet) {
+			display: flex;
+		}
+	}
+
+	&__header {
+		--definition-list-dd--display: grid;
+		display: var(--definition-list__header--display, block);
+		font-weight: $brand__font-weight--bold;
+	}
+}

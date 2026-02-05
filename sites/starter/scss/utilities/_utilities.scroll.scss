@@ -1,0 +1,12 @@
+.u-scroll-none\@mobile {
+	position: fixed;
+	height: 100%;
+	overflow-y: hidden;
+	overflow-x: hidden;
+	@include mq($from: desktop) {
+		overflow-y: unset;
+		overflow-x: unset;
+		position: relative;
+		height: auto;
+	}
+}

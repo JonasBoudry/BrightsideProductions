@@ -1,0 +1,22 @@
+// Transition
+@mixin default-transition() {
+	transition: $brand__transition;
+}
+
+// Transition and delay
+@mixin delayed-transition($transition: null, $delay: null) {
+	transition: $transition;
+	transition-delay: $delay;
+}
+
+// Enable transitions by hiding element with visibility and opacity
+// (transition on display does not work)
+@mixin hide-for-transition() {
+	visibility: hidden;
+	opacity: 0;
+}
+
+@mixin show-for-transition() {
+	visibility: visible;
+	opacity: 1;
+}

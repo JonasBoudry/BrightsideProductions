@@ -1,0 +1,53 @@
+.u-txt-upper {
+	text-transform: uppercase !important;
+}
+
+.u-txt-lower {
+	text-transform: lowercase !important;
+}
+
+.u-txt-center {
+	text-align: center !important;
+}
+
+.u-txt-right {
+	text-align: right !important;
+}
+
+.u-txt-left {
+	text-align: left !important;
+}
+
+.u-txt-justify {
+	text-align: justify !important;
+	text-justify: inter-word !important;
+}
+
+.u-underline-none {
+	text-decoration: none !important;
+}
+
+.u-txt-underline {
+	text-decoration: underline;
+}
+
+.u-txt-italic {
+	font-style: italic;
+}
+
+.u-txt-nowrap {
+	white-space: nowrap;
+}
+
+.u-txt-regular {
+	font-weight: $brand__font-weight--regular !important;
+}
+
+.u-ellipsis {
+	@include truncate-multiline();
+}
+
+.u-flex-center {
+	display: flex;
+	align-items: center;
+}
