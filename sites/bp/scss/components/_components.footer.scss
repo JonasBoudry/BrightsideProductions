@@ -9,13 +9,13 @@ footer {
 	position: relative;
 	display: flex;
 	align-items: var(--footer__content--align-items, center);
+	flex-direction: var(--footer__content--flex-direction, column);
 	justify-content: var(--footer__content--justify-content, center);
 	flex-wrap: wrap;
 	padding: var(--footer__bottom--padding, var(--brand__spacing--small) 0);
 
-	@include mq($from: desktop) {
-		--footer__content--align-items: center;
-		--footer__content--justify-content: space-between;
+	@include mq($from: wide) {
+		--footer__content--flex-direction: row;
 	}
 
 	ul {
@@ -29,7 +29,7 @@ footer {
 			padding: var(--footer__content-li--padding, var(--brand__spacing--tiny) var(--brand__spacing--tiny) 0 var(--brand__spacing--tiny));
 			text-align: center;
 
-			@include mq($from: tablet){
+			@include mq($from: tablet) {
 				--footer__content-li--padding: var(--brand__spacing--tiny)
 			}
 		}
