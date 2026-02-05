@@ -48,4 +48,8 @@ footer {
 
 .footer__logo {
 	margin-block-end: var(--brand__spacing--small);
+
+	a {
+		display: block;
+	}
 }
