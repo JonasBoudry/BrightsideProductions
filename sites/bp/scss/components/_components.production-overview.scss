@@ -1,4 +1,9 @@
 .production-overview {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
     ul {
         display: grid;
         grid-gap: var(--production-overview--grid-gap, var(--brand__spacing--large));
