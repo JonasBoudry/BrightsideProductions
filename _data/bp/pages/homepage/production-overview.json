@@ -3,8 +3,8 @@
     "items": [
         {
             "media": {
-                "src": "/assets/media/images/over-geld-gesproken.avif",
-                "srcDesktop": "/assets/media/images/over-geld-gesproken.avif",
+                "src": "/assets/media/images/productions/over-geld-gesproken.avif",
+                "srcDesktop": "/assets/media/images/productions/over-geld-gesproken.avif",
                 "alt": "Foto Over geld gesproken production"
             },
             "title": "Over geld gesproken",
@@ -12,8 +12,8 @@
         },
         {
             "media": {
-                "src": "/assets/media/images/eat-more-trees.avif",
-                "srcDesktop": "/assets/media/images/eat-more-trees.avif",
+                "src": "/assets/media/images/productions/eat-more-trees.avif",
+                "srcDesktop": "/assets/media/images/productions/eat-more-trees.avif",
                 "alt": "Foto Eat more trees production"
             },
             "title": "Eat more trees",
@@ -21,8 +21,8 @@
         },
         {
             "media": {
-                "src": "/assets/media/images/the-girlfriend-experience.avif",
-                "srcDesktop": "/assets/media/images/the-girlfriend-experience.avif",
+                "src": "/assets/media/images/productions/the-girlfriend-experience.avif",
+                "srcDesktop": "/assets/media/images/productions/the-girlfriend-experience.avif",
                 "alt": "Foto The girlfriend experience production"
             },
             "title": "The girlfriend experience",
@@ -30,8 +30,8 @@
         },
         {
             "media": {
-                "src": "/assets/media/images/hero-banner.avif",
-                "srcDesktop": "/assets/media/images/hero-banner.avif",
+                "src": "/assets/media/images/productions/hero-banner.avif",
+                "srcDesktop": "/assets/media/images/productions/hero-banner.avif",
                 "alt": "Foto Moedertje production"
             },
             "title": "Moedertje",
@@ -57,8 +57,8 @@
         },
                 {
             "media": {
-                "src": "/assets/media/images/helmut.avif",
-                "srcDesktop": "/assets/media/images/helmut.avif",
+                "src": "/assets/media/images/productions/helmut.avif",
+                "srcDesktop": "/assets/media/images/productions/helmut.avif",
                 "alt": "Foto Helmut production"
             },
             "title": "Helmut",
