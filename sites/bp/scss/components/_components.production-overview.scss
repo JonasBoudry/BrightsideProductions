@@ -15,10 +15,10 @@
     li {
         border-radius: 5px;
 
-        &:hover {
-            --production-before--display: inline-block;
-            --production__body--bc: rgba(var(--brand__color--black), 0.35);
-        }
+        // &:hover {
+        //     --production-before--display: inline-block;
+        //     --production__body--bc: rgba(var(--brand__color--black), 0.35);
+        // }
     }
 }
 
