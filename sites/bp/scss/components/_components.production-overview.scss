@@ -66,7 +66,7 @@
 
 .a-production__body {
     @include absolute(0, 0, 0, 0, 1);
-    padding: var(--brand__spacing) var(--brand__spacing) calc(var(--brand__spacing) + var(--brand__spacing--small)) var(--brand__spacing);
+    padding: var(--brand__spacing);
     background-color: var(--production__body--bc, rgba(var(--brand__color--black), 0.2));
     transition: 0.5 ease;
     border-radius: 5px;
@@ -87,20 +87,22 @@
 }
 
 .a-production__title {
-    text-align: center;
-    justify-self: center;
+    display: flex;
+    justify-content: var(--production__title--jc, space-between);
+    text-transform: uppercase;
+    --brand__typography-p--color: rgb(var(--brand__color--white));
     --brand__typography-h4--color: rgb(var(--brand__color--white));
     --brand__typography-h4--margin-bottom: 0;
     --brand__typography-p--color: rgb(var(--brand__color--white));
 }
 
 .a-production__info {
-    display: flex;
-    justify-content: var(--production__info--jc, space-between);
     text-transform: uppercase;
     font-size: 12px;
     letter-spacing: 1px;
     --brand__typography-p--color: rgb(var(--brand__color--white));
+    background-color: rgb(var(--brand__color--black);
+    padding: var(--brand__spacing--tiny);)
 }
 
 .a-production__text {
