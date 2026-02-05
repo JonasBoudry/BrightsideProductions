@@ -110,6 +110,7 @@
     background-color: rgb(var(--brand__color--black));
     padding: calc(var(--brand__spacing--tiny)/2) var(--brand__spacing--tiny);
     border-radius: var(--brand__border-radius);
+    margin-inline-start: auto;
 }
 
 .a-production__text {
