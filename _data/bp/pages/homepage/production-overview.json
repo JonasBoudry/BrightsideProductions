@@ -1,0 +1,31 @@
+{
+	"title": "Onze producties",
+	"items": [
+		{
+			"media": {
+        "src": "/assets/media/images/hero-banner.avif",
+        "srcDesktop": "/assets/media/images/hero-banner.avif",
+				"alt": "Foto kamer Zilvervos"
+			},
+			"title": "Zilver vos",
+			"link": "/zilver-vos"
+		},
+		{
+			"media": {
+        "src": "/assets/media/images/hero-banner.avif",
+        "srcDesktop": "/assets/media/images/hero-banner.avif",
+				"alt": "Foto kamer Rodevos"
+			},
+			"title": "Rode vos",
+			"link": "/rode-vos"
+		},
+		{
+			"media": {
+        "src": "/assets/media/images/hero-banner.avif",
+        "srcDesktop": "/assets/media/images/hero-banner.avif",
+				"alt": "Foto kamer Poolvos"
+			},
+			"title": "Pool vos"
+		}
+	]
+}

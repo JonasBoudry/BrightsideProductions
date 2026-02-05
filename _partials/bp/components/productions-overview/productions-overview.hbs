@@ -1,0 +1,30 @@
+<div class="productions-overview">
+    <ul>
+        {{#each items}}
+        <li>
+            <article class="a-production o-card">
+                <div class="a-production__media o-card__media">
+                    <img class="o-fit o-ratio o-ratio--3:2" src="{{media.src}}" alt="{{media.alt}}" width="900"
+                        height="600" loading="lazy" fetchpriority="low">
+                </div>
+                <div class="a-production__body o-card__body">
+                    <div class="a-production__title o-card__title">
+                        <h3 class="h4">
+                            {{#if link}}<a class="a-link a-link--overlay" href="{{link}}" aria-label="{{title}}">{{/if}}
+                                {{title}}
+                                {{#if link}}</a>{{/if}}
+                        </h3>
+                    </div>
+                    <div class="a-production__content o-card__content">
+                        <div class="a-production__info">
+                            <div class="a-production__genre">
+                                {{genre}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </li>
+        {{/each}}
+    </ul>
+</div>
