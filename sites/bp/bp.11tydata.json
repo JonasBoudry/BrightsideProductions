@@ -1,0 +1,21 @@
+{
+	"siteName": "BP",
+	"type": "Main",
+	"paths": {
+		"map": "bp",
+		"root": "/bp/",
+		"logo": "/assets/svg/icons/bp.svg"
+	},
+	"cssFiles": [
+		{
+			"path": "/assets/css/bp.css"
+		}
+	],
+	"jsFiles": [
+		{
+			"path": "/assets/js/bp.js",
+			"module": true,
+			"defer": true
+		}
+	]
+}

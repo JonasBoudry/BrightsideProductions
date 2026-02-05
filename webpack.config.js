@@ -63,9 +63,9 @@ module.exports = (env, options) => {
 			extensions: [".ts", ".tsx", ".js", ".jsx", ".scss", ".css"],
 			alias: {
 				starter: path.resolve(__dirname, "sites/starter/scss"),
-				bmg: path.resolve(
+				bp: path.resolve(
 					__dirname,
-					"sites/bmg/scss"
+					"sites/bp/scss"
 				),
 			},
 		},

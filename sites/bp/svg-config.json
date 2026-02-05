@@ -7,10 +7,10 @@
 	},
 	"mode": {
 		"symbol": {
-			"dest": "sites/bmg/assets/svg",
+			"dest": "sites/bp/assets/svg",
 			"sprite": "svg-symbols.svg",
 			"example": {
-				"template": "_tmpl/bmg-svg-view.hbs",
+				"template": "_tmpl/bp-svg-view.hbs",
 				"dest": "../../pages/styleguide/svg-view.hbs"
 			}
 		}
