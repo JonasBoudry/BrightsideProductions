@@ -12,6 +12,7 @@
 
 	@include mq($from: large) {
 		--hero-banner--min-height: var(--hero-banner-large--min-height, 700px);
+		align-items: center;
 	}
 }
 
@@ -40,7 +41,7 @@
 	--brand__typography-h1--margin-bottom: 0;
 
 	@include mq($from: large) {
-		--hero-banner__content--padding: var(--brand__spacing--huge) var(--brand__spacing);
+		--hero-banner__content--padding: var(--brand__spacing);
 		min-width: 860px;
 		max-width: 860px;
 	}
