@@ -1,0 +1,15 @@
+{
+	"media": {
+        "src": "/assets/media/images/productions/over-geld-gesproken.avif",
+        "srcDesktop": "/assets/media/images/productions/over-geld-gesproken.avif",
+		"alt": "Foto Over geld gesproken production image",
+		"width": "1280",
+		"height": "720",
+		"loading": "eager"
+	},
+	"title": "A human interest for VTM (Belgium) - Over geld gesproken",
+	"anchor": {
+		"link": "https://www.vtmgo.be/vtmgo/over-geld-gesproken~95fb5547-b8cd-46a8-8145-325548e7c8a0",
+		"label": "Stream now"
+	}
+}
