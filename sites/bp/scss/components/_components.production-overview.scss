@@ -7,13 +7,12 @@
 
     ul {
         display: grid;
-        grid-gap: var(--production-overview--grid-gap, var(--brand__spacing--large));
+        grid-gap: var(--production-overview--grid-gap, var(--brand__spacing));
         grid-template-columns: var(--production-overview-ul--gtc);
         @include list-unstyle();
         margin-block-start: var(--brand__spacing);
 
         @include mq($from: tablet) {
-            --production-overview--grid-gap: var(--brand__spacing);
             --production-overview-ul--gtc: 1fr 1fr 1fr;
         }
     }
