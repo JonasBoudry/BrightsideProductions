@@ -26,9 +26,11 @@
                 <h1>{{title}}</h1>
                 {{#if subtitle}}<div class="subtitle">{{subtitle}}</div>{{/if}}
             </div>
+            {{#if anchor}}
             <div class="hero-banner__cta">
                 <a class="a-btn a-btn--primary" href="#{{anchor.id}}">{{anchor.label}}</a>
             </div>
+            {{/if}}
         </div>
     </article>
 </section>

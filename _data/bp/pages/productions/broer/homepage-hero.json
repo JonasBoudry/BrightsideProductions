@@ -1,11 +1,11 @@
 {
 	"media": {
-        "src": "/assets/media/images/productions/between-us.avif",
-        "srcDesktop": "/assets/media/images/productions/between-us.avif",
-		"alt": "Foto Between us production image",
+        "src": "/assets/media/images/productions/broer.avif",
+        "srcDesktop": "/assets/media/images/productions/broer.avif",
+		"alt": "Foto Broer production image",
 		"width": "1280",
 		"height": "720",
 		"loading": "eager"
 	},
-	"title": "Between us - A shortfilm by Marie De Hert, Ellen Pollard"
+	"title": "Broer - A comedyshow by Lander Severins"
 }
