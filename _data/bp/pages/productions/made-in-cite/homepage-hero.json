@@ -1,0 +1,16 @@
+{
+	"media": {
+        "src": "/assets/media/images/productions/made-in-cite.avif",
+        "srcDesktop": "/assets/media/images/productions/made-in-cite.avif",
+		"alt": "Foto Made in Cité production image",
+		"width": "1280",
+		"height": "720",
+		"loading": "eager"
+	},
+	"title": "Made in Cité",
+	"subtitle": "A comedyshow by Erhan Demirci",
+	"anchor": {
+		"link": "https://erhandemirci.be/made-in-cite/",
+		"label": "More info"
+	}
+}
