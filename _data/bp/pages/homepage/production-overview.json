@@ -8,7 +8,8 @@
                 "alt": "Foto Over geld gesproken production"
             },
             "title": "Over geld gesproken",
-            "genre": "Human Interest"
+            "genre": "Human Interest",
+            "link": "/over-geld-gesproken"
         },
         {
             "media": {
@@ -17,7 +18,8 @@
                 "alt": "Foto Eat more trees production"
             },
             "title": "Eat more trees",
-            "genre": "Documentary"
+            "genre": "Documentary",
+            "link": "/eat-more-trees"
         },
         {
             "media": {
@@ -26,7 +28,8 @@
                 "alt": "Foto Between us production"
             },
             "title": "Between us",
-            "genre": "Short"
+            "genre": "Short",
+            "link": "/between-us"
         },
         {
             "media": {
@@ -35,7 +38,8 @@
                 "alt": "Foto Broer - Lander Severins production"
             },
             "title": "Broer - Lander Severins",
-            "genre": "Comedy"
+            "genre": "Comedy",
+            "link": "/broer"
         },
         {
             "media": {
@@ -44,7 +48,8 @@
                 "alt": "Foto Made in Cité production"
             },
             "title": "Made in Cité",
-            "genre": "Comedy"
+            "genre": "Comedy",
+            "link": "/made-in-cite"
         },
         {
             "media": {
@@ -53,9 +58,10 @@
                 "alt": "Foto Helmut production"
             },
             "title": "Helmut",
-            "genre": "Documentary"
+            "genre": "Documentary",
+            "link": "/helmut"
         },
-                {
+        {
             "media": {
                 "src": "/assets/media/images/productions/streamz.avif",
                 "srcDesktop": "/assets/media/images/productions/streamz.avif",
@@ -63,7 +69,7 @@
             },
             "genre": "Documentary"
         },
-                {
+        {
             "media": {
                 "src": "/assets/media/images/productions/dpg-media.avif",
                 "srcDesktop": "/assets/media/images/productions/dpg-media.avif",
@@ -71,7 +77,7 @@
             },
             "genre": "Documentary"
         },
-                {
+        {
             "media": {
                 "src": "/assets/media/images/productions/vrt.avif",
                 "srcDesktop": "/assets/media/images/productions/vrt.avif",
