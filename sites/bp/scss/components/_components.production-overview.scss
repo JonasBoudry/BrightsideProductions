@@ -93,7 +93,6 @@
     &::after {
         display: var(--production__body-after--display, none);
         content: "";
-        display: inline-block;
         @include absolute(null, var(--production__body-after--right, var(--brand__spacing)), var(--brand__spacing), null);
         width: 22px;
         height: 18px;
