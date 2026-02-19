@@ -21,7 +21,7 @@
         border-radius: var(--brand__border-radius);
 
         &:hover {
-            --production__body-after--right: 10px;
+            --production__body-after--right: 20px;
             cursor: pointer;
         }
     }
@@ -88,7 +88,7 @@
     &::after {
         content: "";
         display: inline-block;
-        @include absolute(null, var(--production__body-after--right, 20px), 20px, null);
+        @include absolute(null, var(--production__body-after--right, var(--brand__spacing)), var(--brand__spacing), null);
         width: 22px;
         height: 18px;
         background-color: rgb(var(--brand__color--white));
