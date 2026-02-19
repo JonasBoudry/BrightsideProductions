@@ -94,6 +94,12 @@
     --set-brand__typography-h4--font-weight: 900;
     --brand__typography-h4--color: rgb(var(--brand__color--white));
     --brand__typography-h4--margin-bottom: 0;
+
+    h3 {
+        font-size: 16px;
+        line-height: 140%;
+        font-weight: 900;
+    }
 }
 
 .a-production__info {
