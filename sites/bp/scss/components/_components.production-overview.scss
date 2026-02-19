@@ -25,9 +25,9 @@
 
             &:hover {
                 --production__body-after--right: 20px;
+                --production__media-img--transform: scale(1.05);
                 cursor: pointer;
             }
-
         }
     }
 }
@@ -53,10 +53,6 @@
         background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0.8));
         background-repeat: no-repeat;
         border-radius: var(--brand__border-radius);
-    }
-
-    &:hover {
-        --production__media-img--transform: scale(1.05);
     }
 }
 
