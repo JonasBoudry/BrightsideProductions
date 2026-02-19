@@ -88,12 +88,13 @@
 
     @include mq($from: desktop) {
         --production__body--padding: var(--brand__spacing);
+        --production__body-after--bottom: var(--brand__spacing);
     }
 
     &::after {
         display: var(--production__body-after--display, none);
         content: "";
-        @include absolute(null, var(--production__body-after--right, var(--brand__spacing)), var(--brand__spacing), null);
+        @include absolute(null, var(--production__body-after--right, var(--brand__spacing)), var(--production__body-after--bottom, var(--brand__spacing--small)), null);
         width: 22px;
         height: 18px;
         background-color: rgb(var(--brand__color--white));
