@@ -24,6 +24,10 @@
             --production__body-after--right: 20px;
             cursor: pointer;
         }
+
+        &.has-link {
+            --production__body-after--display: inline-block;
+        }
     }
 }
 
@@ -86,6 +90,7 @@
     }
 
     &::after {
+        display: var(--production__body-after--display, none);
         content: "";
         display: inline-block;
         @include absolute(null, var(--production__body-after--right, var(--brand__spacing)), var(--brand__spacing), null);
