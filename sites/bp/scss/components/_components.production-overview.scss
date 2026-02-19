@@ -20,13 +20,14 @@
     li {
         border-radius: var(--brand__border-radius);
 
-        &:hover {
-            --production__body-after--right: 20px;
-            cursor: pointer;
-        }
-
         &.has-link {
             --production__body-after--display: inline-block;
+
+            &:hover {
+                --production__body-after--right: 20px;
+                cursor: pointer;
+            }
+
         }
     }
 }
