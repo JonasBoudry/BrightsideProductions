@@ -95,6 +95,7 @@
 }
 
 .a-production__title {
+    position: relative;
     display: flex;
     justify-content: var(--production__title--jc, space-between);
     text-transform: uppercase;
