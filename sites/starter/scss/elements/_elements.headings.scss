@@ -46,9 +46,9 @@ h3, .h3 {
 h4, .h4 {
 	--brand__typography--color: var(--brand__typography-h4--color);
 	--brand__typography--font-family: var(--brand__typography-h4--font-family);
-	font-size: var(--brand__typography-h4--font-size);
+	font-size: var(--set-brand__typography-h4--font-size, var(--brand__typography-h4--font-size));
 	line-height: var(--brand__typography-h4--line-height);
-	font-weight: var(--brand__typography-h4--font-weight);
+	font-weight: var(--set-brand__typography-h4--font-weight, var(--brand__typography-h4--font-weight));
 	letter-spacing: var(--brand__typography-h4--letter-spacing);
 	margin-bottom: var(--brand__typography-h4--margin-bottom);
 }
