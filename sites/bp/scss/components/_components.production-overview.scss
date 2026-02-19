@@ -18,7 +18,11 @@
     }
 
     li {
-        border-radius: 5px;
+        border-radius: var(--brand__border-radius);
+
+        &:hover {
+            --production__media-img--transform: scale(1.05);
+        }
     }
 }
 
@@ -53,9 +57,13 @@
 
 .a-production__media {
     display: flex;
+    border-radius: 5px;
+    overflow: hidden;
 
     img {
         border-radius: 5px;
+        transform: var(--production__media-img--transform);
+        transition: 0.3s ease;
     }
 }
 
