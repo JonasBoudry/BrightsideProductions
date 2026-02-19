@@ -32,7 +32,7 @@
 .a-production {
     display: flex;
     align-items: center;
-    transition: 0.5 ease;
+    transition: 0.5s ease;
 
     &::before {
         display: var(--production-before--display, inline-block);
