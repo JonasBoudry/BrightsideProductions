@@ -79,7 +79,7 @@
     @include absolute(0, 0, 0, 0, 1);
     padding: var(--production__body--padding, var(--brand__spacing--small));
     background-color: var(--production__body--bc, rgba(var(--brand__color--black), 0.2));
-    transition: 0.5 ease;
+    transition: 0.5s ease;
     border-radius: 5px;
 
     @include mq($from: desktop) {
@@ -115,7 +115,6 @@
 }
 
 .a-production__title {
-    position: relative;
     display: flex;
     justify-content: var(--production__title--jc, space-between);
     text-transform: uppercase;
