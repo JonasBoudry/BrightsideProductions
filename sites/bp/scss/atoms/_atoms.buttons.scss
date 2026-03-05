@@ -81,6 +81,7 @@
 				rgb(var(--brand__color--accent)));
 		--brand__btn-span--color: var(---brand__btn-primary-span-hover--color, rgb(var(--brand__color--text)));
 		--brand__btn-primary-after--background-color: var(--brand__btn-primary-after-hover--background-color, rgb(var(--brand__color--black)));
+		transition: 0.3s ease;
 	}
 }
 
