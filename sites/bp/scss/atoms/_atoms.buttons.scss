@@ -54,7 +54,8 @@
 }
 
 .a-btn--primary {
-	--brand__btn--padding: var(--brand__btn-primary--padding, 20px 30px);
+	position: relative;
+	--brand__btn--padding: var(--brand__btn-primary--padding, 20px 50px 20px 30px);
 	--brand__btn--color: var(--brand__btn-primary--color, rgb(var(--brand__color--white)));
 	--brand__btn--background-color: var(--brand__btn-primary--background-color, rgb(var(--brand__color--primary)));
 	--brand__btn-hover--color: var(--brand__btn-primary-hover--color, rgb(var(--brand__color--black)));
@@ -63,7 +64,7 @@
 
 	&::after {
 		content: "";
-		@include absolute(null, var(--production__body-after--right, var(--brand__spacing)), var(--production__body-after--bottom, var(--brand__spacing--small)), null);
+		@include absolute(50%, 20px, null, null);
 		width: 18px;
 		height: 19px;
 		background-color: var(--brand__btn-primary-after--background-color, rgb(var(--brand__color--white)));
@@ -71,6 +72,7 @@
 		mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 19'%3E%3Cpath d='M3.6 0V1.9H14.931L0 17.6605L1.269 19L16.2 3.2395V15.2H18V0H3.6Z'/%3E%3C/svg%3E") no-repeat center;
 		-webkit-mask-size: contain;
 		mask-size: contain;
+		transform: translateY(-50%);
 		transition: 0.3s ease;
 	}
 
