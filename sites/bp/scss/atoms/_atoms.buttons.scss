@@ -35,10 +35,8 @@
 	@include hover {
 		--brand__btn--cursor: pointer;
 		--brand__btn--color: var(--brand__btn-hover--color);
-		--brand__btn-after--transform: var(
-			--brand__btn-after-hover--transform,
-			translateX(var(--brand__spacing--tiny))
-		);
+		--brand__btn-after--transform: var(--brand__btn-after-hover--transform,
+				translateX(var(--brand__spacing--tiny)));
 	}
 
 	&:focus-within {
@@ -63,11 +61,22 @@
 	--brand__btn--min-height: var(--brand__btn-primary--min-height, 50px);
 	--brand__btn-span--color: var(--brand__btn-primary-span--color, rgb(var(--brand__color--white)));
 
+	&::after {
+		content: "";
+		@include absolute(null, var(--production__body-after--right, var(--brand__spacing)), var(--production__body-after--bottom, var(--brand__spacing--small)), null);
+		width: 18px;
+		height: 19px;
+		background-color: var(--brand__btn-primary-after--background-color, rgb(var(--brand__color--white)));
+		-webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 19'%3E%3Cpath d='M3.6 0V1.9H14.931L0 17.6605L1.269 19L16.2 3.2395V15.2H18V0H3.6Z'/%3E%3C/svg%3E") no-repeat center;
+		mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 19'%3E%3Cpath d='M3.6 0V1.9H14.931L0 17.6605L1.269 19L16.2 3.2395V15.2H18V0H3.6Z'/%3E%3C/svg%3E") no-repeat center;
+		-webkit-mask-size: contain;
+		mask-size: contain;
+		transition: 0.3s ease;
+	}
+
 	@include hover {
-		--brand__btn-primary--background-color: var(
-			--brand__btn-primary-hover--background-color,
-			rgb(var(--brand__color--accent))
-		);
+		--brand__btn-primary--background-color: var(--brand__btn-primary-hover--background-color,
+				rgb(var(--brand__color--accent)));
 		--brand__btn-span--color: var(---brand__btn-primary-span-hover--color, rgb(var(--brand__color--text)));
 	}
 }
@@ -80,10 +89,8 @@
 	--brand__btn--min-height: var(--brand__btn-secondary--min-height, 50px);
 
 	@include hover {
-		--brand__btn-secondary--background-color: var(
-			--brand__btn-secondary-hover--background-color,
-			rgb(var(--brand__color--accent))
-		);
+		--brand__btn-secondary--background-color: var(--brand__btn-secondary-hover--background-color,
+				rgb(var(--brand__color--accent)));
 	}
 }
 
@@ -112,68 +119,4 @@
 		--btn-link-download-svg--fill: rgb(var(--brand__color--primary));
 		--brand__btn-download-before--filter: var(--brand__filter--primary);
 	}
-}
-
-.a-btn--close {
-	--brand__btn--font-weight: #{$brand__font-weight--regular};
-	--brand__btn--color: rgb(var(--brand__color--text));
-	--brand__btn-hover--color: rgb(var(--brand__color--text));
-	--brand__btn-active--color: rgb(var(--brand__color--text));
-	--btn__icon-svg--fill: var(--btn-close-icon-svg--fill, rgb(var(--brand__color--text)));
-	--set-btn__icon--padding: var(--brand__spacing--tiny);
-
-	.a-btn__icon {
-		margin-inline-start: var(--brand__spacing--tiny);
-		border-radius: 50%;
-		background-color: var(
-			--set-btn-close-icon--background-color,
-			var(--btn-close-icon--background-color, rgb(var(--brand__color--white)))
-		);
-		transition: 0.3s ease;
-	}
-
-	&:hover {
-		--btn-close-icon--background-color: var(
-			--btn-close-icon-hover--background-color,
-			rgb(var(--brand__color--primary))
-		);
-		--btn__icon-svg--fill: rgb(var(--brand__color--white));
-	}
-}
-
-.a-btn--icon {
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	width: var(--btn-icon--width, 45px);
-	height: var(--btn-icon--height, 45px);
-	--brand__btn-after--content: none;
-	--brand__btn--padding: var(--brand__spacing--tiny);
-	--brand__btn--margin: var(--brand__spacing--tiny);
-	--brand__btn--border-radius: var(--btn-icon--border-radius, 100%);
-	--brand__btn--min-height: none;
-}
-
-.a-btn__icon {
-	display: flex;
-	padding: var(--set-btn__icon--padding, var(--btn__icon--padding, 0 var(--brand__spacing--small) 0 0));
-	flex-shrink: 0;
-	--brand__svg--fill: var(--btn__icon-svg--fill, rgb(var(--brand__color--white)));
-}
-
-.a-btn__label {
-	display: var(--btn__label--display);
-	font-size: var(--btn__label--font-size);
-	font-weight: var(--btn__label--font-weight);
-	letter-spacing: var(--btn__label--letter-spacing);
-	color: var(--btn__label--color);
-	padding-inline-start: var(--btn__label--pis);
-}
-
-.a-btn__label ~ .a-btn__icon {
-	--btn__icon--padding: var(--btn__label-icon--padding, 0 0 0 var(--brand__spacing--small));
-}
-
-.a-btn__icon ~ .a-btn__label {
-	--btn__label--pis: var(--btn__icon-label--pis, var(--brand__spacing--small));
 }
