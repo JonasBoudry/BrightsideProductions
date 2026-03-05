@@ -81,44 +81,45 @@
 				rgb(var(--brand__color--accent)));
 		--brand__btn-span--color: var(---brand__btn-primary-span-hover--color, rgb(var(--brand__color--text)));
 		--brand__btn-primary-after--background-color: var(--brand__btn-primary-after-hover--background-color, rgb(var(--brand__color--black)));
+	}
+}
 
+.a-btn--secondary {
+	--brand__btn--padding: var(--brand__btn-secondary--padding, 20px 30px);
+	--brand__btn--color: var(--brand__btn-secondary--color, rgb(var(--brand__color--white)));
+	--brand__btn--background-color: var(--brand__btn-secondary--background-color, rgb(var(--brand__color--black)));
+	--brand__btn-hover--color: rgb(var(--brand__color--black));
+	--brand__btn--min-height: var(--brand__btn-secondary--min-height, 50px);
 
-		.a-btn--secondary {
-			--brand__btn--padding: var(--brand__btn-secondary--padding, 20px 30px);
-			--brand__btn--color: var(--brand__btn-secondary--color, rgb(var(--brand__color--white)));
-			--brand__btn--background-color: var(--brand__btn-secondary--background-color, rgb(var(--brand__color--black)));
-			--brand__btn-hover--color: rgb(var(--brand__color--black));
-			--brand__btn--min-height: var(--brand__btn-secondary--min-height, 50px);
+	@include hover {
+		--brand__btn-secondary--background-color: var(--brand__btn-secondary-hover--background-color,
+				rgb(var(--brand__color--accent)));
+	}
+}
 
-			@include hover {
-				--brand__btn-secondary--background-color: var(--brand__btn-secondary-hover--background-color,
-						rgb(var(--brand__color--accent)));
-			}
-		}
+.a-btn--link {
+	float: var(--brand__btn-link--float);
+	margin-inline-end: var(--brand__btn-link--mie, var(--brand__spacing--tiny));
+	margin-inline-start: var(--brand__btn-link--mis, 0);
+	--brand__btn--color: var(--brand__btn-link--color, rgb(var(--brand__color--primary)));
+	--brand__btn-after--display: block;
+	--brand__btn-after--filter: var(--brand__btn-link-after--filter, var(--brand__filter--primary));
+	--brand__btn-after--size: var(--brand__btn-link-after--size);
+	--brand__btn-hover--color: rgb(var(--brand__color--primary));
+	--brand__btn-download-before--filter: var(--brand__btn-link-after--filter, var(--brand__filter--primary));
+	--brand__btn-download--pis: 30px;
+	--brand__btn-download-before--left: 0px;
+	--brand__btn--text-align: left;
 
-		.a-btn--link {
-			float: var(--brand__btn-link--float);
-			margin-inline-end: var(--brand__btn-link--mie, var(--brand__spacing--tiny));
-			margin-inline-start: var(--brand__btn-link--mis, 0);
-			--brand__btn--color: var(--brand__btn-link--color, rgb(var(--brand__color--primary)));
-			--brand__btn-after--display: block;
-			--brand__btn-after--filter: var(--brand__btn-link-after--filter, var(--brand__filter--primary));
-			--brand__btn-after--size: var(--brand__btn-link-after--size);
-			--brand__btn-hover--color: rgb(var(--brand__color--primary));
-			--brand__btn-download-before--filter: var(--brand__btn-link-after--filter, var(--brand__filter--primary));
-			--brand__btn-download--pis: 30px;
-			--brand__btn-download-before--left: 0px;
-			--brand__btn--text-align: left;
+	@include hover {
+		--brand__btn-link-after--filter: var(--brand__filter--primary);
+		--btn-link-download-svg--fill: rgb(var(--brand__color--primary));
+		--brand__btn-download-before--filter: var(--brand__filter--primary);
+	}
 
-			@include hover {
-				--brand__btn-link-after--filter: var(--brand__filter--primary);
-				--btn-link-download-svg--fill: rgb(var(--brand__color--primary));
-				--brand__btn-download-before--filter: var(--brand__filter--primary);
-			}
-
-			&:focus-within {
-				--brand__btn-link-after--filter: var(--brand__filter--primary);
-				--btn-link-download-svg--fill: rgb(var(--brand__color--primary));
-				--brand__btn-download-before--filter: var(--brand__filter--primary);
-			}
-		}
+	&:focus-within {
+		--brand__btn-link-after--filter: var(--brand__filter--primary);
+		--btn-link-download-svg--fill: rgb(var(--brand__color--primary));
+		--brand__btn-download-before--filter: var(--brand__filter--primary);
+	}
+}
