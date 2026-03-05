@@ -55,7 +55,7 @@
 
 .a-btn--primary {
 	position: relative;
-	--brand__btn--padding: var(--brand__btn-primary--padding, 20px 50px 20px 30px);
+	--brand__btn--padding: var(--brand__btn-primary--padding, 20px 70px 20px 30px);
 	--brand__btn--color: var(--brand__btn-primary--color, rgb(var(--brand__color--white)));
 	--brand__btn--background-color: var(--brand__btn-primary--background-color, rgb(var(--brand__color--primary)));
 	--brand__btn-hover--color: var(--brand__btn-primary-hover--color, rgb(var(--brand__color--black)));
@@ -64,7 +64,7 @@
 
 	&::after {
 		content: "";
-		@include absolute(50%, 20px, null, null);
+		@include absolute(50%, 30px, null, null);
 		width: 18px;
 		height: 19px;
 		background-color: var(--brand__btn-primary-after--background-color, rgb(var(--brand__color--white)));
