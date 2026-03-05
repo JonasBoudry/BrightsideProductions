@@ -10,6 +10,7 @@
 	overflow: hidden;
 	min-height: var(--set-hero-banner--min-height, var(--hero-banner--min-height, 300px));
 	--brand__btn-primary-after--background-color: rgb(var(--brand__color--black));
+	--brand__btn-primary-after-hover--background-color: rgb(var(--brand__color--black));
 
 	@include mq($from: large) {
 		--hero-banner--min-height: var(--hero-banner-large--min-height, 550px);
