@@ -8,8 +8,8 @@
 		"loading": "eager"
 	},
 	"title": "Eat more trees",
-	"anchor": {
-		"link": "https://www.eatmoretrees.org/",
+	"link": {
+		"src": "https://www.eatmoretrees.org/",
 		"label": "More info about this production"
 	}
 }

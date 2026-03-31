@@ -7,7 +7,7 @@
                 <!-- AVIF -->
                 <source srcset="{{media.srcDesktopAvif}} 1280w, {{media.srcMobileAvif}} 640w" type="image/avif">
                 {{/if}}
-                
+
                 {{#if media.srcDesktopWebp}}
                 <!-- WebP -->
                 <source srcset="{{media.srcDesktopWebp}} 1280w, {{media.srcMobileWebp}} 640w" type="image/webp">
@@ -29,6 +29,11 @@
             {{#if anchor}}
             <div class="hero-banner__cta">
                 <a class="a-btn a-btn--primary" href="#{{anchor.id}}">{{anchor.label}}</a>
+            </div>
+            {{/if}}
+            {{#if link}}
+            <div class="hero-banner__cta">
+                <a class="a-btn a-btn--primary" href="{{link.src}}">{{link.label}}</a>
             </div>
             {{/if}}
         </div>

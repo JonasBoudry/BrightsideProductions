@@ -9,8 +9,8 @@
 	},
 	"title": "Made in Cité",
 	"subtitle": "A comedyshow by Erhan Demirci",
-	"anchor": {
-		"link": "https://erhandemirci.be/made-in-cite/",
+	"link": {
+		"src": "https://erhandemirci.be/made-in-cite/",
 		"label": "More info"
 	}
 }
