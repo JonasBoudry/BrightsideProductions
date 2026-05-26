@@ -58,7 +58,8 @@
                 "alt": "Foto Helmut production"
             },
             "title": "Helmut",
-            "genre": "Documentary"
+            "genre": "Documentary",
+            "link": "/helmut"
         },
         {
             "media": {
