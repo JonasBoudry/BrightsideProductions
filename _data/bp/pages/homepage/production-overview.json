@@ -13,6 +13,15 @@
         },
         {
             "media": {
+                "src": "/assets/media/images/productions/verstaanbaar.avif",
+                "srcDesktop": "/assets/media/images/productions/verstaanbaar.avif",
+                "alt": "Foto Rauw production"
+            },
+            "title": "Verstaanbaar - Wannes Cappelle",
+            "genre": "Comedy"
+        },
+        {
+            "media": {
                 "src": "/assets/media/images/productions/over-geld-gesproken.avif",
                 "srcDesktop": "/assets/media/images/productions/over-geld-gesproken.avif",
                 "alt": "Foto Over geld gesproken production"
