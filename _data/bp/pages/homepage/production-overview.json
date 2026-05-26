@@ -94,7 +94,15 @@
                 "srcDesktop": "/assets/media/images/productions/dpg-media.avif",
                 "alt": "Foto DPG Media production"
             },
-            "genre": "Documentary & Human Interest"
+            "genre": "Documentary"
+        },
+        {
+            "media": {
+                "src": "/assets/media/images/productions/dpg-media.avif",
+                "srcDesktop": "/assets/media/images/productions/dpg-media.avif",
+                "alt": "Foto DPG Media production"
+            },
+            "genre": "Human Interest"
         },
         {
             "media": {
