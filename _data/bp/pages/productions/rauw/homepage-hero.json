@@ -1,0 +1,11 @@
+{
+	"media": {
+        "src": "/assets/media/images/productions/rauw/rauw.avif",
+        "srcDesktop": "/assets/media/images/productions/rauw/rauw.avif",
+		"alt": "Foto Rauw production image",
+		"width": "1280",
+		"height": "720",
+		"loading": "eager"
+	},
+	"title": "Rauw"
+}

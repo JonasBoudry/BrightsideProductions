@@ -3,6 +3,16 @@
     "items": [
         {
             "media": {
+                "src": "/assets/media/images/productions/rauw.avif",
+                "srcDesktop": "/assets/media/images/productions/rauw.avif",
+                "alt": "Foto Rauw production"
+            },
+            "title": "Rauw",
+            "genre": "Documentary",
+            "link": "/rauw"
+        },
+        {
+            "media": {
                 "src": "/assets/media/images/productions/over-geld-gesproken.avif",
                 "srcDesktop": "/assets/media/images/productions/over-geld-gesproken.avif",
                 "alt": "Foto Over geld gesproken production"
