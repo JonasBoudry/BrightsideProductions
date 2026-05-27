@@ -140,6 +140,32 @@ fieldset {
 	}
 }
 
+p.p-large {
+	color: var(--set-brand__typography-p-large--color, var(--brand__typography-p-large--color));
+	font-family: var(--brand__typography-p-large--font-family), var(--brand__typography-fallback--font-family);
+	font-size: var(--brand__typography-p-large--font-size);
+	line-height: var(--set-brand__typography-p-large-line-height, var(--brand__typography-p-large--line-height));
+	margin-bottom: var(--set-brand__typography--margin-bottom, var(--brand__typography-p-large--margin-bottom));
+	font-weight: var(--brand__typography-p-large--font-weight);
+	letter-spacing: var(--brand__typography-p-large--letter-spacing);
+	transition: color 0.3s ease-in-out;
+	text-decoration: var(--brand__typography-p-large--text-decoration);
+	text-transform: var(--brand__typography-p-large--text-transform);
+}
+
+p.p-small {
+	color: var(--set-brand__typography-p-small--color, var(--brand__typography-p-small--color));
+	font-family: var(--brand__typography-p-small--font-family), var(--brand__typography-fallback--font-family);
+	font-size: var(--brand__typography-p-small--font-size);
+	line-height: var(--set-brand__typography-p-small-line-height, var(--brand__typography-p-small--line-height));
+	margin-bottom: var(--set-brand__typography--margin-bottom, var(--brand__typography-p-small--margin-bottom));
+	font-weight: var(--brand__typography-p-small--font-weight);
+	letter-spacing: var(--brand__typography-p-small--letter-spacing);
+	transition: color 0.3s ease-in-out;
+	text-decoration: var(--brand__typography-p-small--text-decoration);
+	text-transform: var(--brand__typography-p-small--text-transform);
+}
+
 @media (prefers-reduced-motion: reduce) {
 	video {
 		animation: none;
