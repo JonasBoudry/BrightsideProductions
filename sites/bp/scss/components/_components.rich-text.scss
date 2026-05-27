@@ -25,6 +25,10 @@
 		--brand__typography-p--margin-bottom: 0;
 	}
 
+	p.p-large:last-child {
+		--brand__typography-p-large--margin-bottom: 0;
+	}
+
 	h1:last-child,
 	h2:last-child,
 	h3:last-child,

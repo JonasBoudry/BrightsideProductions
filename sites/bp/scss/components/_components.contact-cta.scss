@@ -17,7 +17,7 @@
 
 .c-contact-cta__description {
     text-align: center;
-    margin-block-end: var(--brand__spacing);
+    margin-block-end: var(--brand__spacing--large);
 
     @include mq($from: large) {
         max-width: 880px;
