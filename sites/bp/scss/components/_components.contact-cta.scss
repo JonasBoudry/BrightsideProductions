@@ -17,10 +17,10 @@
 
 .c-contact-cta__description {
     text-align: center;
-    margin-block-end: var(--brand__spacing--large);
+    margin-block-end: var(--brand__spacing);
 
     @include mq($from: large) {
-        max-width: 800px;
+        max-width: 880px;
     }
 }
 
