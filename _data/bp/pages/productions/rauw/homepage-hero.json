@@ -8,5 +8,9 @@
 		"loading": "eager"
 	},
 	"title": "Rauw",
-	"subtitle": "A candid portrait of Nick Bril for Play"
+	"subtitle": "A candid portrait of Nick Bril for Play",
+	"link": {
+		"src": "https://www.play.tv/rauw-nick-bril",
+		"label": "Stream now"
+	}
 }
