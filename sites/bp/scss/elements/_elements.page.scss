@@ -175,3 +175,7 @@ p.p-small {
 img {
 	background-color: rgba(var(--brand__color--white), 0.2);
 }
+
+#cookiescript_description {
+	--brand__typography-p--color: rgb(var(--brand__color--white));
+}
