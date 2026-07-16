@@ -1,7 +1,7 @@
 {
     "title": "Our productions",
     "items": [
-                {
+        {
             "media": {
                 "src": "/assets/media/images/productions/onzen-tour.avif",
                 "srcDesktop": "/assets/media/images/productions/onzen-tour.avif",
@@ -13,8 +13,8 @@
         },
         {
             "media": {
-                "src": "/assets/media/images/productions/rauw.avif",
-                "srcDesktop": "/assets/media/images/productions/rauw.avif",
+                "src": "/assets/media/images/productions/rauw-2.avif",
+                "srcDesktop": "/assets/media/images/productions/rauw-2.avif",
                 "alt": "Foto Rauw production"
             },
             "title": "Rauw",
@@ -93,9 +93,9 @@
         },
         {
             "media": {
-                "src": "/assets/media/images/productions/streamz.avif",
-                "srcDesktop": "/assets/media/images/productions/streamz.avif",
-                "alt": "Foto Streamz production"
+                "src": "/assets/media/images/productions/dpg-media.avif",
+                "srcDesktop": "/assets/media/images/productions/dpg-media.avif",
+                "alt": "Foto DPG Media production"
             },
             "genre": "Documentary"
         },
@@ -105,7 +105,7 @@
                 "srcDesktop": "/assets/media/images/productions/dpg-media.avif",
                 "alt": "Foto DPG Media production"
             },
-            "genre": "Documentary"
+            "genre": "Human Interest"
         },
         {
             "media": {
