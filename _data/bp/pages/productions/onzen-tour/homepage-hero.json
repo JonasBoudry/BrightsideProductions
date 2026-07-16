@@ -1,0 +1,15 @@
+{
+	"media": {
+        "src": "/assets/media/images/productions/onzen-tour/onzen-tour.avif",
+        "srcDesktop": "/assets/media/images/productions/onzen-tour/onzen-tour.avif",
+		"alt": "Foto Onzen Tour production image",
+		"width": "1280",
+		"height": "720",
+		"loading": "eager"
+	},
+	"title": "A tribute to friendship",
+	"link": {
+		"src": "https://www.streamz.be/streamz/onzen-tour~ca21bb94-b4fe-4ced-8e5a-9f22900f77d7",
+		"label": "Stream now"
+	}
+}
