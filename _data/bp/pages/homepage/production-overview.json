@@ -1,6 +1,16 @@
 {
     "title": "Our productions",
     "items": [
+                {
+            "media": {
+                "src": "/assets/media/images/productions/onzen-tour.avif",
+                "srcDesktop": "/assets/media/images/productions/onzen-tour.avif",
+                "alt": "Foto Onzen Tour production"
+            },
+            "title": "Onzen Tour",
+            "genre": "Comedy",
+            "link": "/onzen-tour/"
+        },
         {
             "media": {
                 "src": "/assets/media/images/productions/rauw.avif",
@@ -9,7 +19,7 @@
             },
             "title": "Rauw",
             "genre": "Documentary",
-            "link": "/rauw"
+            "link": "/rauw/"
         },
         {
             "media": {
@@ -18,7 +28,8 @@
                 "alt": "Foto Rauw production"
             },
             "title": "Verstaanbaar - Wannes Cappelle",
-            "genre": "Comedy"
+            "genre": "Comedy",
+            "link": "/verstaanbaar/"
         },
         {
             "media": {
@@ -28,7 +39,7 @@
             },
             "title": "Over geld gesproken",
             "genre": "Human Interest",
-            "link": "/over-geld-gesproken"
+            "link": "/over-geld-gesproken/"
         },
         {
             "media": {
@@ -38,7 +49,7 @@
             },
             "title": "Eat more trees",
             "genre": "Documentary",
-            "link": "/eat-more-trees"
+            "link": "/eat-more-trees/"
         },
         {
             "media": {
@@ -48,7 +59,7 @@
             },
             "title": "Between us",
             "genre": "Short",
-            "link": "/between-us"
+            "link": "/between-us/"
         },
         {
             "media": {
@@ -58,7 +69,7 @@
             },
             "title": "Broer - Lander Severins",
             "genre": "Comedy",
-            "link": "/broer"
+            "link": "/broer/"
         },
         {
             "media": {
@@ -68,7 +79,7 @@
             },
             "title": "Made in Cité",
             "genre": "Comedy",
-            "link": "/made-in-cite"
+            "link": "/made-in-cite/"
         },
         {
             "media": {
@@ -78,7 +89,7 @@
             },
             "title": "Helmut",
             "genre": "Documentary",
-            "link": "/helmut"
+            "link": "/helmut/"
         },
         {
             "media": {
