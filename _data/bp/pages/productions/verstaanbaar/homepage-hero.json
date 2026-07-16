@@ -1,0 +1,15 @@
+{
+	"media": {
+        "src": "/assets/media/images/productions/verstaanbaar/verstaanbaar.avif",
+        "srcDesktop": "/assets/media/images/productions/verstaanbaar/verstaanbaar.avif",
+		"alt": "Foto Verstaanbaar - Wannes Cappelle production image",
+		"width": "1280",
+		"height": "720",
+		"loading": "eager"
+	},
+	"title": "A comedyshow by Wannes Cappelle",
+	"link": {
+		"src": "https://www.wannescappelle.be/",
+		"label": "More info"
+	}
+}
